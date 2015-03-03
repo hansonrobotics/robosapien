@@ -14,19 +14,27 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 */
+
+//defining minimal means only enabling compass,sonar- 
+// setting servo's, robot motion, listen led
+#define MINIMAL
 #include <SimpleTimer.h>
 #include <Wire.h>
 #include <Servo.h>
 #include <HMC5883L.h>
-#include <ADXL345.h>
 
-#define print_on 1
+#ifndef MINIMAL
+include <ADXL345.h>
+ADXL345 adxl; //variable adxl is an instance of the ADXL345 library
+#endif
+
+#define LISTEN_LED_PIN 7
+#define IR_IN_PIN 3
 //90 degree motor gives prob
 #define MAX_A 90
 #define MAX_B 90
 #define DIFF_A 0xd
 #define DIFF_B 0xd
-ADXL345 adxl; //variable adxl is an instance of the ADXL345 library
 
 HMC5883L compass;
 
@@ -82,6 +90,7 @@ long b5;
 //baro
 SimpleTimer timer;
 
+#ifndef MINIMAL
 //baro begin
 void bmp085Calibration()
 {
@@ -229,31 +238,6 @@ unsigned long bmp085ReadUP(){
   return up;
 }
 /*
-void writeRegister(int deviceAddress, byte address, byte val) {
-  Wire.beginTransmission(deviceAddress); // start transmission to device 
-  Wire.write(address);       // send register address
-  Wire.write(val);         // send value to write
-  Wire.endTransmission();     // end transmission
-}
-
-int readRegister(int deviceAddress, byte address){
-
-  int v;
-  Wire.beginTransmission(deviceAddress);
-  Wire.write(address); // register to read
-  Wire.endTransmission();
-
-  Wire.requestFrom(deviceAddress, 1); // read a byte
-
-  while(!Wire.available()) {
-    // waiting
-  }
-
-  v = Wire.read();
-  return v;
-}
-*/
-/*
 float calcAltitude(float pressure){
 
   float A = pressure/101325;
@@ -310,7 +294,7 @@ int setupL3G4200D(int scale){
   // if you'd like:
   writeRegister(L3G4200D_Address, CTRL_REG5, 0b00000000);
 }
-
+#endif
 void writeRegister(int deviceAddress, byte address, byte val) {
     Wire.beginTransmission(deviceAddress); // start transmission to device 
     Wire.write(address);       // send register address
@@ -393,20 +377,6 @@ void RSSendCommand(int cmd)
   digitalWrite(IRout, HIGH);
 }
 
-/*{
-  digitalWrite(IRout,LOW);
-  delayMicroseconds(8*bitTime);
-  for (int i=0;i<8;i++) {
-    digitalWrite(IRout,HIGH);  
-    delayMicroseconds(bitTime);
-    if ((command & 128) !=0) delayMicroseconds(3*bitTime);
-    digitalWrite(IRout,LOW);
-    delayMicroseconds(bitTime);
-    command <<= 1;
-  }
-  digitalWrite(IRout,HIGH);
-  delay(250); // Give a 1/4 sec before next
-}*/
 //IR end
 //compass begin
 void setupHMC5883L(){
@@ -433,6 +403,7 @@ float getHeading(){
   return heading * RAD_TO_DEG; //radians to degrees
 }
 //compass end
+#ifndef MINIMAL
 //adxl begin
 void setupADXL()
 {
@@ -576,6 +547,7 @@ void gyroEx()
   Serial.print(",");
   Serial.println(z);
 }
+#endif
 
 void compassEx()
 {
@@ -585,44 +557,44 @@ void compassEx()
 }
 void servoZero()
 {
-  panServo.write((MAX_A+DIFF_A)/2);
-  tiltServo.write((MAX_B+DIFF_B)/2);
+  panServo.write(MAX_A/2+DIFF_A);
+  tiltServo.write(MAX_B/2+DIFF_B);
 }
-/*
-void panSweep()
+void printDist()
 {
-  static int ang=(MAX_A+MIN_A)/2;
-  static int dir=1;
-  ang=ang+dir*4;
-  if (ang>MAX_A) dir=-1;
-  if (ang<MIN_A) dir=1;
-  tiltServo.write(ang);
-  delay(20);
+  Serial.print("!d");
+  Serial.println(distance);
 }
-*/
 void setup()
 {
 	Wire.begin();
 	Serial.begin(9600);
         while(!Serial){;}
+        pinMode(LISTEN_LED_PIN,OUTPUT);
+        pinMode(IR_IN_PIN,INPUT);
 	pinMode(sonarIn,INPUT);
 	pinMode(sonarTrig,OUTPUT);
 	pinMode(IRout,OUTPUT);
         digitalWrite(IRout,HIGH);
+        digitalWrite(LISTEN_LED_PIN,LOW);
 	panServo.attach(panPin);
 	tiltServo.attach(tiltPin);
-	Serial.println("starting up L3G4200D");
+//	Serial.println("starting up L3G4200D");
+#ifndef MINIMAL
         setupL3G4200D(2000); // Configure L3G4200  - 250, 500 or 2000 deg/sec
 	bmp085Calibration();
+	setupADXL();
+#endif
         compass = HMC5883L(); //new instance of HMC5883L library
         setupHMC5883L(); //setup the HMC5883L
-	setupADXL();
         delay(1500); //wait for the sensor to be ready 
 	attachInterrupt(0,sonarDist,CHANGE);
         timer.setInterval(200,trigSonar);
-        timer.setInterval(100,gyroEx);
+#ifndef MINIMAL
+        timer.setInterval(100,gyroEx);//not used
+        timer.setInterval(1000,baroEx);//not used
+#endif
         timer.setInterval(100,compassEx);
-        timer.setInterval(1000,baroEx);
         timer.setInterval(200,printDist);
         servoZero();
 }
@@ -636,16 +608,10 @@ byte hex2byte(byte hexAsc)
   }
   return 0;
 }
-void printDist()
-{
-  Serial.print("!d");
-  Serial.println(distance);
-}
 void RSstop()
 {
   RSSendCommand(0x8E);
-  //if(print_on) 
-  Serial.println("!STP");
+  Serial.println("!S00");
 }
 void loop()
 {
@@ -653,13 +619,16 @@ void loop()
   static byte cmd=0;
   static byte panORtilt=0;
   static byte c1b,c2b,t1b,t2b;
-  byte tmp=0;
+  byte tmp=0,led_on=0;
   static byte state=0;
   timer.run();
   if (Serial.available()){
     inByte=Serial.read();
     switch(inByte)
     {
+      case 'l':
+      state=6;
+      break;
       case 'r':
       cmd=0;
       state=1;//robot command
@@ -673,12 +642,15 @@ void loop()
       default:
       tmp=hex2byte(inByte);
       switch(state){
+        case 0://should not occur
+        break;
         case 1://read hex command nibble1
         c1b=tmp;
         state=3;
         break;
         case 2://read pan tilt hex nibble
         panORtilt=(tmp)?1:0;//1=pan,0=tilt
+        c1b=panORtilt;
         state=3;
         break;
         case 3:
@@ -713,12 +685,17 @@ void loop()
         }
         state=0;
         break;
+        case 6:
+        led_on=(tmp)?HIGH:LOW;
+        digitalWrite(LISTEN_LED_PIN,led_on);
+        state=0;
+        break;
         default:
         break;
       }//switch
     }//switch
   }
-  //if (done){if(print_on) Serial.print(distance);if(print_on) Serial.println(" cm");}
-  //panSweep();
-  adxlExample();
+  #ifndef MINIMAL
+  adxlExample();//not used
+  #endif
 }
