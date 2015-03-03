@@ -12,18 +12,22 @@
 #/sense/robot/get_compass_deg
 #/act/robot/set_listen_led
 
-#/robot/pan_range - [min,max]
-#/robot/tilt_range - [min,max]
-#/robot/current_pan_tilt - [pan,tilt]
+#/robot/get_pan_range - [min,max]
+#/robot/get_tilt_range - [min,max]
+#/robot/get_pan
+#/robot/get_tilt
 
 import rospy
-from std_msgs.msg import String
+from std_msgs.msg import Bool
 from std_msgs.msg import Int32
 from robot.msg import sonar
 from robot.msg import compass
 from robot.msg import robot_cmd
 import serial
 
+#pan or tilts assumed start from 0 degrees
+MAX_PAN=90
+MAX_TILT=90
 ser = serial.Serial()
 distpub = rospy.Publisher('/sense/robot/get_sonar_cm', sonar, queue_size=10)
 dirpub = rospy.Publisher('/sense/robot/get_compass_deg', compass, queue_size=10)
@@ -68,7 +72,7 @@ robosapien_v1_ir_codes={"turn right":"80",
 def callback_move(cmd):
     data=cmd.cmd
     dur=cmd.duration_10ms
-    rospy.loginfo(rospy.get_caller_id() + "I heard %s", data)
+    #rospy.loginfo(rospy.get_caller_id() + "I heard %s", data)
 
     if data in robosapien_v1_ir_codes:
         command="r"+robosapien_v1_ir_codes[data]
@@ -76,39 +80,53 @@ def callback_move(cmd):
         if len(hx)<2: hx="0"+hx
         command=command+hx
         ser.write(command)
-        rospy.loginfo("command= %s",command)
+        #rospy.loginfo("command= %s",command)
 
 def callback_pan(dat):
     data=dat.data
     rospy.loginfo(rospy.get_caller_id() + " pan %d", data)
     if data<0: data=0
-    if data>180: data=180
+    if data>MAX_PAN: data=MAX_PAN
     hexdata=hex(data)[2:4]
     if len(hexdata)<2: hexdata="0"+hexdata
     command="s10"+hexdata
     ser.write(command)
+    rospy.set_param('/robot/get_pan',data)
 
 def callback_tilt(dat):
     data=dat.data
     rospy.loginfo(rospy.get_caller_id() + " tilt %d",data)
     if data<0: data=0
-    if data>180: data=180
+    if data>MAX_TILT: data=MAX_TILT
     hexdata=hex(data)[2:4]
     if len(hexdata)<2: hexdata="0"+hexdata
     command="s00"+hexdata
     ser.write(command)
+    rospy.set_param('/robot/get_tilt',data)
+
+def callback_led(dat):
+    data=dat.data
+    cmmd="l"
+    if (data):cmmd=cmmd+"1"
+    else: cmmd=cmmd+"0"
+    ser.write(cmmd)
 
 def init():
      rospy.init_node('body_node', anonymous=False)
+     rospy.set_param('/robot/get_pan_range',[0,MAX_PAN])
+     rospy.set_param('/robot/get_tilt_range',[0,MAX_TILT])
+     rospy.set_param('/robot/get_pan',-1)
+     rospy.set_param('/robot/get_tilt',-1)
      rospy.Subscriber("/act/robot/send_move_command", robot_cmd, callback_move)
      rospy.Subscriber("/act/robot/set_pan_angle", Int32, callback_pan)
      rospy.Subscriber("/act/robot/set_tilt_angle",Int32,callback_tilt)
+     rospy.Subscriber("/act/robot/set_listen_led",Bool,callback_led)
      ser.baudrate=9600
      ser.port='/dev/rfcomm0'
      ser.timeout=2
      ser.open()
      if not(ser.isOpen()):
-         print "Could not open Serial Port"
+         rospy.logerr("Error: Could not open bluetooth Serial Port")
 
 def parse(txt):
     if txt[0]=='!':
