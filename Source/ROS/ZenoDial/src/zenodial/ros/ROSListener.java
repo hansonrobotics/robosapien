@@ -16,7 +16,7 @@ public class ROSListener {
 			public void onNewMessage(std_msgs.String message) {
 				String msgReceived = message.getData();
 				log.info("Message reached: \"" + msgReceived + "\"");
-				if (msgReceived == "BADINPUT") return;
+				if (msgReceived.equals("BADINPUT")) return;
 				Input.setInputUtterance(msgReceived);
 			}
 		});
