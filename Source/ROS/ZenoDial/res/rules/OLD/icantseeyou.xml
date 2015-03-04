@@ -1,0 +1,28 @@
+<category>
+  <rule id="icantseeyou">
+    <case>
+      <condition operator="or">
+        <if relation="in">i can't see you</if>
+        <if relation="in">we can't see you</if>
+        <if relation="in">i cannot see you</if>
+        <if relation="in">we cannot see you</if>
+        <if relation="in">i cound not see you</if>
+        <if relation="in">we cound not see you</if>
+        <if relation="in">i couldn't you</if>
+        <if relation="in">we couldn't you</if>
+				<and>
+					<if relation="in">where are you</if>
+					<if relation="!in">from</if>
+				</and>        
+      </condition>
+			<effect>
+				<then util="random">I'm sorry I can't see who said that.</then>
+				<then util="random">I hear you.</then>
+				<then util="random">Hey where you at?</then>
+				<then util="random">Come let me get a good look at you.</then>
+				<then util="random">Why don't you let me see you, so I know who is asking.</then>
+				<then util="random">Hey, where are you? I need to see you first.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

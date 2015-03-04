@@ -1,0 +1,35 @@
+<category>
+	<rule id="tellmeapoem">
+		<case>
+			<condition operator="or">
+				<and>
+				  <or>
+		        <if relation="in">tell</if>
+		        <if relation="in">say</if>
+				  </or>
+				  <or>
+		        <if relation="in">me</if>
+		        <if relation="in">us</if>
+				  </or>
+				  <or>
+		        <if relation="in">a * poem</if>
+		        <if relation="in">poems</if>
+				  </or>
+				</and>
+				<and>
+					<or>
+			      <if relation="in">do you have</if>
+					</or>
+					<or>
+			      <if relation="in">a * poem</if>
+			      <if relation="in">poems</if>
+					</or>
+				</and>
+			</condition>
+			<effect>
+				<then util="random">If you think it long and mad, the wind of banners that passes through my life, and you decide... Well I can't listen to this anymore.</then>
+				<then util="random">Little Miss Muffett Sits on her tuffet In a nonchalant sort of a way. With her force field around her, the Spider, the bounder, Is not in the picture today.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

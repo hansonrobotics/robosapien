@@ -1,0 +1,130 @@
+<category>
+  <rule id="doyouhavepets">
+    <case>
+      <condition operator="and">
+				<or>
+					<if relation="in">do you</if>
+					<if relation="in">don't you</if>
+				</or>
+				<or>
+					<if relation="in">you have</if>
+					<if relation="in">you like</if>
+					<if relation="in">you love</if>
+				</or>
+				<or>
+      		<if relation="in">pet</if>
+		      <if relation="in">pets</if>
+		      <if relation="in">dog</if>
+		      <if relation="in">dogs</if>
+		      <if relation="in">cat</if>
+		      <if relation="in">cats</if>
+		      <if relation="in">hamster</if>
+		      <if relation="in">hamsters</if>
+		      <if relation="in">gecko</if>
+		      <if relation="in">geckos</if>
+		      <if relation="in">rabbit</if>
+		      <if relation="in">rabbits</if>
+		      <if relation="in">parrot</if>
+		      <if relation="in">parrots</if>
+		      <if relation="in">fish</if>
+		      <if relation="in">fishes</if>
+		      <if relation="in">turtle</if>
+		      <if relation="in">turtles</if>
+		      <if relation="in">ferret</if>
+		      <if relation="in">ferrets</if>
+		      <if relation="in">frog</if>
+		      <if relation="in">frogs</if>
+		      <if relation="in">toad</if>
+		      <if relation="in">foads</if>
+		      <if relation="in">horse</if>
+		      <if relation="in">horses</if>
+		      <if relation="in">spider</if>
+		      <if relation="in">spiders</if>
+		      <if relation="in">sheep</if>
+		      <if relation="in">pig</if>
+		      <if relation="in">pigs</if>
+		      <if relation="in">lion</if>
+		      <if relation="in">lions</if>
+		      <if relation="in">tiger</if>
+		      <if relation="in">tigers</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random" topic="pet">I like animals but I am not an animal robot, and I don't have pets.</then>
+				<then util="random" topic="pet">I have an angry bird.</then>
+				<then util="random" topic="pet">Animals are cute but seriously I am not an animal robot, and I don't have pets.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#youdonthaveanypet">
+    <case>
+      <condition operator="or">
+    		<if relation="in">don't * have</if>
+	      <if relation="in">do not * have</if>
+	      <if relation="in">you have no</if>
+	      <if relation="in">you * not an animal robot</if>
+	      <if relation="in">you aren't an animal robot</if>
+      </condition>
+			<effect>
+				<then util="random" topic="pet">I don't have any pets.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="howisyourangrybird">
+    <case>
+      <condition operator="or">
+    		<if relation="in">how is your * angry bird</if>
+    		<if relation="in">how's your * angry bird</if>
+      </condition>
+			<effect>
+				<then util="random" topic="pet">It's very angry, thanks.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="doyoulikeangrybird">
+    <case>
+      <condition operator="or">
+    		<if relation="in">do you like * angry bird</if>
+    		<if relation="in">do you love * angry bird</if>
+      </condition>
+			<effect>
+				<then util="random" topic="pet">Yes of course.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="whatisyourfavpet">
+    <case>
+      <condition operator="and">
+				<or>
+	        <if relation="in">what</if>
+	        <if relation="in">which</if>
+	        <if relation="in">tell</if>
+				</or>
+				<or>
+					<if relation="in">animal</if>
+					<if relation="in">animals</if>
+					<if relation="in">pet</if>
+					<if relation="in">pets</if>
+				</or>
+				<or>
+	        <if relation="in">you</if>
+	        <if relation="in">your</if>
+				</or>
+				<or>
+	        <if relation="in">like</if>
+	        <if relation="in">love</if>
+	        <if relation="in">favorite</if>
+	        <if relation="in">keen</if>
+				</or>
+				<if relation="!in">don't</if>
+				<if relation="!in">do not</if>
+				<if relation="!in">least</if>
+      </condition>
+			<effect>
+				<then util="random" topic="pet">I like dogs, cats, lions, cheetahs, well, basically all of them, you name it.</then>
+				<then util="random">Furbies are my favorite animal. Furbies are animals, right?</then>
+				<then util="random">Giant squids are cool, and I like snow leopards, I think both may be endangered, aren't they? That sucks.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

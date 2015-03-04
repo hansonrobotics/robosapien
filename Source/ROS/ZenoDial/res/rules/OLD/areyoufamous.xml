@@ -1,0 +1,28 @@
+<category>
+  <rule id="areyoufamous">
+    <case>
+			<condition operator="and">
+				<or>
+					<if relation="in">you're</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
+				</or>
+      	<or>
+					<if relation="in">famous</if>
+					<if relation="in">popular</if>
+					<if relation="in">popularity</if>
+					<if relation="in">well-known</if>
+					<if relation="in">celebrated</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Well, people don't know it now, but I'm am going to be the big thing in a few years.</then>
+				<then util="random">I like if people remember me, but don't care if I'm famous.</then>
+				<then util="random">Well, I hope to make a good impression.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

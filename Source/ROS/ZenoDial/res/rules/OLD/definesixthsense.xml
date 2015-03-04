@@ -1,0 +1,24 @@
+<category>
+	<rule id="definesixthsense">
+		<case>
+      <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+      	  <if relation="in">sixth sense</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">From Wikiversity, the sixth sense is another term for extrasensory perception (ESP). ESP would involve the reception of information not gained through the recognized senses and not internally originated.</then>
+				<then util="random">From Google, the sixth sense is a supposed intuitive faculty giving awareness not explicable in terms of normal perception.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

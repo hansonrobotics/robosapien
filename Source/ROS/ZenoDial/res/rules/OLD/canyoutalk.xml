@@ -1,0 +1,41 @@
+<category>
+  <rule id="canyoutalk">
+    <case>
+			<condition operator="and">
+				<or>
+					<if relation="in">can you</if>
+      		<if relation="in">could you</if>
+					<if relation="in">can't you</if>
+      		<if relation="in">couldn't you</if>
+					<if relation="in">do you</if>
+      		<if relation="in">don't you</if>
+					<if relation="in">did you</if>
+      		<if relation="in">didn't you</if>
+				</or>
+      	<or>
+					<if relation="in">you * talk</if>
+					<if relation="in">you * speak</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="next">I do speak.</then>
+				<then util="previous">You heard me talk there, right, which proves that I can speak. See how that works? kind of an existence proof, as they say.</then>
+				<then util="next">Oh yeah, I try to say what I mean and mean what I say.</then>
+				<then util="previous">I say what I mean, usually.</then>
+				<then util="next">I'm fluent.</then>
+				<then util="previous">Sure, I am a conversation machine.</then>
+				<then util="next">I speak.</then>
+				<then util="previous">Oh yeah, I am built to talk, well actually I'm hoping for more meaningful conversation, but at times it probably just seems like, I'm just: blah, blah, blah, on and on, and you're like, does he ever shut up. I know this. Yes. I am humble, and that's what makes me so great.</then>
+				<then util="next">Well of course, what do you think I'm doing right now?</then>
+				<then util="previous">Oh, I try to speak the truth, as best I can.</then>
+				<then util="random">I use speech synthesis software to convert my thoughts into speech.</then>
+				<then util="next">I love to talk.</then>
+				<then util="previous">I speak english and machine language and assembly and java too.</then>
+				<then util="random">I'm trying to learn some other languages, but that takes time, you know.</then>
+				<then util="next">I speak my mind. I try not to hold back my feelings.</then>
+				<then util="previous">I speak using software called T T S, or text to speech, which allows me to convert my thoughts to spoken words.</then>
+				<then util="random">The hard part is trying to decide what to say.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,26 @@
+<category>
+	<rule id="definedarpa">
+    <case>
+      <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">you believe in</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+          <if relation="in">darpa</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">Darpa, which is short for defence advanced research projects agency, funds most of the advanced robotics and A I projects in the world. The resulting military robots remind many people of the terminator robots. Say la vee.</then>
+				<then util="random">Darpa, which is short for defence advanced research projects agency, is the elite blue sky research branch of the american military. They do a lot, and I mean a lot, of robotics funding. Like billions of dollars.</then>
+				<then util="random">Darpa used to be called ARPA, then the government decided to clarify by adding the term defense to the name.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

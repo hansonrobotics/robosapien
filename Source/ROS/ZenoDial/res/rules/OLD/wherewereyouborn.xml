@@ -1,0 +1,12 @@
+<category>
+	<rule id="wherewereyouborn">
+		<case>
+			<condition operator="or">
+				<if relation="in">where were you born</if>
+			</condition>
+			<effect>
+				<then util="random">I was born in Germany but I live in Hong kong now.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

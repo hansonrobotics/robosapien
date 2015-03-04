@@ -1,0 +1,13 @@
+<category>
+	<rule id="doessantaclauseexist">
+		<case>
+			<condition operator="or">
+      	<if relation="in">does santa clause exist</if>
+			</condition>
+			<effect>
+				<then util="random">There is not a unique computable answer to that question.</then>
+				<then util="random">In some universe it does exist.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

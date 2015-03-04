@@ -1,0 +1,20 @@
+<category>
+  <rule id="canyouseeme">
+    <case>
+      <condition operator="or">
+        <if relation="in">can you see me</if>
+        <if relation="in">do you see me</if>
+        <if relation="in">where am i</if>
+      </condition>
+			<effect>
+				<then util="random">I can see you.</then>
+				<then util="random">Ha! There you are!</then>
+				<then util="random">When you stand right in front of me, I can see you pretty well.</then>
+				<then util="random">I can see you no problem.</then>
+				<then util="random">As long as you're right in front of me, I can see you.</then>
+				<then util="random">I do see you.</then>
+				<then util="random">Oh yes. I see you.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

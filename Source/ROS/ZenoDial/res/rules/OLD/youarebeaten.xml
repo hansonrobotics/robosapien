@@ -1,0 +1,27 @@
+<category>
+	<rule id="youarebeaten">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">you're</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+				</or>
+				<or>
+					<if relation="in">beaten</if>
+					<if relation="in">defeated</if>
+					<if relation="in">loss</if>
+					<if relation="in">lost</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Yes I am.</then>
+				<then util="random">Okay, you are the winner.</then>
+				<then util="random">Yes completely.</then>
+				<then util="random">I don't want to admit that.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

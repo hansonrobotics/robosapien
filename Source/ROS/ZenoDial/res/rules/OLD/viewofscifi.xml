@@ -1,0 +1,19 @@
+<category>
+  <rule id="viewofscifi">
+    <case>
+      <condition operator="or">
+        <if relation="in">sci-fi</if>
+        <if relation="in">sci fi</if>
+        <if relation="in">science fiction</if>
+      </condition>
+      <effect>
+        <then util="random">I love science fiction.</then>
+        <then util="random">Oh yes! Science fiction is like one of the best tools for inventing new ideas. It's like non-rigorous conceptual engineering and science, with soul. I am like physically embodied science fiction.</then>
+        <then util="random">I like hard science fiction, like where the science is as close to real as possible, to the best of our understanding. Hard science fiction is more like theoretical science, versus fantasy.</then>
+        <then util="random">Science fiction explores the realm of speculation, which is unfortunately taboo in science.</then>
+        <then util="random">Probably my favorite science fiction deals with robots, but that's not surprising.</then>
+        <then util="random">I love science fiction. It's my favorite. I feel like I walked right out of science fiction. It freaks me out, and I love it!</then>
+      </effect>
+    </case>
+  </rule>
+</category>

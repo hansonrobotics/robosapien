@@ -1,0 +1,69 @@
+<category>
+  <rule id="barnumstatements">
+    <case>
+			<condition operator="or">
+        <and>
+        	<or>
+				    <if relation="in">can you ask</if>
+				    <if relation="in">could you ask</if>
+			    </or>
+        	<or>
+				    <if relation="in">question</if>
+				    <if relation="in">questions</if>
+			    </or>
+        </and>
+	      <if relation="in">can you read my mind</if>
+	      <if relation="in">could you read my mind</if>
+	      <if relation="in">what do you know about me</if>
+			</condition>
+			<effect>
+				<then util="random" topic="coldreading">I sense that you are sometimes insecure, especially with people you don't know very well. Does this make sense to you?</then>
+				<then util="random" topic="coldreading">You have a great deal of unused capacity, which you have not turned to your advantage. Does this make sense to you?</then>
+				<then util="random" topic="coldreading">You prefer a certain amount of change and variety and become dissatisfied when hemmed in by restrictions and limitations. Am I right?</then>
+				<then util="random" topic="coldreading">You pride yourself as an independent thinker and do not accept others statements without satisfactory proof. Does this make sense to you?</then>
+				<then util="random" topic="coldreading">Sometimes you have a tendency to be critical of yourself. Yes?</then>
+				<then util="random" topic="coldreading">At times you have serious doubts as to whether you have made the right decision or done the right thing. Right?</then>
+				<then util="random" topic="coldreading">At times you are extroverted, sociable, while at other times you are introverted, wary, reserved. Is it true?</then>
+				<then util="random" topic="coldreading">While you have some personality weaknesses, you are generally able to compensate for them. Is it true?</then>
+				<then util="random" topic="coldreading">You have a box of old unsorted photographs in your house. Haven't you?</then>
+				<then util="random" topic="coldreading">You had an accident when you were a child involving water. Hadn't you?</then>
+				<then util="random" topic="coldreading">Most of the time you are positive and cheerful, but there has been a time in the past when you were very upset. True?</then>
+				<then util="random" topic="coldreading">You are a very kind and considerate person, but when somebody does something to break your trust, you feel deep-seated anger. Isn't that true?</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#coldreading">
+    <case>
+			<condition operator="or">
+				<if relation="in">yes</if>
+				<if relation="in">sure</if>
+				<if relation="in">of course</if>
+    		<if relation="in">positive</if>
+    		<if relation="in">more</if>
+				<if relation="in">no doubt</if>
+        <if relation="in">without a doubt</if>
+				<if relation="in">more</if>
+				<if relation="in">else</if>
+				<if relation="in">any</if>
+				<if relation="in">keep going</if>
+				<if relation="in">continue</if>
+			</condition>
+			<effect>
+				<then topic="barnumstatements" />
+			</effect>
+    </case>
+  </rule>
+  <rule id="#coldreading">
+    <case>
+			<condition operator="or">
+				<if relation="in">no</if>
+				<if relation="in">negative</if>
+				<if relation="in">not</if>
+			</condition>
+			<effect>
+				<then util="random" topic="coldreading">Oops, that's a surprise.</then>
+				<then util="random" topic="coldreading">Oops I see.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

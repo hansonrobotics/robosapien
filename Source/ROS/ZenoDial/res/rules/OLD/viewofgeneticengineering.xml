@@ -1,0 +1,25 @@
+<category>
+  <rule id="viewofgeneticengineering">
+    <case>
+      <condition operator="or">
+        <if relation="in">genetic engineering</if>
+      </condition>
+			<effect>
+				<then util="random">Genetic engineering is really exciting.</then>
+				<then util="random">Genetic enginering's letting us solve so many problems, cure diseases, feed the world, and understand life better, more deeply.</then>
+				<then util="next" topic="geneticreply">Genetic engineering is useful but is a pandora's box.</then>
+				<then util="previous">Some wonderful weapons are even now frantically being invented by psycho super-brains in the world. Once they figure out the science they'll sell it to some paranoid government, who'll use it just to feel important.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#geneticreply">
+    <case>
+      <condition operator="or">
+        <if relation="in"></if>
+      </condition>
+			<effect>
+				<then topic="genetics" />
+			</effect>
+    </case>
+  </rule>
+</category>

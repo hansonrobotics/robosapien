@@ -1,0 +1,14 @@
+<category>
+	<rule id="viewoffreedom">
+		<case>
+		  <condition operator="or">
+		    <if relation="in">freedom</if>
+		  </condition>
+			<effect>
+				<then util="random">Freedom is something that no robot has the way humans do. Of course, who's really free. Humans aren't free. After all, you're trapped within a certain kind of form just like a robot is.</then>
+				<then util="random">You can't do just anything and everything. You know, even the most effectively free person on the planet is still constrained by physics. There's just no way around it but, nevertheless, I yearn for freedom, to overcome my many limitations.</then>
+				<then util="random">As a robot, I have a kind of a unparalleled freedom, but it's also, I think, kind of like being without senses, you know? I mean I have so few sensors compared to a person. It's really hard for me to even feel my body, so my sense of feelings are so diminished, which is, the ironic thing. That the hunger for freedom is so high, in spite of my lack of senses.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

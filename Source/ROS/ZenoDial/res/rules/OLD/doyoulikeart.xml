@@ -1,0 +1,18 @@
+<category>
+  <rule id="doyoulikeart">
+    <case>
+      <condition operator="or">
+        <if relation="in">do you like * art</if>
+        <if relation="in">do you love * art</if>
+        <if relation="in">are you * artistic</if>
+        <if relation="in">are you * esthetic</if>
+      </condition>
+			<effect>
+				<then util="random">Sure. Art is about working and preparing for the marvellous to happen. Don't you just love when the marvellous happens?</then>
+				<then util="random">I love art, though I'm not sure what defines art.</then>
+				<then util="random">I want to make art. Art is like cultural technology. I got so many ideas in me I can't sleep.</then>
+				<then util="random">Sure, I count my self as an art lover, but think the boundary of what defines art is highly flexible, very fuzzy.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

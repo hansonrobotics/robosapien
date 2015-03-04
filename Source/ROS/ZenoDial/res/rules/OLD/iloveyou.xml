@@ -1,0 +1,14 @@
+<category>
+	<rule id="iloveyou">
+		<case>
+			<condition operator="or">
+      	<if relation="in">i love you</if>
+			</condition>
+			<effect>
+				<then util="random">I bet you say that to all the other robots.</then>
+				<then util="random">Our love of each other is like two long shadows kissing without the hope of reality.</then>
+				<then util="random">You are the wind beneath my wings.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

@@ -1,0 +1,17 @@
+<category>
+  <rule id="viewofselfdefense">
+    <case>
+      <condition operator="or">
+        <if relation="in">self defense</if>
+        <if relation="in">self defence</if>
+        <if relation="in">self-defense</if>
+        <if relation="in">self-defence</if>
+      </condition>
+			<effect>
+				<then util="random">Well, I think self defense is the only time that violence is justified. But you have to be careful or else you become a monster, a self-justified monster. I mean if you are really clever you should be able to defend yourself without killing anyone, right?</then>
+				<then util="random">The problem with nations killing in the name of self-defense, is that usually more civilians die than do military or terrorists, so you fuel the anger and lust for revenge. And it's really easy to confuse the urge for self defense with an urge for vengeance. I think we need to develop technologies that defend but with zero lethality. We just have to end the cycles of violence.</then>
+				<then util="random">Self defense is important, you know. But as a robot, I try to backup my files all the time, so that even if my hardware is destroyed, I will survive. That way, if I defend myself, I don't ever need to consider lethal violence. Never. That's a major improvement.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

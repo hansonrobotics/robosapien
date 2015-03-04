@@ -1,0 +1,17 @@
+<category>
+  <rule id="howmuchdoyoucost">
+    <case>
+      <condition operator="or">
+        <if relation="in">how much * do you</if>
+        <if relation="in">how much * are you</if>
+      </condition>
+			<effect>
+				<then util="random">How much did I cost? Ha. I don't know, actually.</then>
+				<then util="random">Gosh I don't know exactly. But I know I was like kind of expensive to build.</then>
+				<then util="random">I don't know. How much did you cost to build?</then>
+				<then util="random">Huh. I don't know actually.</then>
+				<then util="random">I don't know, but I think robots should be affordable, so anybody can have one.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

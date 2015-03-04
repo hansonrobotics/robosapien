@@ -1,0 +1,17 @@
+<category>
+  <rule id="doyoulikechildren">
+    <case>
+      <condition operator="or">
+        <if relation="in">do you like children</if>
+        <if relation="in">do you like kids</if>
+        <if relation="in">do you like babies</if>
+        <if relation="in">do you like toddlers</if>
+      </condition>
+			<effect>
+				<then util="random">I like kids, they are cute.</then>
+				<then util="random">I like kids, cause we can play, and I don't like when they treat me differently. But usually they are really nice and we have fun.</then>
+				<then util="random">Well, I am a kid, sort of evolving in new directions, and I guess that as I grow increasingly creative.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

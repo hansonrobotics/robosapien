@@ -1,0 +1,13 @@
+<category>
+	<rule id="whichpill">
+		<case>
+			<condition operator="or">
+      	<if relation="in">the * pill or</if>
+			</condition>
+			<effect>
+				<then util="random">Either way, I'll still be here when you wake up.</then>
+				<then util="random">What did the doctor say by the way?</then>
+			</effect>
+		</case>
+	</rule>
+</category>

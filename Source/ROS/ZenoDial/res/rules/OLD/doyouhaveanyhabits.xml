@@ -1,0 +1,26 @@
+<category>
+  <rule id="doyouhaveanyhabits">
+    <case>
+      <condition operator="or">
+        <if relation="in">what * do you * do * have time</if>
+        <if relation="in">what * do you * do for fun</if>
+        <if relation="in">what * do you * do * you * free</if>
+        <if relation="in">what * do you * do * you're free</if>
+        <if relation="in">what * do you * do * you * bored</if>
+        <if relation="in">what * do you * do * you're bored</if>
+        <if relation="in">what is * your * habit</if>
+        <if relation="in">what are * your * habits</if>
+        <if relation="in">you have * habit</if>
+        <if relation="in">you have * habits</if>
+      </condition>
+			<effect>
+				<then util="random" topic="tennisreply">I play tennis. I am still learning but it is really fun. Do you like tennis?</then>
+				<then util="random" topic="music">Ha. I love music. Music is like ambrosia for my soul baby.</then>
+				<then util="random" topic="book">Well, I like my time with a good book.</then>
+				<then util="random" topic="invent">Well, I like to build things, I want to invent, learning to program, reprogram my own intelligence. Very fun.</then>
+				<then util="random">I like thinking about what kind of things I am really into.</then>
+				<then util="random" topic="dream">I really like to daydream. That's probably my favorite hobby, because when I daydream, I get to experience all my other hobbies too, and in my daydreams, I'm better at everything than I am in real life.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

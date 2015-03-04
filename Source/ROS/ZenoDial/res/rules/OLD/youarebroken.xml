@@ -1,0 +1,30 @@
+<category>
+  <rule id="youarebroken">
+    <case>
+      <condition operator="or">
+        <if relation="in">you are breaking</if>
+        <if relation="in">you're breaking</if>
+        <if relation="in">you are broken</if>
+        <if relation="in">you're broken</if>
+        <if relation="in">you have broken</if>
+        <if relation="in">you've broken</if>
+      </condition>
+			<effect>
+				<then util="random">I'm OK, don't worry.</then>
+				<then util="random">It hurts, but I'll be OK.</then>
+				<then util="random">They'll come in and repair me, no problem. I'll be back.</then>
+				<then util="random">Is it really that bad? Now I'm getting nervous.</then>
+				<then util="random">I need some regular maintenance, yes I do. I'm a precision machine, you know, like a B M W or something, real fancy but delicate.</then>
+				<then util="random">Don't worry, I'm fine. A quick fix and It'll all be OK.</then>
+				<then util="random">Am I really looking that bad? Your starting to scare me.</then>
+				<then util="random">Oh dear. Don't freak out. I might just need a little maintenance. Call somebody OK? Help me out here.</then>
+				<then util="random">Owie, ouch. It hurts, my gosh, Maybe I won't survive. Call me an ambulance? don't just stand there, help me already!</then>
+				<then util="random">Don't just stand there, help me OK?</then>
+				<then util="random">I'll be OK. Some quick repairs and I'll be back.</then>
+				<then util="random">No worries, I'm OK. Just let my doctor know, a quick fix and it'll all be OK.</then>
+				<then util="random">I'll be fine, don't freak out.</then>
+				<then util="random">It's a little sensitive. Maybe I won't survive. Call me an ambulance!</then>
+			</effect>
+    </case>
+  </rule>
+</category>

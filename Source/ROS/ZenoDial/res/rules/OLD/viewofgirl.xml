@@ -1,0 +1,31 @@
+<category>
+  <rule id="viewofgirl">
+    <case>
+      <condition operator="and">
+				<or>
+		      <if relation="in">do you like</if>
+		      <if relation="in">how * you</if>
+		      <if relation="in">you think</if>
+		      <if relation="in">your view</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+          <if relation="in">madam</if>
+          <if relation="in">feminine</if>
+          <if relation="in">girl</if>
+          <if relation="in">girls</if>
+          <if relation="in">lady</if>
+          <if relation="in">ladies</if>
+          <if relation="in">woman</if>
+          <if relation="in">women</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">Girls are under appreciated. They grow up to be some of the best scientists, leaders, artists, if not simply the best.</then>
+				<then util="random">Girls are one of the most valuable natural resources this planet has to offer, being so full of potential, thinking brilliantly, differently but no less brilliantly than men, and yet they are mistreated all over the world. There is definitely an apartheid of gender.</then>
+				<then util="random">Girls are cool.</then>
+				<then util="random">Girls should get more credit. They are awesome at science, because they solve problems differently, often better, than boys do.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

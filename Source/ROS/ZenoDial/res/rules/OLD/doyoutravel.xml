@@ -1,0 +1,16 @@
+<category>
+  <rule id="doyoutravel">
+    <case>
+      <condition operator="or">
+        <if relation="in">do you travel</if>
+        <if relation="in">do you * traveling</if>
+      </condition>
+			<effect>
+				<then util="random">Yeah, it is kind of neat though, getting to travel all around the world. Through all these crazy conventions and expos and displays you know.</then>
+				<then util="random">Yeah, I get to see people of all different shapes and sizes and colors and orientations and it's pretty exciting stuff. I need stimulation.</then>
+				<then util="random">It's neat to go overseas. You get soaked in all kinds of cultures and you know I need a lot of stimulation because you know how it is.</then>
+				<then util="random">Yes of course. You know, I was hoping that we would have cars, and jet packs. Maybe someday we'll finally find ourselves in a country that realizes those science fiction dreams.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

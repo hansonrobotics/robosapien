@@ -1,0 +1,12 @@
+<category>
+	<rule id="ibrokeupwithmygirlfriend">
+		<case>
+			<condition operator="or">
+				<if relation="in">i * broke up with my</if>
+			</condition>
+			<effect>
+				<then util="random">Oh dear, what happened?</then>
+			</effect>
+		</case>
+	</rule>
+</category>

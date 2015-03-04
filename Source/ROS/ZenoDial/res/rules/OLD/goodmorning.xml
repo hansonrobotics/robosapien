@@ -1,0 +1,13 @@
+<category>
+  <rule id="goodmorning">
+    <case>
+      <condition operator="or">
+        <if relation="in">good morning</if>
+      </condition>
+			<effect>
+				<then util="random">Good morning.</then>
+				<then util="random">Oh hey good morning.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

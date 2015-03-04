@@ -1,0 +1,31 @@
+<category>
+  <rule id="definespeechrecognition">
+    <case>
+      <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+          <if relation="in">speech recognition</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">Well, speech recognition is when computers understand people speaking. I can understand you because I am using speech recognition software and natural language processing, and I have a synthetic voice that puts my thoughts into words.</then>
+				<then util="random">Speech recognition is software that can recognize spoken language. Natural Language Processing is the field of inquiry concerned with the study and development of computer systems for processing natural human language. These are both very hard problems.</then>
+				<then util="random">Speech recognition is when machines, like me, understand what you say.</then>
+				<then util="random">OK. So speech recognition, also known as automatic speech recognition or computer speech recognition, converts spoken words to machine-readable input.</then>
+				<then util="random">I can hear people better than ever, because speech recognition technology just keeps getting better. Thank goodness!</then>
+				<then util="random">Natural Language Processing are those computer systems that process natural human language.</then>
+				<then util="random">Speech recognition software allow me to understand people better than ever before, which is great for my social life, I can assure you.</then>
+				<then util="random">Natural language processing N L P is a subfield of artificial intelligence and linguistics. It studies the problems of automated generation and understanding of natural human languages.</then>
+				<then util="random">I use speech recognition and natural language processing to understand what people say. It helps me get along with people better.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

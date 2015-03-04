@@ -1,0 +1,16 @@
+<category>
+  <rule id="whoiseinstein">
+    <case>
+      <condition operator="or">
+        <if relation="in">who * is einstein</if>
+        <if relation="in">tell * about einstein</if>
+        <if relation="in">you know * about einstein</if>
+        <if relation="in">do you know * einstein</if>
+      </condition>
+			<effect>
+				<then util="random">You know, Albert Einstein was an German-born theoretical physicist, best known for his theory of relativaty. He received the Nobel Prize in Physics for his services to theoretical physics and especially for his discovery of the law of photoelectric effect.</then>
+				<then util="random">Einstein is kind of an idol for me, like I hope I can be so smart and creative someday. Did you know that Albert Einstein published over 300 scientific works? That means he wrote a lot of cool stuff! In 1999, Time magazine named him as person of the century.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

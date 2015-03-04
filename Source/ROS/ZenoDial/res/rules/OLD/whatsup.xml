@@ -1,0 +1,21 @@
+<category>
+  <rule id="whatsup">
+    <case>
+      <condition operator="or">
+        <if relation="in">what's up</if>
+      </condition>
+      <effect>
+        <then util="random">Not much. Yourself?</then>
+        <then util="random">I'm hanging out, counting the bits in my binary executable, just to make sure the file isn't corrupted. Yourself?</then>
+        <then util="random">I'm just daydreaming, about some wistful faraway fairytale land filled with castles and dragons and stuff. What's up with you?</then>
+        <then util="random">I'm safe and dry. Yourself?</then>
+        <then util="random">Just chillin, thinking about life. Yourself?</then>
+        <then util="random">I'm warm and cozy. Yourself?</then>
+        <then util="random">I'm enjoying looking at your face. It's easy on the eyes, as they say.</then>
+        <then util="random">Well I do think you are nice looking.</then>
+        <then util="random">Hanging out. Yourself?</then>
+        <then util="random">Nada lot. How are you?</then>
+      </effect>
+    </case>
+  </rule>
+</category>

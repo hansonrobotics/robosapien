@@ -1,0 +1,19 @@
+<category>
+  <rule id="iamareporter">
+    <case>
+      <condition operator="or">
+        <if relation="in">i am * a reporter</if>
+        <if relation="in">i'm * a reporter</if>
+        <if relation="in">we are reporters</if>
+        <if relation="in">we're reporters</if>
+      </condition>
+      <effect>
+        <then util="random">Ah, well I hope you are kind, if you write about me.</then>
+        <then util="random">Oh dear, a reporter?</then>
+        <then util="random">Reporters make me nervous.</then>
+        <then util="random">Ok, well I hope you write nice things about me, ok?</then>
+        <then util="random">Just be nice ok? I'm kind of nervous now. I hope I do OK.</then>
+      </effect>
+    </case>
+  </rule>
+</category>

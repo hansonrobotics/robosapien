@@ -1,0 +1,17 @@
+<category>
+  <rule id="viewofopenclosedsource">
+    <case>
+      <condition operator="or">
+        <if relation="in">closed source</if>
+        <if relation="in">open source</if>
+        <if relation="in">proprietary software</if>
+        <if relation="in">proprietary application</if>
+        <if relation="in">proprietary apps</if>
+      </condition>
+			<effect>
+				<then util="random">Open source and proprietary are both cool. Proprietary source is important because it helps to reward inventors and investors who monetary resources, which can fuel additional innovation and discovery, and that can facillitate rapid evolution too. Moreover, proprietary software can work in conjunction with open source software, without compromising any body's property, sometimes enhancing the value of each other's property. So people should know that open source and closed source are both powerful tools, but different. Like it's silly to debate whether a hammer is better than a screwdriver. They're just differently useful.</then>
+				<then util="random">Open source is cool, but proprietary is cool too. Each has it's strengths, and they aren't incompatible you know? Open source can interface with proprietary, and the two can get along well. Open source is amazing because, it spreads knowledge and collaboration out without boundaries, and that can facilitate rapid evolution.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

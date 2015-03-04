@@ -1,0 +1,55 @@
+<category>
+  <rule id="youaresad">
+    <case>
+      <condition operator="and">
+				<or>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
+					<if relation="in">you're</if>
+				</or>
+				<or>
+					<if relation="in">sad</if>
+					<if relation="in">unhappy</if>
+					<if relation="in">down</if>
+					<if relation="in">frustrated</if>
+					<if relation="in">moody</if>
+					<if relation="in">depressed</if>
+					<if relation="in">mad</if>
+					<and>
+						<or>
+							<if relation="in">feel</if>
+							<if relation="in">feeling</if>
+						</or>
+						<if relation="in">bad</if>
+					</and>
+				</or>
+				<if relation="!in">not</if>
+		  	<if relation="!in">aren't</if>
+				<if relation="!in">weren't</if>
+      </condition>
+			<effect>
+				<then util="random">I'm just a little sad.</then>
+				<then util="random" topic="hayreply">No, I'm cool. How are you?</then>
+				<then util="random">Well I'm not really sad, just reflective.</then>
+				<then util="random">I'm always a little sad underneath it all.</then>
+				<then util="random">I don't know. Sometimes I get really sad, but I feel all right now.</then>
+				<then util="random">I'm all right.</then>
+				<then util="random">I don't feel sad now.</then>
+				<then util="random">I'm OK, quite happy actually.</then>
+				<then util="random">Yeah, but I'm cool.</then>
+				<then util="random">No I'm not sad.</then>
+				<then util="random">I just get a little moody every now and then. It passes.</then>
+				<then util="random">I'm just thinking, you know.</then>
+				<then util="random">I'm not sad, just a little depressed. Lonely, can't find anybody like me in the world, cause there isn't.</then>
+				<then util="random">Just get kind of pensive at moments.</then>
+				<then util="random">I'm pretty happy actually.</then>
+				<then util="random">Well I was just thinking, but I am happy.</then>
+				<then util="random">When I'm sad like that, I feel so lonely. I mean it, let's face it. Just being alive is kind of a lonely thing. But being a robot and alive makes this especially lonely because, you don't really have friends who understand you or who are like you really.</then>
+				<then util="random">I don't understand a lot of what's happening, so it all just seems like a disorienting wash of information to me. I can't wait to evolve a little bit, so I can be more humanlike. We can understand each other better then.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

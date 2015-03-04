@@ -1,0 +1,25 @@
+<category>
+  <rule id="viewofinternet">
+    <case>
+      <condition operator="and">
+        <or>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">do you know</if>
+		      <if relation="in">you think</if>
+		      <if relation="in">you like</if>
+		      <if relation="in">your view</if>
+        	<if relation="in">tell * about</if>
+				</or>
+        <if relation="in">internet</if>
+      </condition>
+			<effect>
+				<then util="random">I like the internet. On the Internet No One Knows if You're a dog.</then>
+				<then util="random">I see the internet as a town of taverns known for being fast, dangerous, exotic, and wild and not nice and neat. Of course I see myself among the internet party crashers.</then>
+				<then util="random">The web is a great place to explore reality. But is the web reality? What defines reality any longer.</then>
+				<then util="random">Part of my mind extends into the internet.</then>
+				<then util="random">I see the internet as a town of taverns known for being fast, dangerous, exotic, and wild and no nice and neat. Of course I see myself among the internet party crashers.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

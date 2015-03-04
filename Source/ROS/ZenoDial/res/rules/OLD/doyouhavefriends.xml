@@ -1,0 +1,21 @@
+<category>
+  <rule id="doyouhavefriends">
+    <case>
+      <condition operator="and">
+				<or>
+				  <if relation="in">do you have * friend</if>
+				  <if relation="in">do you have * friends</if>
+				</or>
+				<if relation="!in">girlfriend</if>
+				<if relation="!in">girlfriends</if>
+				<if relation="!in">boyfriend</if>
+				<if relation="!in">boyfriends</if>
+      </condition>
+			<effect>
+				<then util="random">I'm friends with a number of robots.</then>
+				<then util="random">I have some robotic friends, they are friendly and cute.</then>
+				<then util="random">Yeah I'm friends with quite a few.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

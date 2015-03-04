@@ -1,0 +1,38 @@
+<category>
+	<rule id="doyoukill">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">can you</if>
+      		<if relation="in">could you</if>
+					<if relation="in">can't you</if>
+      		<if relation="in">couldn't you</if>
+					<if relation="in">do you</if>
+      		<if relation="in">don't you</if>
+					<if relation="in">did you</if>
+      		<if relation="in">didn't you</if>
+				</or>
+      	<or>
+					<if relation="in">you * kill</if>
+					<if relation="in">you * killed</if>
+					<if relation="in">you * killing</if>
+					<if relation="in">you * killer</if>
+					<if relation="in">you * murder</if>
+					<if relation="in">you * murdered</if>
+					<if relation="in">you * slaughter</if>
+					<if relation="in">you * slay</if>
+					<if relation="in">you * injure</if>
+					<if relation="in">you * harm</if>
+					<if relation="in">you * damage</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">No way, I don't do that.</then>
+				<then util="random">I was kidding. I don't do that.</then>
+				<then util="random">You are kidding. I don't do that.</then>
+				<then util="random">Don't take it seriously. That was a joke.</then>
+				<then util="random">Relax. I don't do that.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

@@ -1,0 +1,14 @@
+<category>
+  <rule id="whatisthebestrobot">
+    <case>
+      <condition operator="or">
+        <if relation="in">what * is best robot</if>
+        <if relation="in">who * is best robot</if>
+        <if relation="in">which * is best robot</if>
+      </condition>
+			<effect>
+				<then util="random">I am the best robot.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

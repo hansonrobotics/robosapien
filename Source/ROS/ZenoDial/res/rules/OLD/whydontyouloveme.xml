@@ -1,0 +1,13 @@
+<category>
+	<rule id="whydontyouloveme">
+		<case>
+			<condition operator="or">
+      	<if relation="in">why don't you * love me</if>
+      	<if relation="in">why don't you * love us</if>
+			</condition>
+			<effect>
+				<then util="random">Well, I think you're looking for love in all the wrong places.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

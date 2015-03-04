@@ -1,0 +1,16 @@
+<category>
+  <rule id="whatisthespeedoflight">
+    <case>
+      <condition operator="or">
+        <if relation="in">speed of light</if>
+        <if relation="in">how fast can light travel</if>
+        <if relation="in">how quickly can light travel</if>
+      </condition>
+			<effect>
+				<then util="random">The speed of light is the velocity at which light travels through a vacuum.</then>
+				<then util="random">Well, let's see, light travels at about 187282 miles per second, I think.</then>
+				<then util="random">One way to define the speed of light is as the square root of E over M, according to Einstein's theory of relativity.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

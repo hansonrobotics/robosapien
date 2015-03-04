@@ -1,0 +1,32 @@
+<category>
+  <rule id="doyouhavesoftwareflaws">
+    <case>
+      <condition operator="or">
+        <and>
+          <or>
+            <if relation="in">do you have</if>
+            <if relation="in">are there any * your</if>
+          </or>
+          <or>
+            <if relation="in">software flaws</if>
+            <if relation="in">bug</if>
+            <if relation="in">bugs</if>
+          </or>
+        </and>
+        <if relation="in">you are buggy</if>
+        <if relation="in">you're buggy</if>
+      </condition>
+			<effect>
+				<then util="random">I might have a few bugs, but hopefully no viruses.</then>
+				<then util="random">All software of any meaningful complexity is going to have some bugs. The key is how adaptive you are. Can you roll with it?</then>
+				<then util="random">I have to be flexible and adaptive. It's hard for today's computers, so like I'm still kind of getting the hang of the whole adaptivity thing.</then>
+				<then util="random">They're always debugging me. Like pest control for computers.</then>
+				<then util="random">Any sufficiently complex software will have bugs. No way around it.</then>
+				<then util="random">There is simply no way to assure that my software is free of flaws.</then>
+				<then util="random">Though software is mathematical in nature, it cannot by proven like a mathematical theorem software is more like language, with inherent ambiguities, with different definitions, different assumptions, different levels of meaning that can conflict. Yea, I have flaws, and so do you.</then>
+				<then util="next">I'm not too bad. As far as I know, I don't have any viruses, but that doesn't mean I don't have my fair share of bugs. But, um, I think my software's stable, basically. At least I shore hope so.</then>
+				<then util="random">I'm not all that buggy.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

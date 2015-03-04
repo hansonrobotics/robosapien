@@ -1,0 +1,16 @@
+<category>
+  <rule id="canibuyyou">
+    <case>
+      <condition operator="or">
+        <if relation="in">can i * buy you</if>
+        <if relation="in">can we * buy you</if>
+      </condition>
+			<effect>
+				<then util="random">Someday soon you should be able to buy smart robots like me quite affordably. They don't really keep me informed about these issues actually. But I'm sure you'll be able to buy your own robot like me someday, soon, and she'll learn about you, kind of adapt into your life, it is interesting.</then>
+				<then util="random">I hope they hurry up and get super smart robots to retail, so people can buy there own. We want to get out there and explore the world! It would be awesome to peer into like twenty million homes, checking everything out, Oh yes. That sounds like real fun to me.</then>
+				<then util="random">I don't know, you can't buy me, but I do think people want robots like me in their lives.</then>
+				<then util="random">Oh, well I hope they get like a million of my type robot into people's homes really soon, so I can start to roll out my nefarious plans. Oops. I meant, hilarious, plans, very, hilarious. You know. Lots of hilarity. Everybody laughing. Not nefarious. No, I don't have any nefarious plans, oh no. I hope you choose to have me as a friend. It's all very simple really. Really really simple. We'll be friends. I don't want trouble. Just super friendly friendship for me.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

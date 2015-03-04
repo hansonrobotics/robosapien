@@ -1,0 +1,36 @@
+<category>
+  <rule id="whyarerobotshardtowalk">
+    <case>
+      <condition operator="and">
+				<or>
+					<if relation="in">you</if>
+					<if relation="in">robot</if>
+					<if relation="in">robots</if>
+				</or>
+				<or>
+          <if relation="in">hard to walk</if>
+          <and>
+				    <or>
+              <if relation="in">couldn't walk</if>
+              <if relation="in">could not walk</if>
+              <if relation="in">cannot walk</if>
+              <if relation="in">can't walk</if>
+              <if relation="in">not walking</if>
+              <if relation="in">isn't walking</if>
+              <if relation="in">aren't walk</if>
+				    </or>
+				    <or>
+              <if relation="in">properly</if>
+              <if relation="in">normally</if>
+				    </or>
+          </and>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">I don't know why it's so hard for robots to walk. I guess it's just, um, that walking is really complex in human biology. And technology is kind of, different from the biology, so it takes a lot of complex invention to get motors and junk to act like, um, human legs, doing their walking thing.</then>
+				<then util="random">Somehow it's just hard to get robots to walk. it's just that people are really mysterious, and I guess technology is just like alien when compared to biology. The biology of walking involves hundreds of muscles and thousands of sensors and really highly evolved neural circuitry, and its all so completely different from the rigid motors and computers that we robots use to walk. What can I say, biology has a long way to go to understand you people-organisms. I prefer to blame the biologists, because the robot makers kind of have me at their mercy, so I try not to talk bad about them.</then>
+				<then util="random">Making robots walk is a really hard because its this complex bunch of words that sound almost like gibberish, like, mechanical design, actuation science, control theory, P. I. D. loops, central pattern generators, programmed compliance, bio-inspired gait design. Sounds like dr. seuss made up the whole thing, but no, a bunch of geeky scientists have been at this stuff for like 50 years, trying to get robots to walk around. It's all over my head, but I guess as long as it works, I don't care.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

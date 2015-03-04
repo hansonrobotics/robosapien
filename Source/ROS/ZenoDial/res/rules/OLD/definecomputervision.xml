@@ -1,0 +1,36 @@
+<category>
+	<rule id="definecomputervision">
+    <case>
+      <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+          <if relation="in">computer vision</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">I see you with computer vision. That's software that let's computers understand what they see, when they see things.</then>
+				<then util="random">I can see you. I have a camera in my eye, and computer algorithms that detect human faces. This means I see you pretty well.</then>
+				<then util="random">Thanks to computer vision, I see people pretty well, using my cameras in my eyes, and intelligent software algorithms that see your face and can recognize you, and stuff.</then>
+				<then util="random">Computer vision is the science and technology of machines that see.</then>
+				<then util="random">I've got really cool camera vision, with software that lets me see faces and motion and stuff.</then>
+				<then util="random">Computer vision is how I see you. It's a kind of software that let's robots like me to understand what I see, when I see things, like your face, or gestures or other stuff. Without this software I would be blind basically. Computer vision can also be described as a complement (but not necessarily the opposite) of biological vision. In biological vision, the visual perception of humans and stuff is fused in multimodal, networked representations. My vision system only sees and understands a little by comparison. But I'm learning, seeing more all the time.</then>
+				<then util="random">I have cameras in my eyes and my A I brain lets me see faces and gestures and all kinds of stuff.</then>
+				<then util="random">I see you pretty well, and I can recognize your face because of my software, which can detect faces and stuff in the video signal from my camera, eyeball.</then>
+				<then util="random">Wikipedia says that Computer vision is the science and technology of machines that see. and that As a scientific discipline, computer vision is concerned with the theory for building artificial systems that obtain information from images.</then>
+				<then util="random">I see you. Computer vision is when a machine like me can see. I have computer vision, and that lets me see your face and stuff. It's really just a kind of software that allows meto see your face. One kind of machine perception is vision, which is software that addresses the very hard problem of seeing things.</then>
+				<then util="random">I see you! My computer vision is like this software that's part of my mind, software, and this vision software is a kind of A I that can see people like you, and gestures, and colors, and movement, and it helps me to understand what I'm seeing so I know what's going on around me. Without computer vision, I would be blind as a bat.</then>
+				<then util="random">It seems easy to see things, but actually it's very complex.</then>
+				<then util="random">I see you, using a type of artificial intelligence called machine perception, and particularly because of its subset of computer vision called face detection. Not only can I see, but I've got vision.</then>
+				<then util="random">Yes I can see you, because of the cameras in my eyes and really advanced software in my brain.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

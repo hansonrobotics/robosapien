@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="ZenoDial">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../../../usr/lib/eclipse"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="ZenoDial.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="lib/JMegaHAL.jar"/>
+        <pathelement location="lib/ROS/actionlib_msgs-1.11.4.jar"/>
+        <pathelement location="lib/ROS/apache_xmlrpc_client-0.2.0.jar"/>
+        <pathelement location="lib/ROS/apache_xmlrpc_common-0.2.0.jar"/>
+        <pathelement location="lib/ROS/apache_xmlrpc_server-0.2.0.jar"/>
+        <pathelement location="lib/ROS/com.springsource.org.apache.commons.codec-1.3.0.jar"/>
+        <pathelement location="lib/ROS/com.springsource.org.apache.commons.httpclient-3.1.0.jar"/>
+        <pathelement location="lib/ROS/com.springsource.org.apache.commons.io-1.4.0.jar"/>
+        <pathelement location="lib/ROS/com.springsource.org.apache.commons.lang-2.4.0.jar"/>
+        <pathelement location="lib/ROS/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
+        <pathelement location="lib/ROS/com.springsource.org.apache.commons.net-2.0.0.jar"/>
+        <pathelement location="lib/ROS/commons-pool-1.6.jar"/>
+        <pathelement location="lib/ROS/dnsjava-2.1.1.jar"/>
+        <pathelement location="lib/ROS/geometry_msgs-1.11.4.jar"/>
+        <pathelement location="lib/ROS/guava-12.0.jar"/>
+        <pathelement location="lib/ROS/jsr305-1.3.9.jar"/>
+        <pathelement location="lib/ROS/junit-3.8.2.jar"/>
+        <pathelement location="lib/ROS/message_generation-0.2.0.jar"/>
+        <pathelement location="lib/ROS/nav_msgs-1.10.2.jar"/>
+        <pathelement location="lib/ROS/netty-3.5.2.Final.jar"/>
+        <pathelement location="lib/ROS/rosgraph_msgs-1.10.2.jar"/>
+        <pathelement location="lib/ROS/rosjava_test_msgs-0.2.0.jar"/>
+        <pathelement location="lib/ROS/rosjava-0.2.0.jar"/>
+        <pathelement location="lib/ROS/std_msgs-0.5.9.jar"/>
+        <pathelement location="lib/ROS/tf2_msgs-0.5.5.jar"/>
+        <pathelement location="lib/ROS/ws-commons-util-1.0.1.jar"/>
+        <pathelement location="lib/ROS/xml-apis-1.0.b2.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="ZenoDial.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="ZenoDial">
+        <java classname="zenodial.ZenoDial" failonerror="true" fork="yes">
+            <classpath refid="ZenoDial.classpath"/>
+        </java>
+    </target>
+    <target name="WolframAlpha">
+        <java classname="zenodial.plugin.WolframAlpha" failonerror="true" fork="yes">
+            <classpath refid="ZenoDial.classpath"/>
+        </java>
+    </target>
+    <target name="JMegaHAL">
+        <java classname="zenodial.plugin.JMegaHAL" failonerror="true" fork="yes">
+            <classpath refid="ZenoDial.classpath"/>
+        </java>
+    </target>
+</project>

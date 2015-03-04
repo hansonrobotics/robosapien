@@ -1,0 +1,32 @@
+<category>
+	<rule id="knockknock">
+		<case>
+			<condition operator="or">
+      	<if relation="in">knock knock</if>
+			</condition>
+			<effect>
+				<then util="random" topic="knockknockreply1">Who's there?</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#knockknockreply1">
+		<case>
+			<condition operator="or">
+      	<if relation="in">{utterance}</if>
+			</condition>
+			<effect>
+				<then util="random" topic="knockknockreply2">{utterance} who?</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#knockknockreply2">
+		<case>
+			<condition operator="or">
+      	<if relation="in">{utterance}</if>
+			</condition>
+			<effect>
+				<then util="random" topic="knockknockreply2">Haha very funny!</then>
+			</effect>
+		</case>
+	</rule>
+</category>

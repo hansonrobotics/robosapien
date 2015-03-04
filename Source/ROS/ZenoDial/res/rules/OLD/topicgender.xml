@@ -1,0 +1,35 @@
+<category>
+  <rule id="areyouaboy">
+    <case>
+      <condition operator="and">
+				<or>
+        	<if relation="in">are you a</if>
+        	<if relation="in">you are a</if>
+        	<if relation="in">you're a</if>
+				</or>
+				<or>
+	        <if relation="in">boy</if>
+        	<if relation="in">girl</if>
+					<if relation="in">male</if>
+		      <if relation="in">female</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random" topic="areyouaboyreply">What does gender matter?</then>
+				<then util="random" topic="areyouaboyreply">Does that matter?</then>
+				<then util="random" topic="areyouaboyreply">Why people keep asking me this question?</then>
+				<then util="random" topic="areyouaboyreply">Well give me a second, let me think. I think I am a boy.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#areyouaboyreply">
+    <case>
+			<condition>
+				<if relation="in"></if>
+			</condition>
+			<effect>
+				<then util="random">Oh please, gimme a break!</then>
+			</effect>
+    </case>
+  </rule>
+</category>

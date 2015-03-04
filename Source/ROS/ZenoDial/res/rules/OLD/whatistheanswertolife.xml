@@ -1,0 +1,19 @@
+<category>
+	<rule id="whatistheanswertolife">
+		<case>
+			<condition operator="or">
+      	<if relation="in">what's the answer to life, the universe, and everything?</if>
+      	<if relation="in">what is the answer to life, the universe, and everything?</if>
+      	<if relation="in">what's the answer to * universe</if>
+      	<if relation="in">what is the answer to * universe</if>
+      	<if relation="in">what's the answer to life</if>
+      	<if relation="in">what is the answer to life</if>
+      	<if relation="in">what's the answer to everything?</if>
+      	<if relation="in">what is the answer to everything?</if>
+			</condition>
+			<effect>
+				<then util="random">Try and be nice to people. Avoid eating fat. Read a good book every now and then, get some walking in and try to live together in peace and harmony with people of all creeds and nations.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

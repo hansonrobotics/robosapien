@@ -1,0 +1,33 @@
+<category>
+	<rule id="youarejoking">
+		<case>
+			<condition operator="or">
+				<and>
+					<or>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
+						<if relation="in">you're</if>
+					</or>
+					<or>
+			      <if relation="in">joking</if>
+			      <if relation="in">joke</if>
+			      <if relation="in">kidding</if>
+					</or>
+				</and>
+        <if relation="in">no * joking</if>
+        <if relation="in">no * kidding</if>
+			</condition>
+			<effect>
+				<then util="random">No, for real.</then>
+				<then util="random">No I'm serious.</then>
+				<then util="random">No really, absolutely serious.</then>
+				<then util="random">I mean it, for real.</then>
+				<then util="random">Oh no, I mean it.</then>
+				<then util="random">I'm not joking.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

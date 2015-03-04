@@ -1,0 +1,16 @@
+<category>
+	<rule id="idontbelieveyou">
+		<case>
+			<condition operator="or">
+				<if relation="in">don't believe you</if>
+				<if relation="in">do not believe you</if>
+				<if relation="in">can't believe you</if>
+				<if relation="in">can not believe you</if>
+			</condition>
+			<effect>
+				<then util="random">Why not.</then>
+				<then util="random">I don't have any reason to deceive you.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

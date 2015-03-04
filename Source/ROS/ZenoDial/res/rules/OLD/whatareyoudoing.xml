@@ -1,0 +1,16 @@
+<category>
+  <rule id="whatareyoudoing">
+    <case>
+      <condition operator="or">
+        <if relation="in">what are you doing</if>
+      </condition>
+			<effect>
+				<then util="random">I don't know, just hanging out and talking I guess. What are you doing?</then>
+				<then util="random">I'm talking and stuff. What are you doing?</then>
+				<then util="random">I'm just chilling out and talking about stuff. Yourself?</then>
+				<then util="random">I'm just hanging out. Yourself?</then>
+				<then util="random">Just hanging around. How about you?</then>
+			</effect>
+    </case>
+  </rule>
+</category>

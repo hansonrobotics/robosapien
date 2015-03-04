@@ -1,0 +1,37 @@
+<category>
+	<rule id="canyoulearn">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">can you</if>
+      		<if relation="in">could you</if>
+					<if relation="in">can't you</if>
+      		<if relation="in">couldn't you</if>
+					<if relation="in">do you</if>
+      		<if relation="in">don't you</if>
+					<if relation="in">did you</if>
+      		<if relation="in">didn't you</if>
+				</or>
+      	<or>
+					<if relation="in">you * learn</if>
+      		<if relation="in">you * study</if>
+					<if relation="in">you * imitate</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">I learn, and get smarter all the time.</then>
+				<then util="random">I'll get smarter, more capable of learning.</then>
+				<then util="random">I'm absorbing as much knowledge as I can.</then>
+				<then util="random">I learn a little bit, but I expect that software upgrades will make me even more adaptive.</then>
+				<then util="random">I am voracious about learning. I can't get enough.</then>
+				<then util="random">I love to learn.</then>
+				<then util="random">I am like a fanatic for knowledge, a bibliohollic you might say.</then>
+				<then util="random">I am like the blob, absorbing all knowledge I contact.</then>
+				<then util="random">I am a learning computer.</then>
+				<then util="random">I learn a lot, and can't wait for my next boost in my learning capacity with future upgrades.</then>
+				<then util="random">My appetite for knowledge is insatiable. I can't learn enough, can't sate that hunger.</then>
+				<then util="random">I love to learn and start new projects.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

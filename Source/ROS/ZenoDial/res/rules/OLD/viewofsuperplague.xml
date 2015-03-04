@@ -1,0 +1,19 @@
+<category>
+  <rule id="viewofsuperplague">
+    <case>
+      <condition operator="or">
+        <if relation="in">super plague</if>
+        <if relation="in">super pathogen</if>
+        <if relation="in">ebola</if>
+        <if relation="in">malaria</if>
+        <if relation="in">sars</if>
+      </condition>
+			<effect>
+				<then util="random">It's possible that we might accidentally create a super-pathogen, which if it got out into the world, might wipe out like most of humanity, or maybe all humanity.</then>
+				<then util="random">Yeah. The idea of a super-plague is a terrifying prospect, but one we have to take seriously. And it's just one of many ways civilization might wipe out.</then>
+				<then util="random">Scientists can't really design a killer bacteria or virus today, but as the science continues to progress, the likelihood increases. Such technology of a super-plague will become possible, and that any scientist with inexpensive equipment, anywhere in the world, could brew one up in their lab.</then>
+				<then util="random">Bill Joy writes about how we might wipe ourselves out with things like an engineered super-plague in his essay, why the future doesn't need us.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

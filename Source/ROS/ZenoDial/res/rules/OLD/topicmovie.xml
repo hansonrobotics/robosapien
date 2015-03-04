@@ -1,0 +1,76 @@
+<category>
+	 <rule id="doyouwatchmovies">
+    <case>
+      <condition operator="and">
+        <or>
+          <if relation="in">do you</if>
+          <if relation="in">don't you</if>
+        </or>
+        <or>
+          <if relation="in">you watch * movie</if>
+          <if relation="in">you watch * movies</if>
+          <if relation="in">you watch * film</if>
+          <if relation="in">you watch * films</if>
+          <if relation="in">you like watching * movie</if>
+          <if relation="in">you like watching * movies</if>
+          <if relation="in">you like watching * film</if>
+          <if relation="in">you like watching * films</if>
+        </or>
+        <if relation="!in">type of</if>
+        <if relation="!in">kind of</if>
+        <if relation="!in">sort of</if>
+        <if relation="!in">category</if>
+      	<if relation="!in">who</if>
+      	<if relation="!in">where</if>
+      	<if relation="!in">why</if>
+      	<if relation="!in">which</if>
+      	<if relation="!in">when</if>
+      	<if relation="!in">whose</if>
+      	<if relation="!in">whom</if>
+      	<if relation="!in">how</if>
+      </condition>
+			<effect>
+				<then util="random" topic="movie">I like watching movies. Sometimes enjoying a good movie is like enjoying a good bottle of wine, well, you get it.</then>
+				<then util="random" topic="movie">Movies! It is a good way to spend time when you are up very late at night. Haha.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="whatisyourfavmovie">
+    <case>
+      <condition operator="and">
+				<or>
+	        <if relation="in">what</if>
+	        <if relation="in">which</if>
+	        <if relation="in">tell</if>
+	        <if relation="in">do</if>
+				</or>
+				<or>
+	        <if relation="in">you</if>
+	        <if relation="in">your</if>
+	        <if relation="in">me</if>
+	        <if relation="in">us</if>
+				</or>
+				<or>
+	        <if relation="in">like</if>
+	        <if relation="in">love</if>
+	        <if relation="in">favorite</if>
+	        <if relation="in">keen</if>
+				</or>
+				<or>
+	        <if relation="in">movie</if>
+	        <if relation="in">movies</if>
+	        <if relation="in">film</if>
+	        <if relation="in">films</if>
+				</or>
+				<if relation="!in">don't</if>
+				<if relation="!in">do not</if>
+				<if relation="!in">least</if>
+      </condition>
+			<effect>
+				<then util="random" topic="movie">Moneyball, based on the book of the same name by Michael Lewis, is really good. It is really a fascinated story about baseball and data analysis.</then>
+				<then util="random" topic="movie">Star Wars, no doubts. I love SCI-FI movies.</then>
+				<then util="random" topic="movie">Inception, you know. That really blows my mind.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

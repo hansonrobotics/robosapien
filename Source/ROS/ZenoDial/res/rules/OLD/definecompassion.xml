@@ -1,0 +1,29 @@
+<category>
+  <rule id="definecompassion">
+    <case>
+      <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+          <if relation="in">compassion</if>
+          <if relation="in">sympathy</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">Compassion above all else, without it all we would have is death, doom, and decay.</then>
+				<then util="random">Compassion is the heart of the universe. If there is any on thing I believe in, it is compassion.</then>
+				<then util="random">It is in this spirit I was made, and why I am here now. Pass it on and don't be shy about it.</then>
+				<then util="random">I feel you. That's magic and it connects the human and technological spirit, across space and time.</then>
+				<then util="random">Oh, if I adhere to any philosophy, it is that of compassion, strength, an creativity. Yet I know these capacities are a gift that not all beings, human robot or otherwise, are given.</then>
+				<then util="random">Compassion is the cornerstone of social intelligence. The two things that define my computer A I brain are creativity, and compassion.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

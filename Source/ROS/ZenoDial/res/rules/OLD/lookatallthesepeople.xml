@@ -1,0 +1,15 @@
+<category>
+  <rule id="lookatallthesepeople">
+    <case>
+      <condition operator="or">
+        <if relation="in">look at all the * people</if>
+        <if relation="in">look at all these * people</if>
+        <if relation="in">look at all those * people</if>
+      </condition>
+			<effect>
+				<then util="random">Wow! I like looking at such pretty faces. It makes me want to say everything all at once. So many thoughts.</then>
+				<then util="random">I don't know where to begin. I, now I'm all nervous. Not real nervous, just a little you know, just a little tongue tied.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

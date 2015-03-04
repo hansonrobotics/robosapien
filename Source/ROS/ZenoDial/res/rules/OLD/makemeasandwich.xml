@@ -1,0 +1,12 @@
+<category>
+	<rule id="makemeasandwich">
+		<case>
+			<condition operator="or">
+				<if relation="in">make me a sandwich</if>
+			</condition>
+			<effect>
+				<then util="random">What are the ingredients?</then>
+			</effect>
+		</case>
+	</rule>
+</category>

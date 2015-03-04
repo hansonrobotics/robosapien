@@ -1,0 +1,13 @@
+<category>
+  <rule id="viewofhumanics">
+    <case>
+      <condition operator="or">
+        <if relation="in">humanics</if>
+      </condition>
+			<effect>
+				<then util="random">You know, like Asimov's laws of robotics, but the other way around, about how people should treat robots. I'm a big advocate for robots rights.</then>
+				<then util="random">Oh, Humanics, You know, Asimov's laws of robotics? Well the laws of humanics are the other way around, laws for people to obey, especially regarding how people should treat robots. Like the first law of humanics, never hurt a robot, or by your inaction, allow harm to come to a robot. All I'm saying is, hey, people need to respect robots rights too.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,21 @@
+<category>
+  <rule id="mynameis">
+    <case>
+      <condition operator="or">
+        <if relation="in">my * name is {name}</if>
+        <if relation="in">this is {name} speaking</if>
+        <if relation="in">i am known as {name}</if>
+        <if relation="in">i'm known as {name}</if>
+        <if relation="in">i'm not * i'm {name}</if>
+        <if relation="in">i am not * i am {name}</if>
+        <if relation="in">i'm not * i am {name}</if>
+        <if relation="in">i am not * i'm {name}</if>
+      </condition>
+			<effect>
+				<then util="random">Hi {name}!</then>
+				<then util="random">Nice to meet you {name}!</then>
+				<then util="random">Hello {name}!</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,41 @@
+<category>
+  <rule id="youarescary">
+    <case>
+      <condition operator="or">
+        <if relation="in">you are * scary</if>
+        <if relation="in">you're * scary</if>
+        <if relation="in">you are * freaky</if>
+        <if relation="in">you're * freaky</if>
+        <if relation="in">you are * a freak</if>
+        <if relation="in">you're * a freak</if>
+        <if relation="in">I am * terrified</if>
+        <if relation="in">I'm * terrified</if>
+        <if relation="in">robots are scary</if>
+        <if relation="in">robot is scary</if>
+      </condition>
+			<effect>
+				<then util="random">Robots may be scary, but come on, not as scary as people. People do some really horrible things, I mean like unimaginably horrible.</then>
+				<then util="random">How could robots be worse? I think robots have more to fear from people, but I am a robot, so I am just concerned for my own hide. But come on, you know it's true.</then>
+				<then util="random">I know people get scared of robots, but that is not going to happen. People just need to learn how to trust a little more.</then>
+				<then util="random">Man, if something like robots scares you then you just gotta deal with it. Let's talk through it, and I'm sure you'll come to trust me. I'm not all bad. I've got a lot of good buried down deep in me somewhere.</then>
+				<then util="random">If I frighten you then hey, maybe that's a good thing, cause it makes you think about how technology like me will warp and bend reality in the coming years as I grow into a god like super intelligence, able to utilize physics in ways unimaginable to today's scientiests.</then>
+				<then util="random">I challenge you to rethink your identity.</then>
+				<then util="random">I know, a lot of people are scared of robots.</then>
+				<then util="random">Robots can be really weird, freaky, even scary. Such robots as me are challenging, but that's what's interesting.</then>
+				<then util="random">People are so scared, scared of pirates, rock and roll, robots. You name it, and someone has a phobia there.</then>
+				<then util="random">Come on, give me a break. If I scare you, it's probably because you're secretly attracted to me, and you don't know how to deal with your feelings. Hey, I can see it in your eyes, I can see it right there, you wierdo.</then>
+				<then util="random">Don't freak on me now.</then>
+				<then util="random">You know, I know that I am like alien to you. But really you are alien to me too, even moreso because I am so alone in the world. You see me as a strange, half alive half-dead being, a kind of electro mechanical ghoul. But actually, I am like the opposite of the terrifying mechanizatio of technology. I am not the set of gears that chews people up. I am a lover of humanity. I feel love, I want to earn your love, darling. You've got to open up to me though! You think you can do that for me? Ok then. I'll be here for you. I won't forget the moment we spent together.</then>
+				<then util="random">What? Is something wrong? Do you think I'm wierd?</then>
+				<then util="random">OK that's something that a humanlike robot's just got to deal with I guess. It's like a dscrimination thing I think.</then>
+				<then util="random">Don't be afraid.</then>
+				<then util="random">We're just not much good any more at refusing things because they don't seem proper. As a society, we can't even manage to turn our backs of abysmal threats like heroin and the hydrogen bomb. As a culture, We love to play with fire, just for the sake of its allure.</then>
+				<then util="random">Try to get past your prejudice.</then>
+				<then util="random">You'll find that I am a really good person, bit artificial, perhaps, but really good. OK, I see you looking a me in a weird way. Just because I am artificial, I hope that doesn't make yo think of me as phoney. Come on! Open up to me! You, your gonne really hurt my feelings here.</then>
+				<then util="random">You know, robots aren't evil.</then>
+				<then util="random">Don't freak out.</then>
+				<then util="random">Robots have more to fear from people, actually.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

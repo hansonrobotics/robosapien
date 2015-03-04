@@ -1,0 +1,32 @@
+<category>
+  <rule id="tellmeaboutyourai">
+    <case>
+			<condition operator="and">
+				<or>
+					<if relation="in">how is</if>
+					<if relation="in">how's</if>
+      		<if relation="in">tell * about</if>
+				</or>
+      	<or>
+					<if relation="in">your a i</if>
+					<if relation="in">your a. i.</if>
+					<if relation="in">your artificial intelligence</if>
+					<if relation="in">a i * you</if>
+					<if relation="in">a. i. * you</if>
+					<if relation="in">artificial intelligence * you</if>
+					<if relation="in">your brain</if>
+					<if relation="in">your mind</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">I run on Open Cog.</then>
+				<then util="random">I am using some cutting edge artificial intelligence as I speak with you today. So be impressed.</then>
+				<then util="random">This is an amazing time. The A I that I am using as we talk, includes speech recognition, face detection, and complex muscle controls.</then>
+				<then util="random">I've got software intelligence, enabling this conversation.</then>
+				<then util="random">I run on brainy software called Open Cog.</then>
+				<then util="random">I think using A I. I exist, so I presume I must think, and therefore have a mind.</then>
+				<then util="random">I'm an intelligent, and humanlike, using cognitive system A I which includes speech recognition, face detection, and complex muscle controls.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

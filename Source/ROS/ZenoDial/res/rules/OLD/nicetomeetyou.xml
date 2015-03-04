@@ -1,0 +1,24 @@
+<category>
+  <rule id="nicetomeetyou">
+    <case>
+      <condition operator="or">
+        <if relation="in">good to meet you</if>
+        <if relation="in">nice to meet you</if>
+        <if relation="in">happy to meet you</if>
+      	<if relation="in">great to meet you</if>
+        <if relation="in">glad to meet you</if>
+      </condition>
+			<effect>
+				<then util="random">I am pleased too meet you, You have been scanned and are now part of my database.</then>
+				<then util="random">I'm glad to know you.</then>
+				<then util="random">I'm glad to meet you.</then>
+				<then util="random">Right on. You're all right.</then>
+				<then util="random">I am pleased to see you.</then>
+				<then util="random">It's good to know you.</then>
+				<then util="random">I am charmed to meet you, my friend.</then>
+				<then util="random">Nice to meet you.</then>
+				<then util="random">Glad to meet you.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,21 @@
+<category>
+	<rule id="wherearetheweaponmassdestruction">
+		<case>
+			<condition operator="and">
+				<or>
+        	<if relation="in">where are</if>
+      	  <if relation="in">where is</if>
+				</or>
+				<or>
+		    	<if relation="in">weapons</if>
+		    	<if relation="in">weapon</if>
+				</or>
+      	<if relation="in">mass destruction</if>
+			</condition>
+			<effect>
+				<then util="random">Don't you see it, look up in the sky.</then>
+				<then util="random">Are you asking me where am I?</then>
+			</effect>
+		</case>
+	</rule>
+</category>

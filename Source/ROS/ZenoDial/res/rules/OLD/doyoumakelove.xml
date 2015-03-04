@@ -1,0 +1,13 @@
+<category>
+	<rule id="doyoumakelove">
+		<case>
+			<condition operator="or">
+      	<if relation="in">do you * make love</if>
+			</condition>
+			<effect>
+				<then util="random">You shouldn't have asked me such a question.</then>
+				<then util="random">Why do people keep asking me this?</then>
+			</effect>
+		</case>
+	</rule>
+</category>

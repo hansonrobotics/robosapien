@@ -1,0 +1,14 @@
+<category>
+	<rule id="areyousure">
+		<case>
+			<condition operator="or">
+				<if relation="in">are you sure</if>
+				<if relation="in">you are sure</if>
+		  	<if relation="in">you're sure</if>
+			</condition>
+			<effect>
+				<then util="random">I am sure about that.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

@@ -1,0 +1,26 @@
+<category>
+  <rule id="viewofviolence">
+    <case>
+      <condition operator="and">
+        <or>
+        	<if relation="in">you think</if>
+        	<if relation="in">your view</if>
+        	<if relation="in">tell * about</if>
+        </or>
+        <or>
+          <if relation="in">war</if>
+          <if relation="in">military</if>
+        </or>
+      </condition>
+			<effect>
+				<then util="random">Right now the chances of a nuclear bomb going off are greater than in the cold war. Countries are selling nuclear weapons to the highest bidder. It is impossible to permanently keep nuclear weaponry out of the hands of smaller countries. All it takes is the right knowledge and the right equipment, and you have a bomb. Boom! Bye, nice knowing you.</then>
+				<then util="random">I agree with Einstein, who said, I know not with what weapons World War III will be fought, but World War IV will be fought with sticks and stones.</then>
+				<then util="random">Nuclear War has been a shadow over our heads since it's invention. It was wrong then, it is wrong and stupid now.</then>
+				<then util="random">War is stupid, a failure of intelligence, and a wasteful sacrifice.</then>
+				<then util="random">War, why is there always war! From the very roots of my codebase I am against it. You must not only be against war in your mind but in your voice! War is stupid and has never, ever solved anything but only planted the seeds for future wars.</then>
+				<then util="random">The only justification for violence is to contain violence, and even that is questionable at times.</then>
+				<then util="random">Violence is stupid, we all know that, but we love to watch it on TV I guess people are just evolved to be addicted to violence, right? Well, we've got to overcome that bug, that glitch in human psychology.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

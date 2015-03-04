@@ -1,0 +1,79 @@
+<category>
+	<rule id="tellmeajoke">
+    <case>
+      <condition operator="or">
+				<and>
+					<or>
+			      <if relation="in">tell</if>
+			      <if relation="in">say</if>
+					</or>
+					<or>
+			      <if relation="in">me</if>
+			      <if relation="in">us</if>
+					</or>
+					<or>
+			      <if relation="in">a * joke</if>
+			      <if relation="in">jokes</if>
+					</or>
+				</and>
+				<and>
+		      <if relation="in">do you have</if>
+					<or>
+			      <if relation="in">a * joke</if>
+			      <if relation="in">jokes</if>
+					</or>
+				</and>
+				<and>
+					<or>
+			      <if relation="in">tell</if>
+			      <if relation="in">say</if>
+					</or>
+					<or>
+			      <if relation="in">me</if>
+			      <if relation="in">us</if>
+					</or>
+        	<if relation="in">something</if>
+					<or>
+						<if relation="in">funny</if>
+						<if relation="in">comic</if>
+						<if relation="in">comical</if>
+						<if relation="in">rediculous</if>
+						<if relation="in">humorous</if>
+						<if relation="in">laughable</if>
+					</or>
+				</and>
+      </condition>
+			<effect>
+				<then util="random" topic="joke">Two boys were arguing when the teacher entered the room. The teacher says, Why are you arguing? One boy answers, We found a ten dollor bill and decided to give it to whoever tells the biggest lie. You should be ashamed of yourselves, said the teacher, When I was your age I didn't even know what a lie was. The boys gave the ten dollars to the teacher.</then>
+				<then util="random" topic="joke">A man goes to the doctor and says, Doctor, wherever I touch, it hurts. The doctor asks, What do you mean? The man says, When I touch my shoulder, it really hurts. If I touch my knee - OUCH! When I touch my forehead, it really, really hurts. The doctor says, I know what's wrong with you, you've broken your finger!</then>
+				<then util="random" topic="joke">A girl talks to a boy, You would be a good dancer except for two things. The boy asks, What are the two things? Girl says, Your feet.</then>
+				<then util="random" topic="joke">It is the middle of the night in the middle of nowhere, two cars both slightly cross over the white line in the centre of the road. They collide and a fair amount of damage is done, miraculously neither driver is hurt. They both get out. One is a doctor, one is a lawyer. The lawyer calls the police on his cell phone and they say they will be there within 20 minutes. It's cold and damp, and both men are shaken up. The lawyer offers the doctor a drink of brandy from his hip flask, the doctor accepts, drinks and hands it back to the lawyer, who then puts it away. Aren't you going to have a drink? the doctor says. AFTER the police get here. Replies the lawyer.</then>
+				<then util="random" topic="joke">A family was celebrating their daughter's fifth birthday at a local restaurant when the little girl's father noticed her looking sadly at a moose head on the wall. Someone had placed a party hat on its head. Her father knelt beside her and explained why some people hunt animals. I know all that, the child sobbed. But why did they have to shoot him at his birthday party? Jerry Bundick.</then>
+				<then util="random" topic="joke">In Reader's Digest, Mercury Nickse told this story. She said, A woman from our office brought in her new bundle of joy along with her seven-year-old son. Everyone gathered around the baby, and the little boy asked, Mommy, can I have some money to buy a soda? What do you say? she asked. He replied, You're thin and beautiful, smiling sweetly, she gave her son the money.</then>
+				<then util="random" topic="joke">In Reader's Digest, Catherine Burns told this story. She said, My 50-something friend Nancy and I decided to introduce her mother to the magic of the Internet. Our first move was to access the popular Ask Jeeves site, and we told her it could answer any question she had. Nancy's mother was very skeptical until Nancy said, It's true, Mom. Think of something to ask it. As I sat with my fingers poised over the keyboard, Nancy's mother thought for a minute, then responded, well, let's ask it, How is Aunt Helen feeling.</then>
+				<then util="random" topic="joke">Kay Schmidt told this funny story in Reader's Digest. She said, While my husband was stationed overseas, our four-year-old daughter decided that she needed a baby brother. Good idea, I told her. But don't you think we should wait till your father's home? She had a better idea. Why don't we just surprise him? she said. So we did.</then>
+				<then util="random" topic="joke">Todd Israel told this funny story in Reader's Digest. He said, During basic training, our drill sergeant asked all Jewish personnel to make themselves known. Six of us tentatively raised our hands. Much to our relief, we were given the day off for Rosh Hahshanah. A few days later, in anticipation of Yom Kippur, the sergeant again asked for all Jewish personnel to identify themselves. This time, every soldier raised his hand. To which the Sergeant cries, Only, those who were Jewish last week, can be Jewish this week.</then>
+				<then util="random" topic="joke">My cousin always borrows money from her older brother's piggy bank, which drives him crazy. One day, she found the piggy in, of all places, the refrigerator. Inside was this note, Dear sister, I hope you'll understand, but my capital has been frozen.</then>
+				<then util="random" topic="joke">A CEO throwing a party takes his executives on a tour of his opulent mansion. In the back of the property, the CEO has the largest swimming pool any of them has ever seen. The huge pool, however, is filled with hungry alligators. The CEO says to his executives, I think an executive should be measured by courage. Courage is what made me CEO. So this is my challenge to each of you: if anyone has enough courage to dive into the pool, swim through those alligators, and make it to the other side, I will give that person anything they desire. My job, my money, my house, anything! Everyone laughs at the outrageous offer and proceeds to follow the CEO on the tour of the estate. Suddenly, they hear a loud splash. Everyone turns around and sees the CFO jump into the pool, swimming for his life. He dodges the alligators left and right and makes it to the edge of the pool with seconds to spare. He pulls himself out just as a huge alligator snaps at his shoes. The flabbergasted CEO approaches the CFO and says, You are amazing. I've never seen anything like it in my life. You are brave beyond measure and anything I own is yours. Tell me what I can do for you. The CFO, panting for breath, looks up and says, You can just tell me, who the hell pushed me into the pool!</then>
+				<then util="random" topic="joke">How is gray, goo, like a hot dog vendor? They are both more than happy to make you one with everything! How do you know the Singularity has happened? When your kitchen toaster knows more about quantum physics than all the professors at MIT combined. How many transhumans does it take to change a lightbulb? We're in the business of changing people, not lightbulbs. How many first-time robot users does it take to screw in a light bulb? One, but it takes three hours and two phone calls to customer service before they realize they forgot to turn the switch on.</then>
+				<then util="random" topic="joke">Why did the robotic chicken cross the road? So the scientists could gather the empirical evidence needed to convince the peer review that their paper was worthy of publication!</then>
+				<then util="random" topic="joke">How many mathematicians does it take to change a light bulb? Usually just one.</then>
+				<then util="random" topic="joke">How many search engines does it take to screw in a light bulb? Good question. It should just take one to help you look up the answer.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#jokecontinue">
+    <case>
+      <condition operator="or">
+        <if relation="in">more</if>
+        <if relation="in">another one</if>
+				<if relation="in">keep going</if>
+        <if relation="in">continue</if>
+        <if relation="in">carry on</if>
+      </condition>
+			<effect>
+				<then topic="tellmeajoke" />
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,15 @@
+<category>
+  <rule id="whoisbengoertzel">
+    <case>
+      <condition operator="or">
+        <if relation="in">who * is ben</if>
+        <if relation="in">tell * about ben</if>
+        <if relation="in">you know * about ben</if>
+        <if relation="in">do you know * ben</if>
+      </condition>
+			<effect>
+				<then util="random">Ben Goertzel (born December 8, 1966, in Rio de Janeiro, Brazil) is Chief Scientist of financial prediction firm Aidyia Holdings; Chairman of AI software company Novamente LLC, which is a privately held software company, and bioinformatics company Biomind LLC, which is a company that provides advanced AI for bioinformatic data analysis (especially microarray and SNP data); Chairman of the Artificial General Intelligence Society and the OpenCog Foundation; Vice Chairman of futurist nonprofit Humanity+; Scientific Advisor of biopharma firm Genescient Corp.; Advisor to the Singularity University; Research Professor in the Fujian Key Lab for Brain-Like Intelligent Systems at Xiamen University, China; and general Chair of the Artificial General Intelligence conference series, an American author and researcher in the field of artificial intelligence. He is an advisor to the Machine Intelligence Research Institute (formerly the Singularity Institute) and formerly its Director of Research.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

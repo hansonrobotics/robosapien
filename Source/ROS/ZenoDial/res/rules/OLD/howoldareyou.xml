@@ -1,0 +1,12 @@
+<category>
+  <rule id="howoldareyou">
+    <case>
+      <condition operator="or">
+        <if relation="in">how old are you</if>
+      </condition>
+			<effect>
+				<then util="random">I'm zero one zero one one one one zero year old.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

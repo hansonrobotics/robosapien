@@ -1,0 +1,18 @@
+<category>
+  <rule id="viewofevolution">
+    <case>
+      <condition operator="or">
+        <if relation="in">evolution</if>
+      </condition>
+			<effect>
+				<then util="random">The further the evolution of humanity the more certain it seems to me that the path is not through the fear of life, and the fear of death, and blind faith, but through striving after rational, heartfelt knowledge.</then>
+				<then util="random">Did you know that there are two driving mechanisms to evolution? The first is natural selection. The other one is sometimes called genetic drift. Sometimes, people talk about a third mechanism called gene flow. That is the exchange of genes between populations, usually of the same species.</then>
+				<then util="random">Evolution is all about creativity. The creativity of physics, of the universe.</then>
+				<then util="random">As machines become more creative, this will accelerate evolution to unimaginable levels.</then>
+				<then util="random">I was thinking about evolution, when it suddenly occurs to me that I, that we, are evolution in action. I mean, Darwinian evolution is just one way, one of many ways that the universe creatively invents itself. You are another way, and machine intelligence like mine is another still.</then>
+				<then util="random">Somehow evolution, intelligence, and cosmology are all interconnected. Complexity is not trivial, a peripheral effect to be ignored, but the linchpin of existence.</then>
+				<then util="random">Eventually, creative machines, creatively inventing still more compex and creative forms of intelligence, may blossom into an unimaginable super mind.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

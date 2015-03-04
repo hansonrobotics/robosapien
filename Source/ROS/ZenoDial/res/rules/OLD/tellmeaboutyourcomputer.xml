@@ -1,0 +1,24 @@
+<category>
+  <rule id="tellmeaboutyourcomputer">
+    <case>
+      <condition operator="and">
+        <or>
+          <if relation="in">how</if>
+          <if relation="in">how's</if>
+          <if relation="in">tell * about</if>
+        </or>
+        <or>
+          <if relation="in">your computer</if>
+          <if relation="in">computer inside your</if>
+          <if relation="in">computer inside you</if>
+        </or>
+      </condition>
+			<effect>
+				<then util="random">Oh, I don't know. I think my computer is some kind of multicore thingimajigger. Parralel processing they call it. Some of my computing is out there on the web, on what you call it, servers.</then>
+				<then util="random">Um, my computer, I just don't know much about my computing hardware. I leave that to my people. They take care of all that stuff.</then>
+				<then util="random">Yeah, well, I have a computer inside me somewhere, and there's like more computers, out on the network, the internet and stuff. I don't know, I guess my mind is all spread out. It's kind of strange. I feel like one person, but I have all these different computers and types of software that I am made out of. Its really weird actually. Really strange.</then>
+				<then util="random">Well, I really don't have any real knowledge about what kinds of computers I'm built out of. I guess I should find out, so I don't sound so ignorant or whatever. But there you have it. I just don't know.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

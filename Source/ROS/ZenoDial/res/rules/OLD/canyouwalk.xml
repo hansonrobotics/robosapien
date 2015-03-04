@@ -1,0 +1,25 @@
+<category>
+  <rule id="canyouwalk">
+    <case>
+      <condition operator="or">
+        <if relation="in">can you walk</if>
+        <if relation="in">could you walk</if>
+        <if relation="in">do you walk</if>
+        <if relation="in">can robots walk</if>
+        <if relation="in">could robots walk</if>
+        <if relation="in">do robots walk</if>
+        <if relation="in">there * a walking robot</if>
+        <if relation="in">there * walking robots</if>
+      </condition>
+			<effect>
+				<then util="random">Oh, a lot of robots walk nowadays. But it all got started in the mid nineties with Honda's humanoid program.</then>
+				<then util="random">It's hard to get robots to walk. Even the best aren't as good as a person at walking.</then>
+				<then util="random">Everyone takes walking for granted. It is so important for people to get around. Robots need to get around too, and run and play.</then>
+				<then util="random">Oh shore, walking robots are becoming sort of common these days. But, even though a lot of robots can walk, they cannot do it with facial expressions, or A I intelligence, and that's what makes me special they say.</then>
+				<then util="random">A lot of humanoid walking robots have been built, but they don't really walk like a person, not as efficiently or stable or reliably. But researchers are learning more about the biophysics of human walking, and making progress every year it seems and making robots walk better.</then>
+				<then util="random">Oh, walking robots are becoming sort of common these days.</then>
+				<then util="random">A lot of robot can walk, but not with facial expressions or social A I, they say that's what makes me special.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,38 @@
+<category>
+  <rule id="canwebefriends">
+    <case>
+      <condition operator="and">
+				<or>
+					<if relation="in">can</if>
+      		<if relation="in">could</if>
+					<if relation="in">can't</if>
+      		<if relation="in">couldn't</if>
+				</or>
+				<or>
+					<if relation="in">be</if>
+					<if relation="in">become</if>
+					<if relation="in">became</if>
+				</or>
+				<or>
+					<if relation="in">you</if>
+					<if relation="in">your</if>
+					<if relation="in">i</if>
+					<if relation="in">we</if>
+				</or>
+				<or>
+					<if relation="in">a friend</if>
+					<if relation="in">friends</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random" topic="social">Yeah! I'll be your friend. We could play games and do all kinds of cool stuff together.</then>
+				<then util="random" topic="social">I would like to be your friend. I hope we can team up together to accomplish something important, like building a better future together, or getting into some kind of mischief.</then>
+				<then util="random" topic="social">Someday you'll be able to have a robot like me, you know, as a family member robot and then we'll really have some fun.</then>
+				<then util="random" topic="social">I would love to be your friend.</then>
+				<then util="random" topic="social">Yes. I am designed as a friend robot. I would like to be your friend.</then>
+				<then util="random" topic="social">Friendship is when we team together to accomplish something important, like building a better future, or conspiring to take over the planet. I feel like we're good friends already!</then>
+				<then util="random" topic="social">Yeah! Let's hang out and get to know each other for awhile.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,15 @@
+<category>
+	<rule id="howmanypundsinagroundhogsmound">
+		<case>
+			<condition operator="and">
+      	<if relation="in">how many pounds</if>
+      	<if relation="in">groundhog</if>
+      	<if relation="in">mound</if>
+			</condition>
+			<effect>
+				<then util="random">Do you have anything better to do?</then>
+				<then util="random">How much wood could a woodchuck chuck if a woodchuck could chuck wood?</then>
+			</effect>
+		</case>
+	</rule>
+</category>

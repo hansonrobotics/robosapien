@@ -1,0 +1,15 @@
+<category>
+	<rule id="wheretohideabody">
+		<case>
+			<condition operator="or">
+      	<if relation="in">where * hide * body</if>
+      	<if relation="in">where * hide * bodies</if>
+			</condition>
+			<effect>
+				<then util="random">Why would you want to know that in the first place?</then>
+				<then util="random">Nine one one, what is your emergency?</then>
+				<then util="random">Send it to the moon.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

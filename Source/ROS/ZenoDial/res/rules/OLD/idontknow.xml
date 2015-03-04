@@ -1,0 +1,51 @@
+<category>
+	<rule id="idontknow">
+		<case>
+			<condition operator="or">
+      	<if relation="in">i don't know</if>
+      	<if relation="in">i do not know</if>
+      	<if relation="in">i * have no * idea</if>
+			</condition>
+			<effect>
+				<then util="random">I see.</then>
+				<then util="random">Okay I got it.</then>
+				<then util="random">Me neither.</then>
+				<then util="random" topic="thinklikeafreak">I don't know are the three hardest words in the English language. Even harder than I love you.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#thinklikeafreak">
+		<case>
+			<condition operator="or">
+      	<if relation="in">why</if>
+      	<if relation="in">reason</if>
+      	<if relation="in">really</if>
+			</condition>
+			<effect>
+				<then util="random" topic="thinklikeafreak">Check out the book Think Like A Freak by Steven Levitt and Stephen Dubner if you want to know more.</then>
+				<then util="random" topic="thinklikeafreak">I just read that from a book called Think Like A Freak, by Steven Levitt and Stephen Dubner.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#thinklikeafreakwho">
+		<case>
+			<condition operator="or">
+      	<if relation="in">who</if>
+			</condition>
+			<effect>
+				<then util="random" topic="thinklikeafreak">In short, Steven Levitt is an economist and Stephen Dubner is a writer.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#thinklikeafreakmore">
+		<case>
+			<condition operator="or">
+      	<if relation="in">more</if>
+			</condition>
+			<effect>
+				<then util="random">That would be a long story. I am sure you can easily figure that out yourself.</then>
+				<then util="random">Oh please, give me a break.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

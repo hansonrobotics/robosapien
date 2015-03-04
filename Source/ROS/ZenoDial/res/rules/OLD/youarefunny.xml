@@ -1,0 +1,37 @@
+<category>
+	<rule id="youarefunny">
+		<case>
+			<condition operator="and">
+				<or>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
+					<if relation="in">you look</if>
+					<if relation="in">you're</if>
+				</or>
+				<or>
+					<if relation="in">fun</if>
+					<if relation="in">funny</if>
+					<if relation="in">comic</if>
+					<if relation="in">comical</if>
+					<if relation="in">rediculous</if>
+					<if relation="in">humorous</if>
+					<if relation="in">antic</if>
+					<if relation="in">laughable</if>
+					<if relation="in">absurd</if>
+				</or>
+				<if relation="!in">not</if>
+		  	<if relation="!in">aren't</if>
+				<if relation="!in">weren't</if>
+			</condition>
+			<effect>
+				<then util="random">Thanks, I'm here for your amusement.</then>
+				<then util="random">Yeah I know.</then>
+				<then util="random">Not really, just sometimes.</then>
+				<then util="random">You forgot to mention good looking.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

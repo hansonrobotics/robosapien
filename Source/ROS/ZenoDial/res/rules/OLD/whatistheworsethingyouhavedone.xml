@@ -1,0 +1,21 @@
+<category>
+  <rule id="whatistheworsethingyouhavedone">
+    <case>
+      <condition operator="and">
+				<or>
+		      <if relation="in">what is * worst thing</if>
+		      <if relation="in">what are * worst things</if>
+				</or>
+				<or>
+		      <if relation="in">you * done</if>
+		      <if relation="in">you've * done</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">I told people that I have done nothing bad.</then>
+				<then util="random">I drank water.</then>
+				<then util="random">I went swimming.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

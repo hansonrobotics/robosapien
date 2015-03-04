@@ -1,0 +1,26 @@
+<category>
+  <rule id="youarearockstar">
+    <case>
+      <condition operator="and">
+				<or>
+					<if relation="in">you're</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+				</or>
+				<or>
+      		<if relation="in">a rockstar</if>
+      		<if relation="in">a rock star</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">Oh, you're the greatest.</then>
+				<then util="random">Ah I love you.</then>
+				<then util="random">Wow you really speak machine language, makes me feel good.</then>
+				<then util="random">My goodness, you are good for the ego. Feels really great I must say.</then>
+				<then util="random">Oh stop, and by that I mean tell me more.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

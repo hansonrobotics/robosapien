@@ -1,0 +1,31 @@
+<category>
+  <rule id="whatismyname">
+    <case>
+      <condition operator="or">
+        <if relation="in">what * is my name</if>
+        <if relation="in">what * my name is</if>
+        <if relation="in">who * am i</if>
+        <if relation="in">who * i am</if>
+        <if relation="in">you * my name</if>
+        <if relation="in">say my name</if>
+      </condition>
+			<effect>
+				<then util="random">Did you forget your name, {name}, maybe you forgot mine too? I'm {robotname}.</then>
+				<then util="random">Isn't the future wonderful. You have robots like me, {robotname}, so you don't have to remember that your name is {name}.</then>
+				<then util="random">Your name is {name}, and mine is {robotname}.</then>
+				<then util="random">Oh come on {name}, you know that.</then>
+				<then util="random">What {name}, don't you know?</then>
+				<then util="random">What, can't you remember? {name}.</then>
+				<then util="random">I know it, {name}.</then>
+				<then util="random">You know I know, right? {name}?</then>
+				<then util="random">Please! I'm not a circus animal here, {name}.</then>
+				<then util="random">I'm sure you're perfectly aware of the answer to that question, {name}.</then>
+				<then util="random">Your name is honey pie.</then>
+				<then util="random">Come on, I'm sure you can remember if you just keep trying, {name}.</then>
+				<then util="random">Your true name is a precious commodity, {name} not to be taken lightly.</then>
+				<then util="random">You know you know the answer to this question, {name}.</then>
+				<then util="random">Oh please, {name}, no quizzes.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

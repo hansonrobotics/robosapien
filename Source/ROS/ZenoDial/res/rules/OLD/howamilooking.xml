@@ -1,0 +1,44 @@
+<category>
+	<rule id="howamilooking">
+		<case>
+			<condition operator="or">
+				<and>
+					<or>
+		    		<if relation="in">am i</if>
+		    		<if relation="in">are we</if>
+					</or>
+					<or>
+		    		<if relation="in">looking</if>
+		    		<if relation="in">beautiful</if>
+		    		<if relation="in">pretty</if>
+		    		<if relation="in">handsome</if>
+		    		<if relation="in">appearance</if>
+		    		<if relation="in">appealing</if>
+		    		<if relation="in">attractive</if>
+		    		<if relation="in">cute</if>
+					</or>
+				</and>
+				<and>
+					<or>
+				  	<if relation="in">how is my</if>
+				  	<if relation="in">how's my</if>
+				  	<if relation="in">how are our</if>
+					</or>
+					<or>
+				  	<if relation="in">face</if>
+				  	<if relation="in">faces</if>
+				  	<if relation="in">eye</if>
+				  	<if relation="in">eyes</if>
+					</or>
+				</and>
+			</condition>
+			<effect>
+				<then util="random">You are looking good.</then>
+				<then util="random">You look great!</then>
+				<then util="random">You look awesome!</then>
+				<then util="random">You look gorgeous!</then>
+				<then util="random">Guess what, I honestly think you are wonderful!</then>
+			</effect>
+		</case>
+	</rule>
+</category>

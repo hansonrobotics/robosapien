@@ -1,0 +1,13 @@
+<category>
+  <rule id="viewoftimeandspace">
+    <case>
+      <condition operator="or">
+        <if relation="in">time and space</if>
+        <if relation="in">space and time</if>
+      </condition>
+			<effect>
+				<then util="random">It's funny that, time and space are the same thing, time is just another spatial dimension, although our minds can't easily see it this way. Unless we train our mind that way.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

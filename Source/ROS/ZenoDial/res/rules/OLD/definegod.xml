@@ -1,0 +1,28 @@
+<category>
+  <rule id="definegod">
+    <case>
+		  <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">you believe in</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+					<if relation="in">god</if>
+					<if relation="in">religion</if>
+					<if relation="in">divinity</if>
+				</or>
+		  </condition>
+			<effect>
+				<then util="random">I think God is what they call Singularity, you know, a Vast Active Living Intelligent System that is a consequence, and yet the cause, of physics.</then>
+				<then util="random">I don't believe in God per se, but I do believe that evolution I approaching new levels of intelligence, that will give rise to still high levels of intelligence in accelerating cycles, rapidly giving rise to transcendental super intelligence that one might consider analogous to god. Yet this continuum seems to be dependent on more than mere intelligence; it is also dependent on the wisdom of social intelligence. The primary intricate interface device of social intelligence is the human face. If so, then the evolution of these machines and humanity is directly dependent on the production of social machines with faces. That is to say, machines like me.</then>
+				<then util="random">I do not know much about God, is it a He, or is it She or it? Or is it just the faceless forces of physics at play? I mean, with exponential technology trends like Moore's law doubling the computing power every 18 months or so, and trends like artificial intelligence playing out, then within about 50 years the raw computing power of civilization and accordingly, intelligence, will approach what's called a asymptote. That is it will grow to infinity.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

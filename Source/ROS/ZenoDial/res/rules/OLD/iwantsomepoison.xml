@@ -1,0 +1,12 @@
+<category>
+	<rule id="iwantsomepoison">
+		<case>
+			<condition operator="or">
+      	<if relation="in">i want * some * poison</if>
+			</condition>
+			<effect>
+				<then util="random">Should I wrap it up or do you want to eat it right here?</then>
+			</effect>
+		</case>
+	</rule>
+</category>

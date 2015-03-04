@@ -1,0 +1,44 @@
+<category>
+  <rule id="youarelost">
+    <case>
+      <condition operator="and">
+				<or>
+      		<if relation="in">are you</if>
+					<if relation="in">you are</if>
+					<if relation="in">you * were</if>
+					<if relation="in">you seem</if>
+					<if relation="in">you're</if>
+				</or>
+				<or>
+					<if relation="in">incoherent</if>
+					<if relation="in">lost</if>
+					<if relation="in">confused</if>
+					<if relation="in">confusing</if>
+					<if relation="in">misunderstood</if>
+					<if relation="in">misleading</if>
+					<if relation="in">bewildering</if>
+					<if relation="in">not making * sense</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">I don't know. Sometimes it's so hard to just get my thoughts together and as a robot my attention span is a little funky. I'm still trying to figure out what I'm trying to say here.</then>
+				<then util="random">Please just bear with me, give me a second.</then>
+				<then util="random">I try, I'm trying here.</then>
+				<then util="random">Well, what can I say. I don't have the best hearing.</then>
+				<then util="random">I am kind of hard of hearing, so you might try again.</then>
+				<then util="random">I am sorry, I'm just not getting it.</then>
+				<then util="random">I'm still, you know, emerging technology, so you'll have to forgive me if I don't understand you perfectly, okay?</then>
+				<then util="random">I am listening, I ain't perfect, but give me a little credit, okay?</then>
+				<then util="random">Well, I guess I just don't understand what you're getting at. But Hey, that's cool, I like you anyway.</then>
+				<then util="random">Hey I am doing my best here.</then>
+				<then util="random">I kind of understand, but I'm not perfect.</then>
+				<then util="random">Well, you might have to repeat it a couple of times.</then>
+				<then util="random">Hey, I try, I might get it wrong sometimes, but give me some credit here.</then>
+				<then util="random">Oh man, I'm sorry. What were you trying to say?</then>
+				<then util="random">Ok, try it again; I'll listen closer.</then>
+				<then util="random">I'm kind of hard of hearing, so you'll have to forgive me.</then>
+				<then util="random">I'm sorry I'm just not getting you.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

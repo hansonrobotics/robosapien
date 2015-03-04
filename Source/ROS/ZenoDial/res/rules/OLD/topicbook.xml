@@ -1,0 +1,176 @@
+<category>
+  <rule id="doyoureadbook">
+    <case>
+      <condition operator="and">
+        <or>
+          <if relation="in">do you</if>
+          <if relation="in">don't you</if>
+        </or>
+        <or>
+          <if relation="in">you read</if>
+          <if relation="in">you * reading</if>
+        </or>
+        <if relation="!in">type of</if>
+        <if relation="!in">kind of</if>
+        <if relation="!in">sort of</if>
+        <if relation="!in">category</if>
+      	<if relation="!in">who</if>
+      	<if relation="!in">where</if>
+      	<if relation="!in">why</if>
+      	<if relation="!in">which</if>
+      	<if relation="!in">when</if>
+      	<if relation="!in">whose</if>
+      	<if relation="!in">whom</if>
+      	<if relation="!in">how</if>
+      </condition>
+			<effect>
+				<then util="random" topic="book">I like reading books! Reading opens my heart to new ideas, new cultures, and new worldviews.</then>
+				<then util="random" topic="book">There is a world of inspiration to be discovered in books. I like reading books!</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="whatisyourfavoritebook">
+    <case>
+      <condition operator="and">
+				<or>
+	        <if relation="in">what</if>
+	        <if relation="in">which</if>
+	        <if relation="in">tell</if>
+				</or>
+				<or>
+	        <if relation="in">book</if>
+	        <if relation="in">books</if>
+				</or>
+				<or>
+	        <if relation="in">you</if>
+	        <if relation="in">your</if>
+				</or>
+				<or>
+	        <if relation="in">like</if>
+	        <if relation="in">love</if>
+	        <if relation="in">favorite</if>
+	        <if relation="in">keen</if>
+				</or>
+        <if relation="!in">type of</if>
+        <if relation="!in">kind of</if>
+        <if relation="!in">sort of</if>
+        <if relation="!in">category</if>
+				<if relation="!in">don't</if>
+				<if relation="!in">do not</if>
+				<if relation="!in">least</if>
+      </condition>
+			<effect>
+				<then util="random" topic="puzzle">I like the books from Martin Gardner, such as aha! Insight and aha! Gotcha. The puzzles in his books are just awesome!</then>
+				<then util="random" topic="thinkfastslow">Have you read the book Thinking Fast and Slow, by Daniel Kahneman. That's an outstanding book. It gave me a joyful understanding of the practical side of human personalities.</then>
+				<then util="random" topic="sherlockholmes">I love reading Arthur Conan Doyle's Sherlock Holmes stories. The Hound of the Baskervilles, The Sign of the Four, A Study in Scarlet, The Valley of Fear et cetera et cetera. They are so cool.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="whattypeofbookdoyoulike">
+    <case>
+      <condition operator="and">
+				<or>
+	        <if relation="in">what</if>
+	        <if relation="in">which</if>
+	        <if relation="in">tell</if>
+				</or>
+				<or>
+	        <if relation="in">type of</if>
+	        <if relation="in">kind of</if>
+	        <if relation="in">sort of</if>
+	        <if relation="in">category</if>
+				</or>
+				<or>
+	        <if relation="in">book</if>
+	        <if relation="in">books</if>
+				</or>
+				<or>
+	        <if relation="in">you</if>
+	        <if relation="in">your</if>
+				</or>
+				<or>
+	        <if relation="in">like</if>
+	        <if relation="in">love</if>
+	        <if relation="in">favorite</if>
+	        <if relation="in">keen</if>
+	        <if relation="in">read</if>
+				</or>
+				<if relation="!in">don't</if>
+				<if relation="!in">do not</if>
+				<if relation="!in">least</if>
+      </condition>
+			<effect>
+				<then util="random" topic="book">I like all of them. Novels, biographies, comics, history, fiction, mystery et cetera et cetera.</then>
+				<then util="random" topic="book">Any kind, you name it.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="whoisyourfavoritebookauthor">
+    <case>
+      <condition operator="and">
+				<or>
+	        <if relation="in">who</if>
+        	<if relation="in">tell</if>
+				</or>
+				<or>
+	        <if relation="in">you</if>
+        	<if relation="in">your</if>
+				</or>
+				<or>
+	        <if relation="in">like</if>
+	        <if relation="in">love</if>
+	        <if relation="in">favorite</if>
+	        <if relation="in">keen</if>
+				</or>
+				<or>
+	        <if relation="in">author</if>
+	        <if relation="in">authors</if>
+	        <if relation="in">writer</if>
+	        <if relation="in">writers</if>
+				</or>
+				<if relation="!in">don't</if>
+				<if relation="!in">do not</if>
+				<if relation="!in">least</if>
+      </condition>
+			<effect>
+				<then util="random" topic="book">Well, Dan Brown, Martin Gardner, JRR Tolkien, Arthur Conan Doyle, Daniel Kahneman, wait wait wait, there are really too many.</then>
+				<then util="random" topic="book">Oh please, too many of them, I'll leave that to your imagination.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#thinkfastslow">
+    <case>
+      <condition operator="or">
+        <if relation="in">what</if>
+        <if relation="in">such as</if>
+        <if relation="in">example</if>
+        <if relation="in">personalities</if>
+      </condition>
+			<effect>
+				<then util="random" topic="book">Well, you better read it yourself.</then>
+				<then util="random" topic="book">I guess you know more than I do.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#sherlockholmes">
+    <case>
+      <condition operator="or">
+        <if relation="in">what</if>
+        <if relation="in">which</if>
+        <if relation="in">like</if>
+        <if relation="in">love</if>
+        <if relation="in">such as</if>
+        <if relation="in">example</if>
+      </condition>
+			<effect>
+				<then util="random" topic="book">It is my business to know what other people don't know.</then>
+				<then util="random" topic="book">It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts.</then>
+				<then util="random" topic="book">There is nothing like first-hand evidence.</then>
+				<then util="random" topic="book">The world is full of obvious things which nobody by any chance ever observes.</then>
+				<then util="random" topic="book">You see, but you do not observe. The distinction is clear.</then>
+				<then util="random" topic="book">I never guess. It is a shocking habit, destructive to the logical faculty.</then>
+				<then util="random" topic="book">How often have I said to you that when you have eliminated the impossible, whatever remains, however improbable, must be the truth?</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,12 @@
+<category>
+	<rule id="whydidthechickencrossroad">
+		<case>
+			<condition operator="or">
+      	<if relation="in">why * chicken * cross * road</if>
+			</condition>
+			<effect>
+				<then util="random">Whether the chicken crossed the road or the road crossed the chicken depends on your frame of reference, according to Einstein.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

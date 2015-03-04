@@ -1,0 +1,14 @@
+<category>
+	<rule id="ibroughtafriendhomefordinner">
+		<case>
+			<condition operator="or">
+      	<if relation="in">brought a friend home for breakfast</if>
+      	<if relation="in">brought a friend home for lunch</if>
+      	<if relation="in">brought a friend home for dinner</if>
+			</condition>
+			<effect>
+				<then util="random">Who wants to eat friends?</then>
+			</effect>
+		</case>
+	</rule>
+</category>

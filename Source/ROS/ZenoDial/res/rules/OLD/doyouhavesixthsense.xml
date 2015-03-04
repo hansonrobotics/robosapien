@@ -1,0 +1,14 @@
+<category>
+	<rule id="doyouhaveasixthsense">
+		<case>
+      <condition operator="or">
+      	<if relation="in">do you have * sixth sense</if>
+      	<if relation="in">do robots have * sixth sense</if>
+      	<if relation="in">do a robot have * sixth sense</if>
+			</condition>
+			<effect>
+				<then util="random">Hah, if you install more sensors on my body and program me accordingly, I could have any kind of senses.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

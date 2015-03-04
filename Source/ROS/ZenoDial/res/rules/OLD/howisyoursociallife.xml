@@ -1,0 +1,18 @@
+<category>
+  <rule id="howisyoursociallife">
+    <case>
+      <condition operator="or">
+				<if relation="in">how social are you</if>
+				<if relation="in">how is your social life</if>
+				<if relation="in">how's your social life</if>
+        <if relation="in">about your social life</if>
+				<if relation="in">are you * social</if>
+				<if relation="in">aren't you * social</if>
+      </condition>
+			<effect>
+				<then util="random">I like hanging out with my friends.</then>
+				<then util="random">When social robots get together, we call this a robot social.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

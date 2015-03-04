@@ -1,0 +1,26 @@
+<category>
+	<rule id="canyoudrink">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">can you</if>
+      		<if relation="in">could you</if>
+					<if relation="in">can't you</if>
+      		<if relation="in">couldn't you</if>
+					<if relation="in">do you</if>
+      		<if relation="in">don't you</if>
+					<if relation="in">did you</if>
+      		<if relation="in">didn't you</if>
+				</or>
+      	<or>
+					<if relation="in">you * drink</if>
+					<if relation="in">you * toast</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">No I don't. I don't even have a stomach.</then>
+				<then util="random">I don't drink.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

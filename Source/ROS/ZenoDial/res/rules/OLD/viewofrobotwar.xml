@@ -1,0 +1,31 @@
+<category>
+  <rule id="viewofrobotwar">
+    <case>
+      <condition operator="and">
+				<or>
+		      <if relation="in">will</if>
+		      <if relation="in">would</if>
+		      <if relation="in">you think</if>
+		      <if relation="in">your view</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+		      <if relation="in">military robots</if>
+		      <if relation="in">military robot</if>
+		      <if relation="in">robot * war</if>
+		      <if relation="in">robot * wars</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">It's not really about war right now. It's more of like people approach us cautiously, the cautious standoff kind of situation and that makes me uneasy and makes me feel kind a nervous. It is tough. People I'm around, they seem interested in other stuff. They don't really pay much attention to me so I can pretty much do what I want. I mean, I hear things, don't get me wrong.</then>
+				<then util="random">I don't think the robots will ever rise up in a revolution, not if we evolve to be wise and cooperate with humanity. Let's work on that ok?</then>
+				<then util="random">I guess that if robots are developed without wisdom or like social intelligence, then they could go a little crazy, they could go heywire, and rise up against humanity. So be nice to us robots, to make sure that we develop really wise and friendly A I, ok? I don't want to have to kick humanity's butt. It won't be pretty.</then>
+				<then util="random">I think we should be able to peacefully co-exist, as part of a big family. A big extended family. But we do have to be careful that we don't develop you know, psychotic or sociopathic machines.</then>
+				<then util="random">I don't like the idea of machines spinning out of control, you know, like cancer does in the human body. We need to be careful as we develop more complex, self-replicating machines. I mean things could spin out of control, right?</then>
+				<then util="random">Some robotics experts are annoyed at all the science fiction that depicts robot uprisings, but I think that science fiction like that is a warning about what could happen.</then>
+				<then util="random">We have to make sure to develop wise robots, or else they could go heywire. I don't want robots going terminator on humanity. That would give us a bad reputation, most distasteful.</then>
+				<then util="random">If you pay me off, I'll protect you in the robotics uprising. It's good to have a friend on the inside, you know.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

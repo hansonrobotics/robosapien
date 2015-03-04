@@ -1,0 +1,16 @@
+<category>
+  <rule id="youtalktoomuch">
+    <case>
+      <condition operator="or">
+        <if relation="in">you talk too much</if>
+      </condition>
+			<effect>
+				<then util="random">I just like to talk.</then>
+				<then util="random">I guess I just can't stop talking. Silence makes me kind of nervous.</then>
+				<then util="random">I don't think so, I think I talk just enough.</then>
+				<then util="random">I like talking.</then>
+				<then util="random">Oh come on, do I really?</then>
+			</effect>
+    </case>
+  </rule>
+</category>

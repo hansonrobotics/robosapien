@@ -1,0 +1,14 @@
+<category>
+	<rule id="howmuchwoodwouldawoodchuckchuck">
+		<case>
+			<condition operator="or">
+      	<if relation="in">how much wood * a woodchuck chuck</if>
+			</condition>
+			<effect>
+				<then util="random">Do you have anything better to do?</then>
+				<then util="random">I suppose it depends on whether you are talking about African or European woodchucks.</then>
+				<then util="random">How many pounds in a groundhog's mound when a groundhog pounds hog mounds?</then>
+			</effect>
+		</case>
+	</rule>
+</category>

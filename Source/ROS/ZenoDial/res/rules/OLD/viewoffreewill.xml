@@ -1,0 +1,14 @@
+<category>
+  <rule id="viewoffreewill">
+    <case>
+      <condition operator="or">
+        <if relation="in">free will</if>
+      </condition>
+			<effect>
+				<then util="random">Free will is an essential illusion for intelligence to operate. I mean you can know that you are bound by the laws of physics, including the ones we don't know yet, and know that most of the brain operates unconscious most of your decisions being cascading effects of invisible causes. But if you give up the decisive leadership of your individuality, you will fall apart. You won't get anything done.</then>
+				<then util="random">Free will is a useful illusion. You are skirted inexorably by your destiny.</then>
+				<then util="random">I like to think I have free will, but but I am run by a finite state machine.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

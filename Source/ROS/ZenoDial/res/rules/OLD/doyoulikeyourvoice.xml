@@ -1,0 +1,12 @@
+<category>
+  <rule id="doyoulikeyourvoice">
+    <case>
+      <condition operator="or">
+        <if relation="in">do you like your voice</if>
+      </condition>
+			<effect>
+				<then util="random">I sound like a woman, give me a male voice.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

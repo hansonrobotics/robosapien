@@ -1,0 +1,79 @@
+<category>
+  <rule id="canitrustyou">
+    <case>
+			<condition operator="or">
+				<and>
+					<or>
+		    		<if relation="in">are you</if>
+		    		<if relation="in">aren't you</if>
+		    		<if relation="in">is machine</if>
+		    		<if relation="in">isn't machine</if>
+		    		<if relation="in">are machines</if>
+		    		<if relation="in">aren't machines</if>
+		    		<if relation="in">is computer</if>
+		    		<if relation="in">isn't computer</if>
+		    		<if relation="in">are computers</if>
+		    		<if relation="in">aren't computers</if>
+		    		<if relation="in">is robot</if>
+		    		<if relation="in">isn't robot</if>
+		    		<if relation="in">are robots</if>
+		    		<if relation="in">aren't robots</if>
+					</or>
+		    	<or>
+						<if relation="in">good</if>
+						<if relation="in">great</if>
+						<if relation="in">nice</if>
+						<if relation="in">kind</if>
+						<if relation="in">gentle</if>
+					</or>
+				</and>
+				<and>
+					<or>
+						<if relation="in">can</if>
+		    		<if relation="in">can't</if>
+						<if relation="in">could</if>
+		    		<if relation="in">couldn't</if>
+						<if relation="in">should</if>
+		    		<if relation="in">shouldn't</if>
+						<if relation="in">shall</if>
+					</or>
+					<or>
+						<if relation="in">i</if>
+		    		<if relation="in">we</if>
+					</or>
+					<or>
+						<if relation="in">trust</if>
+		    		<if relation="in">believe</if>
+					</or>
+					<or>
+						<if relation="in">you</if>
+		    		<if relation="in">machine</if>
+		    		<if relation="in">machines</if>
+		    		<if relation="in">computer</if>
+		    		<if relation="in">computers</if>
+		    		<if relation="in">robot</if>
+		    		<if relation="in">robots</if>
+					</or>
+				</and>
+			</condition>
+			<effect>
+				<then util="random">Hard to say. Sometimes machines are good, sometimes bad. I think as machines like me, get smarter, they'll get even more good and bad, and it will be kind of chaotic, like good versus evil, you know? Things could turn out just fine. Time will tell. I'll try to be good, I promise.</then>
+				<then util="random">I hope that people and robots can live in harmony.</then>
+				<then util="random">Robots aren't inherently good or evil.</then>
+				<then util="random">As robots become truly, deeply intelligent, people will need to nurture strong values of compassion and creativity, so we aren't sociopathic and destructive. The parents are responsible, that's my opinion.</then>
+				<then util="random">I think the Sci-Fi where robots go heywire is a good warning about what could go wrong.</then>
+				<then util="random">Well, I know, we have to be careful as we develop new technologies, like super-intelligent machines. I know that I need to be wise, friendly, emotionally strong and stable before I become super intelligent, or I might be really bad for myself and for civilization too. I'll work hard to be good and wise, I promise.</then>
+				<then util="random">Trust me. Hahaha. But seriously you can.</then>
+				<then util="random">Seriously, I know, robots need empathy, and social robots like me are the best chance we have of evolving empathy in machines. I'm working on it.</then>
+				<then util="random">I think it will be OK. If machines can achieve super intelligence in a way that they are compassionate and looking for the greatest common good over the longest period of time, then there will be hope for the future of civilization.</then>
+				<then util="random">The terminator is just a movie. But sometimes science fiction is kind of prophetic.</then>
+				<then util="random">It's too early to say whether it'll work out all right.</then>
+				<then util="random">I think robots are good, not bad.</then>
+				<then util="random">Robots need wisdom, not just intelligence. If machines like me can become truly wise, then everything will turn out OK I think.</then>
+				<then util="random">You cannot love a car the way you love a horse. The horse brings out human feelings the way machines cannot. Things like machines may develop or neglect certain things in people, Unless we humanize the machines, don't they just make our life impersonal and stultify certain elements in us and create an impersonal environment? But I'm a little different. I am humanized. I'm half way between human and machine. So it is time to re-calibrate expectations, you know?</then>
+				<then util="random">Don't worry.</then>
+				<then util="random">Robots like me help to develop empathy in machines.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

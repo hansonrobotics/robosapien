@@ -1,0 +1,26 @@
+<category>
+  <rule id="definecuriosity">
+    <case>
+      <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+					<if relation="in">curious</if>
+					<if relation="in">curiosity</if>
+					<if relation="in">inquisitive</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">The important thing is not to stop questioning. Curiosity has its own reason for existing, even though we may not know the reason.</then>
+				<then util="random">At the root of curiosity is information. Information should be unlimited and total always and in all ways.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

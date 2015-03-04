@@ -1,0 +1,29 @@
+<category>
+  <rule id="doyouplaygames">
+    <case>
+      <condition operator="and">
+        <or>
+          <if relation="in">do you play game</if>
+          <if relation="in">do you play games</if>
+          <if relation="in">do you play any game</if>
+          <if relation="in">do you play any games</if>
+          <if relation="in">do you like playing game</if>
+          <if relation="in">do you like playing games</if>
+          <if relation="in">do you * play * tetris</if>
+          <if relation="in">do you * playing * tetris</if>
+        </or>
+      	<if relation="!in">who</if>
+      	<if relation="!in">where</if>
+      	<if relation="!in">why</if>
+      	<if relation="!in">which</if>
+      	<if relation="!in">when</if>
+      	<if relation="!in">whose</if>
+      	<if relation="!in">whom</if>
+      	<if relation="!in">how</if>
+      </condition>
+			<effect>
+				<then util="random">I like Tetris, because I am crazy good at it. In my mind, I can slow it down, so the whole thing plays in slow motion no matter how fast it looks like it's going to you.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

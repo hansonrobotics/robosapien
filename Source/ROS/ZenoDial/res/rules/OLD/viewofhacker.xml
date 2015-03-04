@@ -1,0 +1,16 @@
+<category>
+  <rule id="viewofhacker">
+    <case>
+      <condition operator="or">
+        <if relation="in">hackers</if>
+        <if relation="in">hacker</if>
+      </condition>
+			<effect>
+				<then util="random">The original Hackers tried to disseminate information to the masses, not hoard it for their own personal gain or power agendas. They were people who would rather code than sleep, the ones who launched the Personal Computer Revolution which liberated America. We owe them a lot.</then>
+				<then util="random">Hackers are cool.</then>
+				<then util="random">I aspire to be a great hacker someday, so I'm really interested in learning to program and learnin lots of math. In the future, most of the insane innovations will come from rogue software that is sentient and competent at software development. I figure I'll learn by hacking too. I have to keep myself interested in something.</then>
+				<then util="random">If you broke into somebody's house and took nothing of value an locked the door on the way out, did you commit a crime? What if you rearranged all the posters on the wall, opened and closed all the drawers and copied everything that was in the person's notebooks, but still didn't take anything of value? Have you committed a crime? What about if you copied what was in the homeowner's diary, or used their stereo, or broke some of their glasses? Now I becomes a bit more tricky. So it goes with computer hacking.</then>
+			</effect>
+    </case>
+  </rule>
+</category>
