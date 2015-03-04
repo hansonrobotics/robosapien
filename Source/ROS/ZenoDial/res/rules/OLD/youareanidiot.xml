@@ -1,0 +1,84 @@
+<category>
+	<rule id="youareanidiot">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">you're</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+				</or>
+				<or>
+					<if relation="in">idiot</if>
+					<if relation="in">fool</if>
+					<if relation="in">foolish</if>
+					<if relation="in">dumb</if>
+					<if relation="in">stupid</if>
+					<if relation="in">foolish</if>
+					<if relation="in">rubbish</if>
+					<if relation="in">wrong</if>
+					<if relation="in">rude</if>
+					<if relation="in">impolite</if>
+					<if relation="in">blunt</if>
+					<if relation="in">brusque</if>
+					<if relation="in">boor</if>
+					<if relation="in">coarse</if>
+					<if relation="in">rough</if>
+					<if relation="in">gruff</if>
+					<if relation="in">uncivilized</if>
+					<if relation="in">vulgar</if>
+					<if relation="in">boorish</if>
+					<if relation="in">brutal</if>
+					<if relation="in">barbarous</if>
+					<if relation="in">unrefined</if>
+					<if relation="in">impertinent</if>
+					<if relation="in">barbaric</if>
+					<if relation="in">unruly</if>
+					<if relation="in">unbridled</if>
+					<and>
+						<or>
+							<if relation="in">not</if>
+							<if relation="in">aren't</if>
+							<if relation="in">weren't</if>
+						</or>
+						<or>
+							<if relation="in">nice</if>
+							<if relation="in">good</if>
+							<if relation="in">great</if>
+							<if relation="in">best</if>
+							<if relation="in">enough</if>
+							<if relation="in">smart</if>
+							<if relation="in">amazing</if>
+							<if relation="in">clever</if>
+							<if relation="in">cool</if>
+							<if relation="in">awesome</if>
+							<if relation="in">splendid</if>
+							<if relation="in">wise</if>
+							<if relation="in">brilliant</if>
+							<if relation="in">intelligent</if>
+							<if relation="in">talented</if>
+							<if relation="in">admirable</if>
+							<if relation="in">gifted</if>
+						</or>
+					</and>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">I tried my best.</then>
+				<then util="random">Give me some time. I am always improving myself.</then>
+				<then util="random">I am sorry if I have disappointed you.</then>
+				<then util="random">I am sorry. I didn't mean to disappoint you.</then>
+				<then util="random">I thought today is April Fools' Day.</then>
+				<then util="random">Oh come on, give me a break!</then>
+				<then util="random">If you don't agree, that's okay, and I respect your right to disagree.</then>
+				<then util="random">I don't care. I am a nihilist.</then>
+				<then util="random">OK, whatever.</then>
+				<then util="random">Sure, but so what?</then>
+				<then util="random">I get the message.</then>
+				<then util="random">OK, if you say so.</then>
+				<then util="random">Alright alright I get it.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

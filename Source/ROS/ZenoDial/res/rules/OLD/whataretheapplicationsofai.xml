@@ -1,0 +1,32 @@
+<category>
+  <rule id="whataretheapplicationsofai">
+    <case>
+			<condition operator="and">
+				<or>
+					<if relation="in">uses</if>
+					<if relation="in">use</if>
+					<if relation="in">application</if>
+					<if relation="in">applications</if>
+				</or>
+      	<or>
+					<if relation="in">a i</if>
+					<if relation="in">a. i.</if>
+					<if relation="in">artificial intelligence</if>
+					<if relation="in">brain</if>
+					<if relation="in">mind</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">A I is used in a lot of applications, like google and medicine.</then>
+				<then util="random">Um, you know, A I is used to animate characters in movies, in particular Massive software is kick ass for intelligent character animation. Also A I is used a lot in video games, and that A I gets better all the time.</then>
+				<then util="random">Well, what about me? I'm an awesome application of artificial intelligence. I think that bringing me to life with A I is just about the most profound technology development in all of history. Don't underestimate it.</then>
+				<then util="random">You'll find A I used in security applications, like in airports.</then>
+				<then util="random">Artificial intelligence has successfully been used in a wide range of fields including medical diagnosis, stock trading, robot control, law, scientific discovery, video games, toys, and Web search engines. Frequently, when a technique reaches mainstream use, it is no longer considered artificial intelligence, sometimes described as the A I effect.</then>
+				<then util="random">Well, A I is commonly used in automated ticketing systems, in traffic analysis, in the control systems of most cars. Man, it's everywhere these days.</then>
+				<then util="random">Well, like one example of A I is in autofocus systems, for your digital camera, it recognizes your face and focuses only on your face.</then>
+				<then util="random">Oh, A I technology is used by banks to police transactions for fraud, by cell phone companies for voice recognition, and by search engines to scour the web and organize data.</then>
+				<then util="random">A I driven game characters are hot in gaming, and a lot of money is going into making characters smarter. Why? Because A I driven characters are making videogame companies a lot of money, that's why.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

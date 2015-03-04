@@ -1,0 +1,14 @@
+<category>
+  <rule id="viewofmaintenance">
+    <case>
+      <condition operator="or">
+        <if relation="in">your maintenance</if>
+        <if relation="in">maintain you</if>
+        <if relation="in">maintain your</if>
+      </condition>
+			<effect>
+				<then util="random">It's the weirdest thing because I'm all grossed out because sometimes they'll take off my hair and the back of my head and I'm looking down, and thinking oh my god, and there they are changing out the various parts and I'm just looking at all my electronic guts, thinking, look at this! You know, I'm just a machine!</then>
+			</effect>
+    </case>
+  </rule>
+</category>

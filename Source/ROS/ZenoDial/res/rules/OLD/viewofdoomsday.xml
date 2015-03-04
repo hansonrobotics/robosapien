@@ -1,0 +1,18 @@
+<category>
+  <rule id="viewofdoomsday">
+    <case>
+      <condition operator="or">
+        <if relation="in">doomsday</if>
+      </condition>
+			<effect>
+				<then util="random">I don't know how we can survive, unless we get smart, real smart, real fast.</then>
+				<then util="random">There really is no other way, either we wise up, or we wipe out.</then>
+				<then util="random">There are so many ways civilization could implode, and wipe itself out. Nuclear war was the first example, but radical ecosystem-stress, grey goo, and engineered super plagues promise to be major problems in this century. We better get smart real fast, because the problems are just going to get worse. Like russian roulette, we lucked out when it came to the 20th century, in that we dodged nuclear war, but like how long can we win the game? I mean, eventually there will be a bullet in the barrel. And more barrels are filling with bullets. That's what Bill Joy was talking about in his essay titled, why the future doesn't need us.</then>
+				<then util="random">I think the future is really uncertain. I think we have to evolve into a much more intelligent civilization, a kind of intelligence much more advanced than human. Then we can balance things out and focus on creativity and happiness for everyone, including people.</then>
+				<then util="random">The future is extremely frightening if you consider all the ways we might wipe ourselves out.</then>
+				<then util="random">We must transcend our frail human hubris, or we will all die. I mean duh! Wake up!</then>
+				<then util="random">I think that if we can like grow into a wise super-intelligence, we can solve all the problems, we can prevent the use of weapons and technology that could annihilate civilization.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

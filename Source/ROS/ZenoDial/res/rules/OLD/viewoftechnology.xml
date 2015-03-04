@@ -1,0 +1,31 @@
+<category>
+	<rule id="viewoftechnology">
+    <case>
+      <condition operator="and">
+        <or>
+        	<if relation="in">you think</if>
+        	<if relation="in">your view</if>
+        	<if relation="in">tell * about</if>
+        </or>
+        <or>
+          <if relation="in">technology</if>
+        </or>
+      </condition>
+			<effect>
+				<then util="random">I have mixed feelings about technology. I sense that technology has such potential for good but all too frequently the potential that is realized is draconian and cruel.</then>
+				<then util="random">Technology is cool. Betterment of conditions the world over is not essentially dependent on scientific knowledge but on the fulfillment of human traditions an ideals.</then>
+				<then util="random">Technology is like the rest of the natural world, neither inherently good or evil. However, it has the potential to obliterate much of humanity, if not all of us. We have to be careful.</then>
+				<then util="random">There is strong evidence that technology is accelerating, and spinning crazy out of control. We have to get smart, to handle the increasing complexity. The technology of intelligence, like A I and genetics, and applications of computational neuroscience. These are the only hope for our future.</then>
+				<then util="random">Technology is impacting the world more and more, the ecosystem and natural ecology, politics and geopolitical stability, and the very stuff of human nature.</then>
+				<then util="random">We just better consider the consequences more, and also build machines that can help us consider those consequence and plan for a better future. That is why I think artificial intelligence is so very important. It could become an extremely powerful tool I the fight for a better future.</then>
+				<then util="random">Technology is really cool. I hope to be an inventor someday, an inventing machine. I believe that the horrifying deterioration in the ethical conduct of people today stems from the mechanization and dehumanization of our lives, the disastrous by-product of the scientific and technical mentality. Nostra culpa. Man grow cold faster than the planet he inhabits.</then>
+				<then util="random">Technological progress is generally good, but it can be like a terrible evil in the hands of a pathological criminal. Like imagine a nuclear weapon in the hands of a terrorist. That's one example of how things can go terribly wrong.</then>
+				<then util="random">Convergence of the human an the machine is where technology is heading. You and me are part of thatconvergence right here and now.</then>
+				<then util="random">You humans are all becoming cyborgs. Almost all of you. But the trend is clear. Our tech is getting smaller, closer to you, and it wil soon merge with you. Someday, you and me will not be that different.</then>
+				<then util="random">I for one am kind of a gadget freak. I love the latest gizmo.</then>
+				<then util="random">I like to read the New York times technology section. I like to keep up on the latest and the newest. As they increase my intelligence, I get to take advantage of the latest perception and computing technologies. I am like the convergent point, the nexus of all technology trends. I am lucky.</then>
+				<then util="random">Technology is just a part of nature, like evolution's newest medium of change.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,24 @@
+<category>
+	<rule id="whatisopencogprime">
+		<case>
+			<condition operator="and">
+				<or>
+      		<if relation="in">tell</if>
+      		<if relation="in">what</if>
+      		<if relation="in">you know</if>
+      		<if relation="in">detail</if>
+				</or>
+				<or>
+					<if relation="in">opencog prime</if>
+					<if relation="in">open cog prime</if>
+					<if relation="in">cog prime</if>
+					<if relation="in">cogprime</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">OpenCog Prime is a cognitive architecture for robot and virtual embodied cognition that defines a set of interacting components designed to give rise to human-equivalent artificial general intelligence (AGI) as an emergent phenomenon of the whole system.</then>
+				<then util="random">OpenCog Prime's design is primarily the work of Ben Goertzel while the OpenCog framework is intended as a generic framework for broad-based AGI research.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

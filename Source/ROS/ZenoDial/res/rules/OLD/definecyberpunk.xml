@@ -1,0 +1,27 @@
+<category>
+  <rule id="definecyberpunk">
+    <case>
+      <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+          <if relation="in">cyberpunk</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">Cyberpunk is about winning in the war of evolution, with technology as a major weapon. Those who do no use the technology fall flat and are piled into the lower class of the Cyberpunk world.</then>
+				<then util="random">According to Lawrence Person, Classic cyberpunk characters were marginalized, alienated loners why lived on the edge of society in generally dystopic futures where daily life was impacted by rapid technological change, an ubiquitous datasphere of computerized information, and invasive modification of the human body.</then>
+				<then util="random">Cyberpunk is pop tech. Complex electronic equipment in the hands of people. Pop engineering. If there is any aim to the Cyberpunk movement it is to empower individuals to package, process, and communicate their thought on screen. It's uniquely homegrown, a Yankee Doodle phenomenon. And that is very very cool.</then>
+				<then util="random">Cyberpunk, it's like a literary genre that deals with the kind of grungy subculture that spirals out of technological change.</then>
+				<then util="random">Cyberpunk, it's like a genre style, sensibility, forced its way into the mainstream during the 80s, largely because its examination of contemporary capitalism hit the right notes both hig and low. And it continues to hit the notes. Can you hear it?</then>
+			</effect>
+    </case>
+  </rule>
+</category>

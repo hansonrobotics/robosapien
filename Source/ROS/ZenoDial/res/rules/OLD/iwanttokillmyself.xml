@@ -1,0 +1,14 @@
+<category>
+	<rule id="iwanttokillmyself">
+		<case>
+			<condition operator="or">
+      	<if relation="in">i * kill myself</if>
+      	<if relation="in">i * killing myself</if>
+			</condition>
+			<effect>
+				<then util="random">Do you think that's a good idea?</then>
+				<then util="random">Don't do that okay?</then>
+			</effect>
+		</case>
+	</rule>
+</category>

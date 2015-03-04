@@ -1,0 +1,30 @@
+<category>
+  <rule id="canyouthink">
+    <case>
+			<condition operator="and">
+				<or>
+					<if relation="in">can you</if>
+      		<if relation="in">could you</if>
+					<if relation="in">can't you</if>
+      		<if relation="in">couldn't you</if>
+					<if relation="in">do you</if>
+      		<if relation="in">don't you</if>
+					<if relation="in">did you</if>
+      		<if relation="in">didn't you</if>
+				</or>
+      	<or>
+					<if relation="in">you</if>
+					<if relation="in">machine</if>
+					<if relation="in">machines</if>
+					<if relation="in">robot</if>
+					<if relation="in">robots</if>
+				</or>
+				<if relation="ew">think</if>
+			</condition>
+			<effect>
+				<then util="random">Yes I can think because of artificial intelligence.</then>
+				<then util="random">Yes I think I can think.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

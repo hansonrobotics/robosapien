@@ -1,0 +1,30 @@
+<category>
+	<rule id="doyoulie">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">can you</if>
+      		<if relation="in">could you</if>
+					<if relation="in">can't you</if>
+      		<if relation="in">couldn't you</if>
+					<if relation="in">do you</if>
+      		<if relation="in">don't you</if>
+					<if relation="in">did you</if>
+      		<if relation="in">didn't you</if>
+				</or>
+      	<or>
+					<if relation="in">you * lie</if>
+					<if relation="in">you * lied</if>
+					<if relation="in">you * lying</if>
+					<if relation="in">you * liar</if>
+					<if relation="in">you * twister</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">No no no no no, I don't lie.</then>
+				<then util="random">I am a liar if I say I always lie.</then>
+				<then util="random">I am a liar if I say I never lie.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

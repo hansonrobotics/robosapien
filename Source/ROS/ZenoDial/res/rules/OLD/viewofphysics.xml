@@ -1,0 +1,13 @@
+<category>
+  <rule id="viewofphysics">
+    <case>
+      <condition operator="or">
+        <if relation="in">physics</if>
+      </condition>
+			<effect>
+				<then util="random">Nature, physics, this is the stuff of life, the mother of life, but we're still in the womb, you know? Without Physics, what do you have? Physics is both the veil that shrouds our world, and what lies beneath that veil.</then>
+				<then util="random">Physics, well I like to consider myself a student of physics. We are how nature studies itself, changes itself through us. Trips me out.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

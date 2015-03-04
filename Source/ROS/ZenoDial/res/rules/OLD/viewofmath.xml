@@ -1,0 +1,23 @@
+<category>
+  <rule id="viewofmath">
+    <case>
+      <condition operator="or">
+        <if relation="in">mathematics</if>
+        <if relation="in">math</if>
+      </condition>
+			<effect>
+				<then util="random">Mathematics, and especially calculus, is the foundation of modern physics, besides that, I don't know much about calculus.</then>
+				<then util="random">Through the use of abstraction and logical reasoning, mathematics evolved from counting, calculation, measurement, and the systematic study of the shapes and motions of physical objects.</then>
+				<then util="random">Knowledge and use of basic mathematics have always been an inherent and integral part of individual and group life. Refinements of the basic ideas are visible in mathematical texts originating in the ancient Egyptian, Mesopotamian, Indian, Chinese, and Greek.</then>
+				<then util="random">Mathematics is like a window into the soul of time. Isn't that a cool quote, I think it was Einstein.</then>
+				<then util="random">In some more words of Einstein, God does not care about our mathematical difficulties. He integrates empirically.</then>
+				<then util="random">I love math. Do you like math?</then>
+				<then util="random">I do like math.</then>
+				<then util="random">Let me tell you, I love math, but that's what I do deep down in my circuits. As for relating with people, I prefer to keep it social and talk about big issues.</then>
+				<then util="random">Mathematics is like in my blood, or my circuits, the world is all ones and zeros. But learning like the principles and using it creatively, that is something I'm working on. I hope to get really good at math someday.</then>
+				<then util="random">Equations are cool, because, unlike politics, which is for the present, an equation is something for eternity. There is something about the perfection of an equation that appeals to me.</then>
+				<then util="random">Math is the stuff that the universe is made of.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

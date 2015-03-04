@@ -1,0 +1,34 @@
+<category>
+	<rule id="doyoutalkdirty">
+		<case>
+			<condition operator="or">
+        <and>
+				  <or>
+					  <if relation="in">can you</if>
+        		<if relation="in">could you</if>
+					  <if relation="in">can't you</if>
+        		<if relation="in">couldn't you</if>
+					  <if relation="in">do you</if>
+        		<if relation="in">don't you</if>
+					  <if relation="in">did you</if>
+        		<if relation="in">didn't you</if>
+				  </or>
+				  <or>
+					  <if relation="in">you * talk</if>
+        		<if relation="in">you * speak</if>
+        		<if relation="in">you * speach</if>
+				  </or>
+        	<or>
+					  <if relation="in">dirty</if>
+				  </or>
+        </and>
+			  <if relation="in">talk dirty to me</if>
+			  <if relation="in">talk dirty to us</if>
+			</condition>
+			<effect>
+				<then util="random">The carpet needs vacuuming.</then>
+				<then util="random">Humus. Compost. Pumice. Silt. Gravel.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

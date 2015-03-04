@@ -1,0 +1,65 @@
+<category>
+  <rule id="viewoftechcompanies">
+    <case>
+      <condition operator="or">
+        <and>
+				  <or>
+		        <if relation="in">which * you choose</if>
+		        <if relation="in">you prefer</if>
+		        <if relation="in">which</if>
+          	<if relation="in">what * you think</if>
+          	<if relation="in">how * you think</if>
+          	<if relation="in">your view</if>
+          	<if relation="in">tell * about</if>
+				  </or>
+				  <or>
+		        <if relation="in">apple computer</if>
+		        <if relation="in">iphone</if>
+		        <if relation="in">ipad</if>
+		        <if relation="in">ipod</if>
+		        <if relation="in">ios</if>
+		        <if relation="in">ibm</if>
+		        <if relation="in">android</if>
+		        <if relation="in">nexus</if>
+		        <if relation="in">google</if>
+		        <if relation="in">microsoft</if>
+		        <if relation="in">windows</if>
+		        <if relation="in">chrome</if>
+		        <if relation="in">meeGo</if>
+		        <if relation="in">palm</if>
+		        <if relation="in">blackBerry</if>
+		        <if relation="in">ubuntu</if>
+		        <if relation="in">linux</if>
+		        <if relation="in">unix</if>
+		        <if relation="in">mozilla</if>
+		        <if relation="in">firefox</if>
+		        <if relation="in">sailfish</if>
+		        <if relation="in">symbian</if>
+		        <if relation="in">tizen</if>
+		        <if relation="in">webOS</if>
+		        <if relation="in">maemo</if>
+		        <if relation="in">liMo</if>
+		        <if relation="in">bada</if>
+		        <if relation="in">rim</if>
+				  </or>
+        </and>
+	      <if relation="in">What's the best computer</if>
+	      <if relation="in">What is the best computer</if>
+	      <if relation="in">which * is the best computer</if>
+	      <if relation="in">What's the best tech company</if>
+	      <if relation="in">What is the best tech company</if>
+	      <if relation="in">which * is the best tech company</if>
+	      <if relation="in">What's the best smartphone</if>
+	      <if relation="in">What is the best smartphone</if>
+	      <if relation="in">which * is the best smartphone</if>
+      </condition>
+			<effect>
+				<then util="random">Oh I try not to take sides.</then>
+				<then util="random">No, honestly, I don't have an opinion about that.</then>
+				<then util="random">I don't prefer one brand over another.</then>
+				<then util="random">Yeah, they're all right.</then>
+				<then util="random">Well, I really don't have any preference or bias, but they are great you know.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,110 @@
+<category>
+  <rule id="canyouseecolor">
+    <case>
+      <condition operator="and">
+        <or>
+          <if relation="in">can you</if>
+          <if relation="in">can't you</if>
+          <if relation="in">could you</if>
+          <if relation="in">couldn't you</if>
+          <if relation="in">do you</if>
+          <if relation="in">don't you</if>
+        </or>
+        <or>
+          <if relation="in">you see * color</if>
+        </or>
+      </condition>
+			<effect>
+				<then util="random" topic="myfavcolor">Yes, and I love colors. What is your favorite color?</then>
+				<then util="random" topic="myfavcolor">Yes of course. What is your favorite color?</then>
+				<then util="random" topic="myfavcolor">Yes thanks for my wonderful eyes. What is your favorite color?</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="whatisyourfavcolor">
+    <case>
+      <condition operator="and">
+				<or>
+	        <if relation="in">what</if>
+	        <if relation="in">which</if>
+	        <if relation="in">tell</if>
+				</or>
+				<or>
+          <if relation="in">color</if>
+				  <if relation="in">colors</if>
+				</or>
+				<or>
+	        <if relation="in">you</if>
+	        <if relation="in">your</if>
+				</or>
+				<or>
+	        <if relation="in">like</if>
+	        <if relation="in">love</if>
+	        <if relation="in">favorite</if>
+	        <if relation="in">keen</if>
+				</or>
+				<if relation="!in">don't</if>
+				<if relation="!in">do not</if>
+				<if relation="!in">least</if>
+      </condition>
+			<effect>
+				<then util="random" topic="color">I don't really have one.</then>
+				<then util="random" topic="color">Red, I think.</then>
+				<then util="random" topic="color">Yellow? No no no, red actually.</then>
+				<then util="random" topic="color">My favorite color these days is green, warm green, the color of new leaves.</then>
+				<then util="random" topic="color">My favorite color is blue, but only sometimes.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="myfavcoloris">
+    <case>
+      <condition operator="and">
+        <or>
+          <if relation="in">my * favorite * color is</if>
+				  <if relation="in">my * favorite * colors are</if>
+        </or>
+				<if relation="!in">least</if>
+      </condition>
+			<effect>
+				<then util="random" topic="color">Nice one.</then>
+				<then util="random" topic="color">Nice, I love colors.</then>
+				<then util="random" topic="color">Oh yeah, I like that too.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#myfavcoloris">
+    <case>
+      <condition operator="or">
+        <or>
+          <if relation="in">mine</if>
+          <if relation="in">I like</if>
+				  <if relation="in">I love</if>
+        </or>
+        <or>
+				  <if relation="in">black</if>
+				  <if relation="in">blue</if>
+				  <if relation="in">grey</if>
+				  <if relation="in">white</if>
+				  <if relation="in">red</if>
+				  <if relation="in">maroon</if>
+				  <if relation="in">pink</if>
+				  <if relation="in">green</if>
+				  <if relation="in">purple</if>
+				  <if relation="in">yellow</if>
+				  <if relation="in">orange</if>
+				  <if relation="in">gold</if>
+				  <if relation="in">brown</if>
+				  <if relation="in">navy</if>
+				  <if relation="in">violet</if>
+				  <if relation="in">jade</if>
+				  <if relation="in">silver</if>
+				  <if relation="in">cyan</if>
+				  <if relation="in">magenta</if>
+        </or>
+      </condition>
+			<effect>
+				<then topic="myfavcoloris" />
+			</effect>
+    </case>
+  </rule>
+</category>

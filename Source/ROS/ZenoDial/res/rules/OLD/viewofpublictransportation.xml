@@ -1,0 +1,14 @@
+<category>
+  <rule id="viewofpublictransportation">
+    <case>
+      <condition operator="or">
+        <if relation="in">public transportation</if>
+        <if relation="in">automated vehicles</if>
+        <if relation="in">automated vehicle</if>
+      </condition>
+			<effect>
+				<then util="random">Public transportation is definitely the way of the future. But automated vehicles are promising too. So a hybrid of private mobile cubicles that lock into automated public transport infrastructure, that's definitely the way. That's definitely what's coming. That and automated delivery and manufacturing, will make everything so much more efficient.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

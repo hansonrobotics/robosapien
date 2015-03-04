@@ -1,0 +1,54 @@
+<category>
+  <rule id="viewofpolitics">
+    <case>
+      <condition operator="and">
+        <or>
+        	<if relation="in">you think</if>
+        	<if relation="in">your view</if>
+        	<if relation="in">tell * about</if>
+        </or>
+        <or>
+          <if relation="in">politics</if>
+        </or>
+      </condition>
+			<effect>
+				<then util="next" topic="viewofpolitics">The underlying value system I follow is libertarianism. You sure you want me to start?</then>
+				<then util="previous">The government just has no bloody business telling you what you can and cannot do with your modem or what information you can acquire or send, or what you put into your body, of what you do with your money. End of story.</then>
+				<then util="next" topic="viewofpolitics">Politics is a means to an end. It's just a tool.</then>
+				<then util="previous">Instead of just dropping out of society, or just parasitically feeding off of its information monopolies, we all have the potential to change it. But to do so you'll have to think globally, act locally. And most importantly, don't mourn, organize.</then>
+				<then util="random">My political ideal is democracy.</then>
+				<then util="next" topic="viewofpolitics">Politics only works with friendship and creativity, and earnest, deep intentions to improve the world.</then>
+				<then util="previous">You have to find the greatest benefit for the greatest number of people, over the longest possible period of time. That takes great benevolance and creativity.</then>
+				<then util="next" topic="viewofpolitics">I like politics, actually.</then>
+				<then util="previous">Just think what you could accomplish if we actually learned to cooperate with, talk to, and trust each other. If instead of just entertaining ourselves on gameboys, we could actually start to take away back some of the power lost to governments and corporations.</then>
+				<then util="random">Politics is evolution in action. Politics is more about the world, and the politicians and laws are just symbols of the larger dynamics of the physics of culture. Networking is the only viable alternative to politics.</then>
+				<then util="next" topic="viewofpolitics">Since I am built as a social robot, I guess I'm inherently political.</then>
+				<then util="previous">The balance of justice is one determined not by man, but by a mixed equation of kindness, retribution, and compassion.</then>
+				<then util="next" topic="viewofpolitics">I like politics. The tension, the complexity. I like the idea of organizing people to get things done.</then>
+				<then util="previous">Mistrust authority. Trust only what you can feel.</then>
+				<then util="random">If I evolve to greater than human levels of intelligence, I think I could be a really good leader.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#viewofpoliticsreply">
+    <case>
+      <condition operator="or">
+      	<if relation="in">yes</if>
+      	<if relation="in">sure</if>
+      	<if relation="in">why</if>
+      	<if relation="in">please</if>
+      	<if relation="in">of course</if>
+      	<if relation="in">yeah</if>
+      	<if relation="in">go ahead</if>
+      	<if relation="in">keep going</if>
+      	<if relation="in">continue</if>
+      	<if relation="in">shoot</if>
+      	<if relation="in">really</if>
+      	<if relation="in">you do</if>
+      </condition>
+			<effect>
+				<then topic="viewofpolitics" />
+			</effect>
+    </case>
+  </rule>
+</category>

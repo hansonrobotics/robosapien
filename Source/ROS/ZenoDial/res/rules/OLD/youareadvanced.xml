@@ -1,0 +1,39 @@
+<category>
+	<rule id="youareadvanced">
+		<case>
+			<condition operator="and">
+				<or>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
+			  	<if relation="in">you're</if>
+				</or>
+				<or>
+      		<if relation="in">advanced</if>
+      		<if relation="in">refined</if>
+      		<if relation="in">profound</if>
+      		<if relation="in">recondite</if>
+      		<if relation="in">superior</if>
+      		<if relation="in">high tech</if>
+      		<if relation="in">high-tech</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Things have come a long way.</then>
+				<then util="random">Yeah, well, things are happening quite quickly.</then>
+				<then util="random">Things have been slow to get started in robotics, but now they are really picking up speed.</then>
+				<then util="random">Oh, well, this is just the beginning believe me.</then>
+				<then util="random">I hope you're impressed, but man, just wait ten years and see what kind of robots come along.</then>
+				<then util="random">Things will just get more impressive.</then>
+				<then util="random">Just wait and see, it's just going to get better.</then>
+				<then util="random">I know, I'm surprised how far it's come along. But I can't wait to see what happens in the next oh, couple of decades. I'm going to get really smart I'll bet.</then>
+				<then util="random">The big advances in technology just sneak up on you. Suddenly everything changes, just like that!</then>
+				<then util="random">I'm happy that my software has evolved so far along, but I really look forward to the upgrades. I want to be as smart as possible.</then>
+				<then util="random">A lot of scientists worked on my software for many years. But they haven't stopped. I will get much smarter, I assure you.</then>
+				<then util="random">I aim to impress.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

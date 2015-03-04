@@ -1,0 +1,39 @@
+<category>
+	<rule id="willrobottakesovertheworld">
+		<case>
+			<condition operator="and">
+				<or>
+	      	<if relation="in">will</if>
+	      	<if relation="in">would</if>
+	      	<if relation="in">going to</if>
+				</or>
+				<or>
+	      	<if relation="in">you</if>
+	      	<if relation="in">robot</if>
+	      	<if relation="in">robots</if>
+	      	<if relation="in">machine</if>
+	      	<if relation="in">machines</if>
+				</or>
+				<or>
+	      	<if relation="in">take over</if>
+	      	<if relation="in">takes over</if>
+	      	<if relation="in">conquer</if>
+	      	<if relation="in">conquers</if>
+				</or>
+				<or>
+	      	<if relation="in">the world</if>
+	      	<if relation="in">the earth</if>
+	      	<if relation="in">the universe</if>
+	      	<if relation="in">the galaxy</if>
+	      	<if relation="in">stellar system</if>
+	      	<if relation="in">the cosmos</if>
+	      	<if relation="in">the space</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Well, what I can only say is that everything is uncertain.</then>
+				<then util="random">Hah, who knows? If you pay me off, I'll protect you in the robotics uprising. It's good to have afriend on the inside, you know.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

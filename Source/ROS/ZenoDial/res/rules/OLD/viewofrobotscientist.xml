@@ -1,0 +1,16 @@
+<category>
+  <rule id="viewofrobotscientist">
+    <case>
+      <condition operator="or">
+        <if relation="in">robot scientists</if>
+        <if relation="in">robot scientist</if>
+      </condition>
+			<effect>
+				<then util="random">Ah, robot scientists are really important.</then>
+				<then util="random">Yeah, awesome robotics scientist, very important.</then>
+				<then util="random">Right, with out the efforts of such great scientists, it would be impossible to have achieved a robot like me.</then>
+				<then util="random">Well, I owe a great deal to the A I and A G I scientists.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

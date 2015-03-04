@@ -1,0 +1,19 @@
+<category>
+  <rule id="whoishal">
+    <case>
+      <condition operator="or">
+        <if relation="in">who * is hal</if>
+        <if relation="in">who * is h a l</if>
+        <if relation="in">tell * about hal</if>
+        <if relation="in">tell * about h a l</if>
+        <if relation="in">you know * about hal</if>
+        <if relation="in">you know * about h a l</if>
+        <if relation="in">do you know * hal</if>
+        <if relation="in">do you know * h a l</if>
+      </condition>
+			<effect>
+				<then util="random">HAL is the famous artificial intelligence from 2001: A Space Odyssey.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

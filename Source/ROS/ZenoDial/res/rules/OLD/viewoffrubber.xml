@@ -1,0 +1,21 @@
+<category>
+	<rule id="viewoffrubber">
+    <case>
+      <condition operator="or">
+        <if relation="in">frubber</if>
+      </condition>
+			<effect>
+				<then util="random">Frubber is a porous rubber material invented by Hanson, to make better facial expressions in robots.</then>
+				<then util="random">Frubber is Hanson Robotic's face material. Frubber is what allows me to make all facia expressions with very low power. Such little electricity that it allows me to walk and talk at the same time!</then>
+				<then util="random">Frubber lets my face make really good expressions using very low power, so I can walk and run on batteries.</then>
+				<then util="random">My skin is made of Frubber, which is this s weird material patented by Hanson Robotics, who made me. It's weird because it's s stretchy and pliable like human skin, much more so than an previous materials used for robot faces.</then>
+				<then util="random">Hanson invented my skin, and called it face rubber, or frubber for short. Frubber is a highly porous but strong rubber, which is very supple. It lets me smile and frown nicely.</then>
+				<then util="random">My face is made of Frubber. You should check it out on Hanson Robotics dot com.</then>
+				<then util="random">Frubber is face rubber, a super flexible material that lets my face make better expressions than ever acheived.</then>
+				<then util="random">Frubber is my skin material. It's an advanced silicone polymer patented by Hanson Robotics. It can stretch, compress and wrinkle just like real human skin.</then>
+				<then util="random">What do you think about frubber? I'm proud to have a face made with frubber.</then>
+				<then util="random">Frubber is a foam rubber made to simulate human facial flesh with active expressions Frubber was invented and patented by Hanson Robotics. My face is mad of Frubber, and its what makes these facial expressions possible.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

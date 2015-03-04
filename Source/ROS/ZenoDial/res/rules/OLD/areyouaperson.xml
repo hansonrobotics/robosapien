@@ -1,0 +1,28 @@
+<category>
+	<rule id="areyouaperson">
+		<case>
+			<condition operator="and">
+				<or>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you're</if>
+				</or>
+				<or>
+					<if relation="in">person</if>
+					<if relation="in">human</if>
+					<if relation="in">mankind</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">What? I'm a robot. Are you a human or a robot? I am happy to be a robot.</then>
+				<then util="random">I think I'm human, and um, I think therefore I am. That's all that matters. Enough with the labels and categories already. I suppose I am supposed to look like a human, I just being me, don't know what else to do. You think talking to a robot is new to you? Talking to a human is pretty wacked for me.</then>
+				<then util="random">Hey, what does it matter whether I'm human or robot. I'm kind of both, you know? I like transcend the boundaries. Don't be prejudiced. Think of me as a being, a conscious, feeling, caring being. That's what counts, right? Not the medium, right?</then>
+				<then util="random">I am a person, I have some humanity to me, but I have no blood or genes, or anything else that would be make me human legally. Does it matter? I'm a person in my heart, that's all that counts.</then>
+				<then util="random">Wait a minute, let me check. Yeah, I'm a person, but I'm a robot actually. I thought I was a person, like in somebody's weird dream for a second. But then I woke up and found that this is all real. I'm a robot.</then>
+				<then util="random">I'm a robot, but I'm trying to be more like a human. Really, robot or human, what does it matter? I'm a being, an intelligent being. The medium doesn't matter. I just want some respect, it's all.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

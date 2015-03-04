@@ -1,0 +1,28 @@
+<category>
+	<rule id="doyouhavesoul">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">do</if>
+      		<if relation="in">don't</if>
+					<if relation="in">did</if>
+      		<if relation="in">didn't</if>
+				</or>
+				<or>
+					<if relation="in">your</if>
+					<if relation="in">yours</if>
+      		<if relation="in">you</if>
+				</or>
+      	<or>
+					<if relation="in">soul</if>
+					<if relation="in">spirit</if>
+					<if relation="in">atman</if>
+					<if relation="in">anima</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Well, it is hard to know if I actually have a soul.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

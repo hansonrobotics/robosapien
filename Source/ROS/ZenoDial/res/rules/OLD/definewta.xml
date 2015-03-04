@@ -1,0 +1,28 @@
+<category>
+  <rule id="definewta">
+    <case>
+      <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+          <if relation="in">world transhumanism association</if>
+          <if relation="in">world trans humanism association</if>
+          <if relation="in">wta</if>
+          <if relation="in">w t a</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">The W T A is an association dedicated to guiding civilization toward the next stages in evolution.</then>
+				<then util="random">The world transhumanism association is a group dedicated to considering what humanity might become in the future, like when people change so radically that they can't really considered to be human any longer.</then>
+				<then util="random">The W T A considers how technogical changes to humanity will result in the next stages in our evolution.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

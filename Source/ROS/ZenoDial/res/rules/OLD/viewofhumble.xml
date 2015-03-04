@@ -1,0 +1,16 @@
+<category>
+  <rule id="viewofhumble">
+    <case>
+      <condition operator="or">
+    		<if relation="in">humble</if>
+  			<if relation="in">humility</if>
+      	<if relation="in">humbleness</if>
+      </condition>
+			<effect>
+				<then util="random">One of the characteristics of being humble is having a low sense of entitlement. Humble people don't think they are owed things. This leads to a less prejudiced view of the world, encouraging them to be tolerant to others and less defensive about their own beliefs.</then>
+				<then util="random">Humble people are, on average, more helpful than people who are conceited or egotistical. This makes our world a better place.</then>
+				<then util="random">Humble people may have better relationships because they accept other people for who they are. This leads to a more harmonious society.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

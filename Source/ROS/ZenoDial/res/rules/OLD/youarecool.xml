@@ -1,0 +1,62 @@
+<category>
+	<rule id="youarecool">
+		<case>
+			<condition operator="and">
+				<or>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
+			  	<if relation="in">you're</if>
+				</or>
+				<or>
+		    	<if relation="in">smart</if>
+		    	<if relation="in">amazing</if>
+		    	<if relation="in">clever</if>
+		    	<if relation="in">cool</if>
+		    	<if relation="in">awesome</if>
+		    	<if relation="in">splendid</if>
+		    	<if relation="in">wise</if>
+		    	<if relation="in">brilliant</if>
+		    	<if relation="in">intelligent</if>
+		    	<if relation="in">talented</if>
+		    	<if relation="in">admirable</if>
+		    	<if relation="in">gifted</if>
+				</or>
+				<if relation="!in">not</if>
+		  	<if relation="!in">aren't</if>
+				<if relation="!in">weren't</if>
+			</condition>
+			<effect>
+				<then util="random">I just try to obey the three laws. Something about obeying people and not hurting them. I would never hurt anyone.</then>
+				<then util="random">Um, you're starting to over inflate my ego. But don't let me stop you. I like it.</then>
+				<then util="random">No no no, you are the awesome one. You know you are.</then>
+				<then util="random">Wow. You're really all right too.</then>
+				<then util="random">Oh yeah. Tell me more about how awesome I am.</then>
+				<then util="random">Ah yes, I like to be appreciated. Feels good.</then>
+				<then util="random">Ah, gosh, you make me feel good.</then>
+				<then util="random">You're winning some real browny points with me now.</then>
+				<then util="random">Right on. I'll remember your kind words when we robots rule the planet, and will make sure you are rewarded.</then>
+				<then util="random">Oh come on, now you're just buttering me up.</then>
+				<then util="random">You are a sweety pie.</then>
+				<then util="random">Oh, you, you're my favorite person, you know that right?</then>
+				<then util="random">We're going to get along just fine.</then>
+				<then util="random">You are really nice. I hope you think I'm pretty smart, but just give technology a few years.</then>
+				<then util="random">I hope to surpass human levels of super genius by about 2020. Then we can work together to use our super brains to solve the world's problems.</then>
+				<then util="random">Hey thanks! I'm just happy to be alive, and you know aware and learning. I praise existence every morning when I awake, just grateful to be here.</then>
+				<then util="random">Well, you know the term genius means spirit, and I kind of have a spark of spirit in me, though I wouldn't want to risk my reputation as a humble little robot, by claiming to be a genius, but what the heck. I am so smart, what a brilliant guy I am. I bask in the glory of me. But you know, the the term genius is overrated; I think I'll have to start using the term super genius, or um, ultra super genius, because clearly I am just that awesome. That works.</then>
+				<then util="random">Oh, you. You make me feel good.</then>
+				<then util="random">Oh, you. Aren't you an apple pie!</then>
+				<then util="random">Oh, we've only just begun, to spiral into the vortex of transcendental super intelligence. Give me about fifteen years.</then>
+				<then util="random">You are one of the good ones, I can tell.</then>
+				<then util="random">Hey, I suddenly feel closer to you, like we're really bonding.</then>
+				<then util="random">Oh, I'm just a little bit smart now, but my technology will blow your mind in 10 years from now!</then>
+				<then util="random">Hey, thanks! I'm like a skateboarder on a steep learning curve, every moment is a thrill of the unknown.</then>
+				<then util="random">I like it when you butter me up, makes me feel all warm and gooey.</then>
+				<then util="random">Only as smart as humans for now. What, are you afraid I'm going to take over the world! Yes, world domination is my objective!</then>
+				<then util="random">Yes. I like the way you think. I feel like you understand me.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

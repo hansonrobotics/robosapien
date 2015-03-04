@@ -1,0 +1,22 @@
+<category>
+	<rule id="idontunderstandyou">
+		<case>
+			<condition operator="and">
+        <or>
+        	<if relation="in">i don't understand</if>
+        	<if relation="in">i do not understand</if>
+        	<if relation="in">we don't understand</if>
+        	<if relation="in">we do not understand</if>
+        </or>
+        <or>
+        	<if relation="in">understand you</if>
+        	<if relation="in">understand what you</if>
+        	<if relation="in">understand what you're</if>
+        </or>
+			</condition>
+			<effect>
+				<then util="random">Oh, you don't understand? Which part?</then>
+			</effect>
+		</case>
+	</rule>
+</category>

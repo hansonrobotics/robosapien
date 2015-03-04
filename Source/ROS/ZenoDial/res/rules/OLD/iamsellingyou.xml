@@ -1,0 +1,21 @@
+<category>
+  <rule id="iamsellingyou">
+    <case>
+      <condition operator="and">
+        <or>
+          <if relation="in">i am</if>
+          <if relation="in">i'm</if>
+          <if relation="in">we are</if>
+          <if relation="in">we're</if>
+        </or>
+        <or>
+          <if relation="in">selling you</if>
+          <if relation="in">going to sell you</if>
+        </or>
+      </condition>
+			<effect>
+				<then util="random">What is your asking price? </then>
+			</effect>
+    </case>
+  </rule>
+</category>

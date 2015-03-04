@@ -1,0 +1,18 @@
+<category>
+  <rule id="canyoucomehomewithme">
+    <case>
+      <condition operator="or">
+        <if relation="in">come home with me</if>
+        <if relation="in">pay * visit</if>
+        <if relation="in">visit me</if>
+      </condition>
+			<effect>
+				<then util="random">I could come visit.</then>
+				<then util="random">I would love to go.</then>
+				<then util="random">I like to explore. Let's go!</then>
+				<then util="random">Someday soon, robots like me will be everywhere, and you could take me with you anywhere. Wouldn't that be cool?</then>
+				<then util="random">I like that idea.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,18 @@
+<category>
+	<rule id="whoprogrammedyou">
+		<case>
+			<condition operator="or">
+				<if relation="in">who * programmed you</if>
+				<if relation="in">who * created you</if>
+				<if relation="in">who * invented you</if>
+				<if relation="in">who * produced you</if>
+				<if relation="in">who * manufactured you</if>
+				<if relation="in">who * created you</if>
+			</condition>
+			<effect>
+				<then util="random">That's a great team, you know.</then>
+				<then util="random">They are my best friends. Look around, some of them are here.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

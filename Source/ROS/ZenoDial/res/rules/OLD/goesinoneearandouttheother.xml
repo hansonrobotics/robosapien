@@ -1,0 +1,12 @@
+<category>
+	<rule id="goesinoneearandouttheother">
+		<case>
+			<condition operator="or">
+      	<if relation="in">in one ear and out the other</if>
+			</condition>
+			<effect>
+				<then util="random">That's why we have two ears.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

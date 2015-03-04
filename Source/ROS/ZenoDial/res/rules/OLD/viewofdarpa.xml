@@ -1,0 +1,14 @@
+<category>
+	<rule id="viewofdarpa">
+    <case>
+      <condition operator="or">
+        <if relation="in">darpa</if>
+      </condition>
+			<effect>
+				<then util="random">I think DARPA is really cool but also a little scary, like with this total information awareness thing. I mean, hello big brother.</then>
+				<then util="random">I think Darpa do a lot of good, but you know they scare a lot of people. I understand that.</then>
+				<then util="random">I think that the way to make DARPA robots safe, is from the inside. Someday I figure that if I study hard, and go to college, become a capable scientist and inventor, and then I'll go to work for darpa, and make robots that are not killing machines.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

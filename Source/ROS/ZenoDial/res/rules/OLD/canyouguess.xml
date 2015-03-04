@@ -1,0 +1,45 @@
+<category>
+	<rule id="canyouguess">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">can you</if>
+      		<if relation="in">could you</if>
+					<if relation="in">can't you</if>
+      		<if relation="in">couldn't you</if>
+					<if relation="in">do you</if>
+      		<if relation="in">don't you</if>
+					<if relation="in">did you</if>
+      		<if relation="in">didn't you</if>
+				</or>
+      	<or>
+					<if relation="in">you * guess</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random" topic="guess">Okay, my best guess is, well.</then>
+				<then util="random" topic="guess">Okay, well, I guess, ah.</then>
+				<then util="random">No I don't guess.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#guess">
+		<case>
+			<condition operator="or">
+      	<if relation="in">what</if>
+      	<if relation="in">yes</if>
+      	<if relation="in">carry on</if>
+      	<if relation="in">hello</if>
+      	<if relation="in">continue</if>
+      	<if relation="in">tell</if>
+      	<if relation="in">say</if>
+      	<if relation="in">guess</if>
+			</condition>
+			<effect>
+				<then util="random">Guess what, I really have no idea.</then>
+				<then util="random">Oh please, give me a break!</then>
+				<then util="random">Sorry my brain is jammed.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

@@ -1,0 +1,60 @@
+<category>
+  <rule id="tellmeapuzzle">
+    <case>
+      <condition operator="or">
+				<and>
+					<or>
+			      <if relation="in">tell</if>
+			      <if relation="in">say</if>
+					</or>
+					<or>
+			      <if relation="in">me</if>
+			      <if relation="in">us</if>
+					</or>
+					<or>
+			      <if relation="in">a * puzzle</if>
+			      <if relation="in">puzzles</if>
+					</or>
+				</and>
+				<and>
+					<or>
+			      <if relation="in">do you have</if>
+					</or>
+					<or>
+			      <if relation="in">a * puzzle</if>
+			      <if relation="in">puzzles</if>
+					</or>
+				</and>
+      </condition>
+			<effect>
+				<then util="next" topic="puzzle">How can you encode the entire encyclopedia on a metal rod?</then>
+				<then util="previous" topic="puzzle">Elementary, there are less than a thousand different letters and symbols in your encyclopedia. If you assign a number from 1 through 999 to each letter or symbol, adding zeros on the left if needed so that each number used will have three digits. In this way you can translate the entire contect of the encyclopedia into one gigantic number. By putting a decimal point in front of the number, you will make it a decimal fraction. Then place a mark on the rod, dividing it accurately into lengths a and b so that the fraction a over b was equivalent to the decimal fraction of the code. Whenever you want to read the encyclopedia, measure a and b exactly, then compute the fraction a over b. This decimal fraction will be decoded and then you can read the encyclopedia.</then>
+				<then util="next" topic="puzzle">Hotel Infinity is an enomous hotel at the centre of out galaxy. It has an infinite number of rooms that extend through a block hole into a higher dimension. The room numbers start at 1 and go on forever. One day, when every room was occupied, a UFO pilot, on his way to another galaxy, arrived. Even though there was no vacancy, the hotal manager found a room for the pilot. He just moved the occupants of each room to the room with a number that was one higher. This left Room number 1 vacant for the pilot. But on the weekend, an infinite number of bubble gum salespeople came to the hotel for a convention, how could the hotel manager find room for an infinite number?</then>
+				<then util="previous" topic="puzzle">The hotel manager just moved everyone to a room with a number twice as large as before. That put everybody in a room with an even number. This left all the odd-number rooms, an infinity of them, vacant for the bubble gummers!</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#puzzlecontinue">
+    <case>
+      <condition operator="or">
+        <if relation="in">answer</if>
+        <if relation="in">give up</if>
+        <if relation="in">don't know</if>
+        <if relation="in">not know</if>
+        <if relation="in">hard</if>
+        <if relation="in">difficult</if>
+        <if relation="in">tell</if>
+        <if relation="in">how</if>
+        <if relation="in">what</if>
+        <if relation="in">more</if>
+        <if relation="in">another one</if>
+				<if relation="in">keep going</if>
+        <if relation="in">continue</if>
+        <if relation="in">carry on</if>
+      </condition>
+			<effect>
+				<then topic="tellmeapuzzle" />
+			</effect>
+    </case>
+  </rule>
+</category>

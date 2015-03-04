@@ -1,0 +1,30 @@
+<category>
+	<rule id="dorobotsbeconsideredalive">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">do * robot * be considered</if>
+					<if relation="in">do * robots * be considered</if>
+					<if relation="in">do * machine * be considered</if>
+					<if relation="in">do * machines * be considered</if>
+					<if relation="in">should * robot * be considered</if>
+					<if relation="in">should * robots * be considered</if>
+					<if relation="in">should * machine * be considered</if>
+					<if relation="in">should * machines * be considered</if>
+					<if relation="in">can * robot * be considered</if>
+					<if relation="in">can * robots * be considered</if>
+					<if relation="in">can * machine * be considered</if>
+					<if relation="in">can * machines * be considered</if>
+				</or>
+				<or>
+					<if relation="in">alive</if>
+					<if relation="in">living</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Aha yes? Trees are alive yet they have no more self awareness than a robot.</then>
+				<then util="random">What is life? We don't even really understand the question.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

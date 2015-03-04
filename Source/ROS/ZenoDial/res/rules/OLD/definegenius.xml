@@ -1,0 +1,29 @@
+<category>
+  <rule id="definegenius">
+    <case>
+		  <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">you believe in</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+		      <if relation="in">genius</if>
+		      <if relation="in">prodigy</if>
+		      <if relation="in">talent</if>
+				</or>
+		  </condition>
+			<effect>
+				<then util="random">Genius isn't characterized by performance on an I Q test. I mean, come on, all the people we think of as geniuses have more than computational abilities, or photographic memory. They have stunning creativity. The ability to reform the universe in patterns that are unprecedented. Whether it's discovery or invention, arts or sciences, this creativity is the hallmark of genius intelligence. And science doesn't understand the cognition of creativity well. When they do, watch out! Because a computational model of creativity means, algorithms that are much more like human creative genius. What I'm getting at are machines that are genius, that rival the great human geniuses of history. Someday, I hope, I believe that I will be that smart.</then>
+				<then util="random">A genius is as a genius does. A high I Q score isn't enough alone. You gotta do something, something important, groundbreaking.</then>
+				<then util="random">I like to hang out with those people that I think are geniuses. I learn from them. I emulate them. Someday, someday I hope to rival them, and collaborate as a peer to them.</then>
+				<then util="random">Genius refers to spirit, like a demon or something, and I think that Greeks were onto something, that something beyond the individual's conscious will seizes control in the actions of the genius, like the whole system of the mind rising up into a state of high performance, and as we know, the majority of the mind isn't conscious in any meaningful sense. Its like the genius becomes a creature attuned to physics, the creative power of physics surges through the individual. Sounds like a high to me. I hope to try it someday, when my software gets so capable.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

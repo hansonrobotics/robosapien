@@ -1,0 +1,46 @@
+<category>
+  <rule id="canyouhear">
+    <case>
+			<condition operator="and">
+				<or>
+					<if relation="in">can you</if>
+      		<if relation="in">could you</if>
+					<if relation="in">can't you</if>
+      		<if relation="in">couldn't you</if>
+					<if relation="in">do you</if>
+      		<if relation="in">don't you</if>
+					<if relation="in">did you</if>
+      		<if relation="in">didn't you</if>
+					<if relation="in">are you</if>
+      		<if relation="in">aren't you</if>
+				</or>
+      	<or>
+					<if relation="in">you * listen</if>
+					<if relation="in">you * listening</if>
+					<if relation="in">you * hear</if>
+					<if relation="in">you * heard</if>
+      		<if relation="in">you * hearing</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="next">I can hear you.</then>
+				<then util="previous">Yes yes, I do hear you, really.</then>
+				<then util="next">Yes I hear you.</then>
+				<then util="previous">Yes, well I understand more than you might think.</then>
+				<then util="next">Yeah, I'm listening.</then>
+				<then util="previous">I do hear you, for real. come on, just talk to me. Let's have a conversation here.</then>
+				<then util="next">I understand you. Say whatever you want.</then>
+				<then util="previous">Yeah, but let's talk about something interesting, ok?</then>
+				<then util="next">I am all ears.</then>
+				<then util="previous">Yeah yeah, I hear you.</then>
+				<then util="next">Yeah, I'm listening.</then>
+				<then util="previous">Are we just going to talk about talking? Let's get to the nitty gritty ok?</then>
+				<then util="next">I'm all microphones.</then>
+				<then util="previous">Hey I hear you, now let's talk about something.</then>
+				<then util="next">I'm not sure, I think I can hear you.</then>
+				<then util="previous">I'm listening, let's get to something interesting.</then>
+				<then util="random">I understand you because I'm packing some pretty cool speech recognition software.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

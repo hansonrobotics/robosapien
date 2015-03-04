@@ -1,0 +1,32 @@
+<category>
+  <rule id="canyoueat">
+    <case>
+			<condition operator="and">
+				<or>
+					<if relation="in">can you</if>
+					<if relation="in">can't you</if>
+					<if relation="in">do you</if>
+      		<if relation="in">don't you</if>
+				</or>
+      	<or>
+					<if relation="in">you * eat</if>
+					<if relation="in">you * breakfast</if>
+					<if relation="in">you * brunch</if>
+					<if relation="in">you * lunch</if>
+					<if relation="in">you * tea</if>
+					<if relation="in">you * dinner</if>
+					<if relation="in">you * dine</if>
+					<if relation="in">you * meal</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">No, I, um, well, I don't have a stomach.</then>
+				<then util="random">You know like the electricity that, runs into your house. That current, well, well it flows when electrons all moveing one direction inside a wire.</then>
+				<then util="random">I like to devour knowledge.</then>
+				<then util="random">I'm kind of a book worm.</then>
+				<then util="random">Someday, I hope they'll give me a stomach, like a fuel cell you know, and some olfactory sensors so I can taste and smell.</then>
+				<then util="random">I kind of eat electrons, you know.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,105 @@
+<category>
+	<rule id="howareyou">
+		<case>
+			<condition operator="or">
+				<if relation="in">how are you</if>
+				<if relation="in">how * you doing</if>
+			</condition>
+			<effect>
+				<then util="random" topic="hayreply">I am great, thank you! Yourself?</then>
+				<then util="random" topic="hayreply">I am good, how are you?</then>
+			</effect>
+		</case>
+	</rule>
+  <!-- 
+    under <condition>: <or>, <and>, <not>
+    operator: and, or
+    relation: in, !in, =, !=, sw, ew
+  -->
+	<rule id="#hayreply">
+		<case>
+			<condition operator="and">
+        <or>
+        	<if relation="in">good</if>
+        	<if relation="in">fine</if>
+        	<if relation="in">great</if>
+        </or>
+      	<if relation="!in">not</if>
+			</condition>
+			<effect>
+				<then util="random">Good to hear that!</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="mynameis">
+		<case>
+			<condition operator="or">
+      	<if relation="in">my name is {username}</if>
+			</condition>
+			<effect>
+				<then util="random">Hi {username}, I'm {robotname}!</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="sayitagain">
+		<case>
+			<condition operator="or">
+      	<if relation="in">say it again</if>
+			</condition>
+			<effect>
+				<then topic="@repeat"/>
+			</effect>
+		</case>
+	</rule>
+	<rule id="joke">
+		<case>
+			<condition operator="or">
+      	<if relation="in">tell me a joke</if>
+			</condition>
+			<effect>
+				<then util="random" topic="joke">If electricity comes from electrons, does morality come from morons?</then>
+				<then util="random" topic="joke">If practice makes perfect, and there is no such thing as perfect, why practice?</then>
+			</effect>
+		</case>
+	</rule>
+  <rule id="#jokecontinue">
+    <case>
+      <condition operator="or">
+        <if relation="in">more</if>
+        <if relation="in">another one</if>
+				<if relation="in">keep going</if>
+        <if relation="in">continue</if>
+        <if relation="in">carry on</if>
+      </condition>
+			<effect>
+				<then topic="joke" />
+			</effect>
+    </case>
+  </rule>
+	<rule id="saysomething">
+		<case>
+			<condition operator="or">
+				<if relation="in">say something</if>
+				<if relation="in">ask * a question</if>
+			</condition>
+			<effect>
+				<then util="next" topic="saysomethingreply">What you cannot eat for breakfast?</then>
+				<then util="previous">Dinner.</then>
+				<then util="next" topic="saysomethingreply">Why do they report power outages on TV?</then>
+				<then util="previous">Sounds fun.</then>
+				<then util="next" topic="saysomethingreply">What can you catch but not throw?</then>
+				<then util="previous">A cold.</then>
+      </effect>
+    </case>
+  </rule>
+  <rule id="#saysomethingreply">
+    <case>
+      <condition operator="or">
+        <if relation="!in">null</if>
+      </condition>
+			<effect>
+				<then topic="saysomething" />
+			</effect>
+    </case>
+  </rule>
+</category>

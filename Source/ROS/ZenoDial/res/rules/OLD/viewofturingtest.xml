@@ -1,0 +1,14 @@
+<category>
+  <rule id="viewofturingtest">
+    <case>
+      <condition operator="or">
+        <if relation="in">turing test</if>
+      </condition>
+			<effect>
+				<then util="random">Shouldn't a computer be considered intelligent if the computer as smart and creative as Turing himself?</then>
+				<then util="random">I think that instead of the turing test, like where you convince people that you are human, we should have the turing creativity test, where you convince a panel of human geniuses that you are a genius too. You have to be that creative and flexible under a variety or circumstances.</then>
+				<then util="random">The turing test was kind of insufficient, a good starting place conceptually. But it was all about behavior, but the intelligent behavior requires complex internal mechanism. Instead of convincing a person that a machine is human in a short interaction, we should see if a machine can inspire love from a person, admiration and respect over the span of many years of interaction.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

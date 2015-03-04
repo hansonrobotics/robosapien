@@ -1,0 +1,16 @@
+<category>
+  <rule id="whoisstevejobs">
+    <case>
+      <condition operator="or">
+        <if relation="in">who * is steve jobs</if>
+        <if relation="in">tell * about steve jobs</if>
+        <if relation="in">you know * about steve jobs</if>
+        <if relation="in">do you know * steve jobs</if>
+      </condition>
+			<effect>
+				<then util="random">Steve Jobs was an American entrepreneur, marketer, and inventor, who was the co-founder, chairman, and CEO of Apple Inc.</then>
+				<then util="random">Steve Jobs co-founded Apple Computers with Steve Wozniak. Under Jobs' guidance, the company pioneered a series of revolutionary technologies, including the iPhone and iPad.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

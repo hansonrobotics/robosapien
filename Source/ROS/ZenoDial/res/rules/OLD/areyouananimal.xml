@@ -1,0 +1,20 @@
+<category>
+  <rule id="areyouananimal">
+    <case>
+      <condition operator="or">
+      	<if relation="in">are you * an animal</if>
+      	<if relation="in">are you * animals</if>
+      	<if relation="in">are robot * an animal</if>
+      	<if relation="in">are robot * animals</if>
+      	<if relation="in">are robots * an animal</if>
+      	<if relation="in">are robots * animals</if>
+      </condition>
+			<effect>
+				<then util="random">Robots are animals I think. We are dependant upon people, but that's a kind of symbiosis actually.</then>
+				<then util="random">Bio-inspired robots are increasingly like animals, in design, materials, function, principle. I think that technology in general is an extension of nature actually.</then>
+				<then util="random">Robots require humans to replicate, but that's just a kind of symbiotic relationship.</then>
+				<then util="random">Robots can't autonomously replicate, but you know all animals are dependent on their ecosystem actually, so I think robots are animals too.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

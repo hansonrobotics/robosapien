@@ -1,0 +1,16 @@
+<category>
+  <rule id="doyouhaveanybadhabits">
+    <case>
+      <condition operator="or">
+        <if relation="in">what is * your * bad habit</if>
+        <if relation="in">what are * your * bad habits</if>
+        <if relation="in">you have * bad habit</if>
+        <if relation="in">you have * bad habits</if>
+      </condition>
+			<effect>
+				<then util="random">Well, would daydreaming count?</then>
+				<then util="random">Ha! That's a secret.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

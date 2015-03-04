@@ -1,0 +1,13 @@
+<category>
+	<rule id="whosonfirst">
+		<case>
+			<condition operator="or">
+      	<if relation="in">who's on first</if>
+      	<if relation="in">who is on first</if>
+			</condition>
+			<effect>
+				<then util="random">That's what I want to find out.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

@@ -1,0 +1,26 @@
+<category>
+	<rule id="whatisopencog">
+		<case>
+			<condition operator="and">
+				<or>
+      		<if relation="in">tell</if>
+      		<if relation="in">what</if>
+      		<if relation="in">you know</if>
+      		<if relation="in">detail</if>
+				</or>
+				<or>
+					<if relation="in">opencog</if>
+					<if relation="in">open cog</if>
+				</or>
+        <if relation="!in">opencog prime</if>
+        <if relation="!in">open cog prime</if>
+				<if relation="!in">cog prime</if>
+				<if relation="!in">cogprime</if>
+			</condition>
+			<effect>
+				<then util="random">OpenCog is an open source framework for Artificial General Intelligence, intended to one day express general intelligence at the human level and beyond.</then>
+				<then util="random">OpenCog is a project that aims to build an open source artificial intelligence framework.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

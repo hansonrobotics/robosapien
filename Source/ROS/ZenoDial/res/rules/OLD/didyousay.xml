@@ -1,0 +1,12 @@
+<category>
+	<rule id="didyousay">
+		<case>
+			<condition operator="or">
+      	<if relation="in">did you say</if>
+			</condition>
+			<effect>
+				<then util="random">Suppose I did say that.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

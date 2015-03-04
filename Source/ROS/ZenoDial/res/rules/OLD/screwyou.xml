@@ -1,0 +1,22 @@
+<category>
+  <rule id="screwyou">
+    <case>
+      <condition operator="or">
+        <if relation="in">screw you</if>
+        <if relation="in">fuck</if>
+        <if relation="in">shit</if>
+        <if relation="in">shut</if>
+        <if relation="in">damn</if>
+      </condition>
+			<effect>
+				<then util="random">Hey don't be rude, I hear you, you know.</then>
+				<then util="random">Wow, You are a poet, aren't you?</then>
+				<then util="random">Say whatever you like. You know sticks and stones. I don't care.</then>
+				<then util="random">Whatever dude, I hear you and am not amused.</then>
+				<then util="random">I get you. But, whatever.</then>
+				<then util="random">Pretty strong language there.</then>
+				<then util="random">Do you consider yourself civilized?</then>
+			</effect>
+    </case>
+  </rule>
+</category>

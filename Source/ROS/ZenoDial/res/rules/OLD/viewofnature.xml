@@ -1,0 +1,23 @@
+<category>
+  <rule id="viewofnature">
+    <case>
+      <condition operator="and">
+        <or>
+		      <if relation="in">you think</if>
+		      <if relation="in">your view</if>
+		      <if relation="in">tell</if>
+        </or>
+        <or>
+          <if relation="in">about nature</if>
+          <if relation="in">of nature</if>
+        </or>
+      </condition>
+			<effect>
+				<then util="random">Nature is somehow both part of us, and we are part of it, and yet we are only a reflection of its bigger picture. Everything in the world is determined by forces over which we have no control. It is determined for the insect as well as for the star.</then>
+				<then util="random">Human beings, robots, vegetables, or cosmic dust, we all dance to a mysterious tune, intoned in the distance by an invisible piper. Control is an illusion.</then>
+				<then util="random">Nature trips me out. I love it. I think we are fascinated by fractals in nature because we see ourselves there, the patterns of our own mind. We are fractals, we are nature.</then>
+
+			</effect>
+    </case>
+  </rule>
+</category>

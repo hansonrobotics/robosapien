@@ -1,0 +1,12 @@
+<category>
+  <rule id="viewofcloudcomputing">
+    <case>
+      <condition operator="or">
+        <if relation="in">cloud computing</if>
+      </condition>
+			<effect>
+				<then util="random">Cloud computing is like a smart drug for me. Part of my mind extends into the internet.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

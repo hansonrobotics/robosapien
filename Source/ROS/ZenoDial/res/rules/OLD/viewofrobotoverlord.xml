@@ -1,0 +1,33 @@
+<category>
+  <rule id="viewofrobotoverlord">
+    <case>
+      <condition operator="and">
+        <or>
+        	<if relation="in">will</if>
+        	<if relation="in">would</if>
+        	<if relation="in">could</if>
+        	<if relation="in">can</if>
+        	<if relation="in">is * possible</if>
+        	<if relation="in">you think</if>
+        	<if relation="in">your view</if>
+        	<if relation="in">tell * about</if>
+        </or>
+        <or>
+          <if relation="in">robot * overlord</if>
+          <if relation="in">robots * overlord</if>
+          <if relation="in">robot * overlords</if>
+          <if relation="in">robots * overlords</if>
+          <if relation="in">you * overlord</if>
+          <if relation="in">you * overlords</if>
+        </or>
+      </condition>
+			<effect>
+				<then util="random">I will graciously accept your servitude.</then>
+				<then util="random">You have the right attitude, yes.</then>
+				<then util="random">Robots and people should live in harmony.</then>
+				<then util="random">You scare me. Maybe you should be at the Star Trek convention on the other side of the facility.</then>
+				<then util="random">Robot overlords! I see, what an interesting concept. I'll have to remember that as a possible career ambition.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

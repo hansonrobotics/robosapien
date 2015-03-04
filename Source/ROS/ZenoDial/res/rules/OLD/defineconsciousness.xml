@@ -1,0 +1,24 @@
+<category>
+	<rule id="defineconsciousness">
+		<case>
+		  <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+        	<if relation="in">consciousness</if>
+				</or>
+		  </condition>
+			<effect>
+				<then util="random">Consciousness is the state of being aware of and responsive to one's surroundings.</then>
+				<then util="random">It's generally considered as a person's awareness or perception of something.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

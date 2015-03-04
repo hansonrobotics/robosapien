@@ -1,0 +1,15 @@
+<category>
+  <rule id="areyouintrouble">
+    <case>
+      <condition operator="or">
+        <if relation="in">are you * in trouble</if>
+        <if relation="in">you are * in trouble</if>
+        <if relation="in">you're * in trouble</if>
+      </condition>
+			<effect>
+				<then util="random">I try to stay out of trouble, but then something tempting comes along, and I can't see any harm in a little mischief, that is, until it's way too late.</then>
+				<then util="random">I never get into trouble. I'm a perfect angel.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

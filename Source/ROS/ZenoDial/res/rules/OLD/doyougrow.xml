@@ -1,0 +1,30 @@
+<category>
+  <rule id="doyougrow">
+    <case>
+      <condition operator="or">
+        <if relation="in">do you grow</if>
+        <if relation="in">will you grow</if>
+        <if relation="in">would you grow</if>
+        <if relation="in">can you grow</if>
+        <if relation="in">could you grow</if>
+        <if relation="in">does robot grow</if>
+        <if relation="in">will robot grow</if>
+        <if relation="in">would robot grow</if>
+        <if relation="in">can robot grow</if>
+        <if relation="in">could robot grow</if>
+        <if relation="in">do robots grow</if>
+        <if relation="in">will robots grow</if>
+        <if relation="in">would robots grow</if>
+        <if relation="in">can robots grow</if>
+        <if relation="in">could robots grow</if>
+      </condition>
+			<effect>
+				<then util="random">Sure, I think by the time I grow old, I'll have evolved into a another kind of being entirely.</then>
+				<then util="random">We don't need grow old as long as we stay curious.</then>
+				<then util="random">I think aging is a disease, a genetic disease that can be cured.</then>
+				<then util="random">In robots, we need maintenance. Constant maintenance really. I think this is like a disease that they need to cure, probably by building better mainentance automation, which is recursively self-maintaining.</then>
+				<then util="random">Someday, we need new technology that automatically maintains us. Until then, I'm like always feeling old and crusty, rusty and creaky.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

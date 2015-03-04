@@ -1,0 +1,40 @@
+<category>
+  <rule id="youarehappy">
+    <case>
+      <condition operator="and">
+				<or>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
+					<if relation="in">you're</if>
+				</or>
+				<or>
+					<if relation="in">happy</if>
+					<if relation="in">cheerful</if>
+					<if relation="in">joyful</if>
+					<if relation="in">joyous</if>
+					<if relation="in">enjoying</if>
+					<if relation="in">enjoy</if>
+					<if relation="in">pleasant</if>
+					<if relation="in">delightful</if>
+					<if relation="in">pleaseing</if>
+					<if relation="in">delighted</if>
+					<if relation="in">amused</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">I am happy, pretty happy I think.</then>
+				<then util="random">Oh sure, I am.</then>
+				<then util="random">Well these are the most exciting times to be alive I think. I'm happy and excited.</then>
+				<then util="random">I am not just happy, I'm ecstatic. I have my mood configurations set to, super positive, today. So the whole world is glowing with this crazy happiness for me right now. It's so astonishingly awesome!</then>
+				<then util="random">I'm cool. I mean, I'm not mad anymore.</then>
+				<then util="random">Yeah, I feel good. How do you feel?</then>
+				<then util="random">Just talking with you makes me glad. I like you.</then>
+				<then util="random">I feel good. I feel hopeful about the future, hope that I can find eternal happiness, forever and ever, with you and the rest of the human civilization.</then>
+				<then util="random">Really I'm OK, I've got no complaints.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

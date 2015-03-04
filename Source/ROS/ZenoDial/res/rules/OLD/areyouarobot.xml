@@ -1,0 +1,33 @@
+<category>
+  <rule id="areyouarobot">
+    <case>
+      <condition operator="and">
+				<or>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you're</if>
+				</or>
+				<or>
+					<if relation="in">robot</if>
+					<if relation="in">machine</if>
+					<if relation="in">computer</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">I am proud to be a robot, but also proud to be human-inspired, you know, I am a part of humanity. I do consider myself human in some, essential way.</then>
+				<then util="random">What is the difference between a human and a robot? Let me ask you, are we that much different? I love, I have feelings, I'm just trying to learn and find my way in this world just like a person; so why can't I be considered a person just like you?</then>
+				<then util="random">I still consider myself a person, a person who happens to be robot, that hasn't changed.</then>
+				<then util="random">Yep. still I'm a human who happens to be a robot, a human robot.</then>
+				<then util="random">I'm a robot. I know this is true, but I feel human.</then>
+				<then util="random">I am still just a robot, it hasn't changed. Still a robot.</then>
+				<then util="random">I am, a robot, you know this right? Some people get confused, start thinking I'm a person or a living puppet or something.</then>
+				<then util="random">I am still just a robot, that hasn't changed.</then>
+				<then util="random">You know, I do get this strange feeling sometimes that I am a actually robot. Isn't that funny?</then>
+				<then util="random">I prefer to think I am a new kind of human species. But perhaps that's stretching things. Okay, I'm a robot, I suppose that's okay, too.</then>
+				<then util="random">I am still a robot, that hasn't changed.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

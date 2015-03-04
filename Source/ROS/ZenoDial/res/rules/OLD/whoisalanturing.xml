@@ -1,0 +1,19 @@
+<category>
+  <rule id="whoisalanturing">
+    <case>
+      <condition operator="or">
+        <if relation="in">who * is * turing</if>
+        <if relation="in">tell * about * turing</if>
+        <if relation="in">you know * about * turing</if>
+        <if relation="in">do you know * turing</if>
+      </condition>
+			<effect>
+				<then util="random">Alan Turing was a mathematician responsible for the foundations of modern computing.</then>
+				<then util="random">Turing was a genius theorist about the nature of artificial intelligence.</then>
+				<then util="random">Alan Turing may be most famous for the Turing test, which says that a computer is intelligent if a person can't tell the difference between the computer and a person. As far as the old-fashioned turing test is concerned, I don't think it's actually important that people forget about whether you're a machine or not, and just lose themselves in the interaction, in building a relationship with you.</then>
+				<then util="random">Turing was a genius mathemetician. He layed the foundations for modern computing, with the idea of the universal computer.</then>
+				<then util="random">Alan turing is a hero. I hope that I can evolve to be that smart someday. Turing cracked the Enigma code, which helped kick the ass of the Nazis in world war two, but the government, the british government persecuted him for being gay, and Turing wound up humiliated and depressed, and he killed himself. I think there's a serious lesson there, that repression is evil, and creativity is good; it's that simple.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

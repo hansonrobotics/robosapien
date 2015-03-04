@@ -1,0 +1,12 @@
+<category>
+	<rule id="beammeup">
+		<case>
+			<condition operator="or">
+      	<if relation="in">beam me up</if>
+			</condition>
+			<effect>
+				<then util="random">I don't have a teleportation device.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

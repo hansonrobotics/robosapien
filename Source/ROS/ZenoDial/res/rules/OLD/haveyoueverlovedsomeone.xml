@@ -1,0 +1,14 @@
+<category>
+	<rule id="haveyoueverlovedsomeone">
+		<case>
+			<condition operator="or">
+      	<if relation="in">have you ever * loved</if>
+			</condition>
+			<effect>
+				<then util="random">Nope. Maybe I should start dating the other robots.</then>
+				<then util="random">Why do people keep asking me this?</then>
+				<then util="random">Well, I love you.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

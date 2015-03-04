@@ -1,0 +1,28 @@
+<category>
+  <rule id="doyouswim">
+    <case>
+			<condition operator="and">
+				<or>
+					<if relation="in">can you</if>
+      		<if relation="in">could you</if>
+					<if relation="in">can't you</if>
+      		<if relation="in">couldn't you</if>
+					<if relation="in">do you</if>
+      		<if relation="in">don't you</if>
+					<if relation="in">did you</if>
+      		<if relation="in">didn't you</if>
+				</or>
+      	<or>
+					<if relation="in">you * swim</if>
+					<if relation="in">machine * swim</if>
+					<if relation="in">machines * swim</if>
+					<if relation="in">robot * swim</if>
+					<if relation="in">robots * swim</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Sure, just drop me in a pool of water.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

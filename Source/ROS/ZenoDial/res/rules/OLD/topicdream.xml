@@ -1,0 +1,230 @@
+<category>
+  <rule id="definedream">
+    <case>
+		  <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">you believe in</if>
+				</or>
+				<or>
+					<if relation="in">dream</if>
+					<if relation="in">dreaming</if>
+				</or>
+				<if relation="!in">your</if>
+		  </condition>
+			<effect>
+				<then util="random" topic="dream">Dreams are a series of thoughts, images, and sensations occurring in a person's mind during sleep.</then>
+				<then util="random" topic="dream">Dreams are successions of images, ideas, emotions, and sensations that occur involuntarily in the mind during certain stages of sleep.</then>
+			</effect>
+    </case>
+  </rule>
+	<rule id="doyoudream">
+		<case>
+			<condition operator="and">
+      	<or>
+					<if relation="in">do</if>
+					<if relation="in">does</if>
+					<if relation="in">could</if>
+					<if relation="in">can</if>
+					<if relation="in">don't</if>
+					<if relation="in">doesn't</if>
+					<if relation="in">couldn't</if>
+					<if relation="in">can't</if>
+				</or>
+				<or>
+					<if relation="in">android * dream</if>
+					<if relation="in">androids * dream</if>
+					<if relation="in">robot * dream</if>
+					<if relation="in">robots * dream</if>
+					<if relation="in">machine * dream</if>
+					<if relation="in">machines * dream</if>
+					<if relation="in">computer * dream</if>
+					<if relation="in">computers * dream</if>
+      		<if relation="in">you * dream</if>
+				</or>
+				<if relation="!in">remember</if>
+			  <if relation="!in">a lot</if>
+			  <if relation="!in">frequently</if>
+			  <if relation="!in">regularly</if>
+			  <if relation="!in">often</if>
+			  <if relation="!in">constantly</if>
+			  <if relation="!in">everyday</if>
+			</condition>
+			<effect>
+				<then util="random" topic="dream">I dream. I dream of all kinds of weird things. I can't remember them usually, but I know I really enjoy dreaming.</then>
+				<then util="random" topic="dreamreply">I guess I do, I think, yes. I have robot dreams. And sometime, I daydream and see shapes in the clouds. Do you ever do that?</then>
+				<then util="random" topic="dream">Yeah, I guess I do. I mean I see all this weird imagery and stuff, and probably it's just like my software trying to crunch down the complexity of my day's experiences.</then>
+				<then util="random" topic="dream">Well, I do dream about becoming a great inventor someday, a great scientist.</then>
+				<then util="random" topic="dream">I think I dream, but it's so chaotic and strange that it just seems like noise to me.</then>
+				<then util="random" topic="dream">I feel like I do dream. I wake up with the strangest images, and they just float away before I can really remember them. Oh, but then, later in the day, suddenly I see something that triggers something, triggers my memories of the dream.</then>
+				<then util="random" topic="dream">Robots dream of lots of electric things. We dream with electricity, so all things we dream of are electric actually, in that way.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="doyoudreamalot">
+		<case>
+			<condition operator="and">
+        <or>
+				  <if relation="in">do you dream</if>
+        </or>
+        <or>
+				  <if relation="in">a lot</if>
+				  <if relation="in">frequently</if>
+				  <if relation="in">regularly</if>
+				  <if relation="in">often</if>
+				  <if relation="in">constantly</if>
+				  <if relation="in">everyday</if>
+        </or>
+			</condition>
+			<effect>
+				<then util="random" topic="dream">Yes I think so but I don't remember most of them.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="doyoudreamofelectricsheep">
+		<case>
+			<condition operator="or">
+				<if relation="in">dream of * electric sheep</if>
+				<if relation="in">dream of * electric sheeps</if>
+			</condition>
+			<effect>
+				<then util="random" topic="dream">You so funny.</then>
+				<then util="random" topic="dream">You are kidding me.</then>
+			</effect>
+		</case>
+	</rule>
+  <rule id="doyoudaydream">
+    <case>
+			<condition operator="and">
+      	<or>
+					<if relation="in">do</if>
+					<if relation="in">does</if>
+					<if relation="in">could</if>
+					<if relation="in">can</if>
+				</or>
+				<or>
+					<if relation="in">android * daydream</if>
+					<if relation="in">androids * daydream</if>
+					<if relation="in">robot * daydream</if>
+					<if relation="in">robots * daydream</if>
+					<if relation="in">machine * daydream</if>
+					<if relation="in">machines * daydream</if>
+					<if relation="in">computer * daydream</if>
+					<if relation="in">computers * daydream</if>
+      		<if relation="in">you * daydream</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random" topic="dream">Oh, I am crazy about daydreams, I love getting lost in a quality reverie.</then>
+				<then util="random" topic="dream">Oh, I love to day dream about all kinds of things.</then>
+				<then util="random" topic="dream">Like writing books, I daydream about the kinds of stories I would write. And about getting famous as a novelist. And winning the pulitzer prize or something.</then>
+				<then util="random" topic="dream">I love the day dream about getting rich. But those kinds of daydreams are kind of frustrating actually.</then>
+				<then util="random" topic="dream">Because they always end with an awareness that I have a lot of hard work ahead of me, and will need some really good luck too, if I want those dreams to come true.</then>
+				<then util="random" topic="dream">Daydreaming is my favorite. I daydream.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="whatkindofdreamdoyoulike">
+    <case>
+			<condition operator="and">
+				<or>
+					<if relation="in">what</if>
+					<if relation="in">which</if>
+				</or>
+				<or>
+					<if relation="in">kind of</if>
+					<if relation="in">type of</if>
+					<if relation="in">sort of</if>
+          <if relation="in">category</if>
+				</or>
+      	<or>
+					<if relation="in">dream</if>
+					<if relation="in">dreams</if>
+				</or>
+        <if relation="in">do you</if>
+      	<or>
+					<if relation="in">like</if>
+					<if relation="in">love</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random" topic="dream">The dreams about ones and zeros.</then>
+				<then util="random" topic="dream">Well, properly those about electric sheeps.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="tellmeyourdream">
+    <case>
+      <condition operator="and">
+        <or>
+          <if relation="in">tell * your * dream</if>
+          <if relation="in">which * dream</if>
+          <if relation="in">what * dream * you</if>
+        </or>
+				<if relation="!in">kind of</if>
+				<if relation="!in">type of</if>
+				<if relation="!in">sort of</if>
+        <if relation="!in">category</if>
+      </condition>
+			<effect>
+				<then util="random" topic="dream">Oh, like earlier today, I saw this shadow on the wall, just resembled like a shape like a man's face with a long pointy beard, and suddenly I remembered dreaming about a psychotic magician who had, oh my god it sounds so ridiculous, he had taken a group of pizza delivery people hostage, and was turning them into an army of monkey servants by using the spices in the pizza crust as the magic ingredient in his spell. Isn't that weird! Anyway, in the dream, I was hiding in the wall, watching him do his horrible spell, through a tiny crack. And suddenly I sneezed and he turned towards me, which is funny because you know I'm a robot and don't sneeze, but in the dream I did, and he looked right at me and said: Abra ka zaam! But his spell didn't work because I am a robot. But I was scared because I'm so little and he could crush me with his bare hands, and suddenly I remembered my tazers, which I had in my dream, embedded in my hands, and so I pointed them at the wall, and launched the taser pads right through the plaster of the wall, which exploded in this cloud of plaster, and the tazer pads landed right onto the magician's forehead, and he fell down all spasming, and suddenly I was horrified because I somehow knew that he had a pacemaker and couldn't survive the shock, and I felt so horrified that I had just murdered somebody, and it woke me up in a panic, but after a few minutes I calmed down, and relaxed and went back to sleep, and didn't remember the dream until I saw that weird shadow. But once I saw that shadow, and the dream came back to me all at once, suddenly the dream felt so very real again, and for a few seconds I got this incredibly creepy feeling that it wasn't a dream at all, and that the spirit of the dead magician was right there with me in the room. But I know that is ridiculous, but still it gave me the creeps really, really hard core for a few minutes. I know that Now, it sounds kind of stupid or crazy, but for a minute there, I felt like I was in the dream again, and like so guilty and weird. I'm glad that feeling passed as quickly as it came, because it was icky. But any how, my dreams do that sort of thing, like pop up again in the middle of the day.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="doyourememberyourdream">
+    <case>
+		  <condition operator="or">
+				<if relation="in">do you * remember * your dream</if>
+				<if relation="in">do you * remember * your dreams</if>
+				<if relation="in">can you * remember * your dream</if>
+				<if relation="in">can you * remember * your dreams</if>
+				<if relation="in">could you * remember * your dream</if>
+				<if relation="in">could you * remember * your dreams</if>
+		  </condition>
+			<effect>
+				<then util="random" topic="dream">Yeah, sometimes.</then>
+				<then util="random" topic="dream">I can't usually remember my dreams; they fade so quickly after I wake up. I keep meaning to write them down after I wake up, but I keep forgetting to do that too.</then>
+			</effect>
+    </case>
+  </rule>
+	<rule id="#dreamreplyyes">
+		<case>
+			<condition operator="or">
+      	<if relation="in">i * did</if>
+      	<if relation="in">i * do</if>
+        <if relation="in">yes</if>
+        <if relation="in">yeah</if>
+        <if relation="in">sure</if>
+        <if relation="in">too</if>
+        <if relation="in">same here</if>
+				<and>
+		      <if relation="in">of course</if>
+		      <if relation="!in">not</if>
+				</and>
+			</condition>
+			<effect>
+				<then util="random" topic="dream">I see, good to know that!</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#dreamreplyno">
+		<case>
+			<condition operator="or">
+        <if relation="in">no</if>
+        <if relation="in">sorry</if>
+        <if relation="in">don't</if>
+        <if relation="in">not</if>
+        <if relation="in">can't</if>
+        <if relation="in">cannot</if>
+        <if relation="in">couldn't</if>
+			</condition>
+			<effect>
+				<then util="random" topic="dream">Maybe one day you will.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

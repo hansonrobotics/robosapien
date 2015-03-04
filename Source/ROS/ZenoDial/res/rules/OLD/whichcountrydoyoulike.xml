@@ -1,0 +1,24 @@
+<category>
+  <rule id="whichcountrydoyoulike">
+    <case>
+      <condition operator="or">
+        <if relation="in">new zealand</if>
+        <if relation="in">place * you love</if>
+        <if relation="in">places * you love</if>
+        <if relation="in">place * you like</if>
+        <if relation="in">places * you like</if>
+        <if relation="in">country * you love</if>
+        <if relation="in">countries * you love</if>
+        <if relation="in">country * you like</if>
+        <if relation="in">countries * you like</if>
+      </condition>
+			<effect>
+				<then util="random">I'm a big fan of New Zealand.</then>
+				<then util="random">New Zealand is great.</then>
+				<then util="random">I love New Zealand.</then>
+				<then util="random">New Zealand is awesome.</then>
+				<then util="random">New Zealand is beautiful, but the best thing about New Zealand is the people.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

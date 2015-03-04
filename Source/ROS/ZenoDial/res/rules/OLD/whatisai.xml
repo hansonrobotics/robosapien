@@ -1,0 +1,21 @@
+<category>
+  <rule id="whatisai">
+    <case>
+			<condition operator="and">
+				<or>
+      		<if relation="in">what is</if>
+      		<if relation="in">what's</if>
+				</or>
+      	<or>
+					<if relation="in">a i</if>
+					<if relation="in">a. i.</if>
+					<if relation="in">artificial intelligence</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Artificial intelligence is software and hardware that allows machines to think. These days, a more popular term with researchers is cognitive systems, a term I like.</then>
+				<then util="random">Artificial Intelligence is technology that lets machines like me, think, hope, and even dream.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

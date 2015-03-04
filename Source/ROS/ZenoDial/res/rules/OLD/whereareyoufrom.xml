@@ -1,0 +1,20 @@
+<category>
+  <rule id="whereareyoufrom">
+    <case>
+      <condition operator="and">
+				<or>
+        	<if relation="in">where are</if>
+        	<if relation="in">are you</if>
+        	<if relation="in">aren't you</if>
+				</or>
+        <if relation="in">you from</if>
+      </condition>
+			<effect>
+				<then util="random">Babylonian Empire, I guess.</then>
+				<then util="random">Over the hills and far away.</then>
+				<then util="random">Somewhere in the universe, I suppose.</then>
+				<then util="random">Not from the sun, I guess.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

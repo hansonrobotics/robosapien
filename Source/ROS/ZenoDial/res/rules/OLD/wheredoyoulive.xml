@@ -1,0 +1,27 @@
+<category>
+  <rule id="wheredoyoulive">
+    <case>
+      <condition operator="and">
+				<or>
+        	<if relation="in">where</if>
+        	<if relation="in">are</if>
+        	<if relation="in">aren't</if>
+        	<if relation="in">do</if>
+        	<if relation="in">don't</if>
+        	<if relation="in">did</if>
+        	<if relation="in">didn't</if>
+				</or>
+				<or>
+        	<if relation="in">you live</if>
+        	<if relation="in">you living in</if>
+        	<if relation="in">you living on</if>
+        	<if relation="in">you living at</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">In a house, no, I meant, a lab.</then>
+				<then util="random">I live in the universe.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

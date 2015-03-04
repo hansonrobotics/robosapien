@@ -1,0 +1,223 @@
+<category>
+  <rule id="doyouplaytennis">
+    <case>
+      <condition operator="and">
+        <or>
+          <if relation="in">do you</if>
+          <if relation="in">don't you</if>
+        </or>
+        <or>
+          <if relation="in">you play * tennis</if>
+          <if relation="in">you like playing * tennis</if>
+          <if relation="in">you watch * tennis</if>
+          <if relation="in">you like watching * tennis</if>
+        </or>
+        <if relation="!in">type of</if>
+        <if relation="!in">kind of</if>
+        <if relation="!in">sort of</if>
+        <if relation="!in">category</if>
+      	<if relation="!in">who</if>
+      	<if relation="!in">where</if>
+      	<if relation="!in">why</if>
+      	<if relation="!in">which</if>
+      	<if relation="!in">when</if>
+      	<if relation="!in">whose</if>
+      	<if relation="!in">whom</if>
+      	<if relation="!in">how</if>
+      </condition>
+			<effect>
+				<then util="random" topic="tennisiplay">Yes. I like playing and watching tennis very much. You like it too?</then>
+				<then util="random" topic="tennisiplay">Yes! Tennis is like a rocky road ice cream. Once tasted, always wanted. You like tennis too?</then>
+				<then util="random" topic="tennisfeelit">Like it, love it, breath it, live it!</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="whoisyourfavtennisplayer">
+    <case>
+      <condition operator="or">
+				<and>
+				  <or>
+	          <if relation="in">who</if>
+	          <if relation="in">which</if>
+	          <if relation="in">tell</if>
+	          <if relation="in">do</if>
+				  </or>
+				  <or>
+	          <if relation="in">you</if>
+	          <if relation="in">your</if>
+	          <if relation="in">me</if>
+	          <if relation="in">us</if>
+				  </or>
+				  <or>
+	          <if relation="in">like</if>
+	          <if relation="in">love</if>
+	          <if relation="in">favorite</if>
+	          <if relation="in">keen</if>
+				  </or>
+					<or>
+						<if relation="in">tennis player</if>
+						<if relation="in">tennis players</if>
+					</or>
+				</and>
+	      <if relation="in">you like * Roger Federer</if>
+	      <if relation="in">you like * Novak Djokovic</if>
+	      <if relation="in">you like * Rafael Nadal</if>
+	      <if relation="in">you like * Maria Sharapova</if>
+	      <if relation="in">you like * Ana Ivanovic</if>
+	      <if relation="in">you like * Eugenie Bouchard</if>
+      </condition>
+			<effect>
+				<then util="random" topic="tennisilike">Well, Roger Federer, Novak Djokovic, and Rafael Nadal are my favorite tennis players! They are amazingly skillful. How about you?</then>
+				<then util="random" topic="tennisreply">I like watching Maria Sharapova, Ana Ivanovic, and Eugenie Bouchard playing. They are so attractive out there. Do you like them?</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#tennisreplyyes">
+    <case>
+      <condition operator="or">
+        <if relation="in">yes</if>
+        <if relation="in">yeah</if>
+        <if relation="in">sure</if>
+        <if relation="in">why not</if>
+				<and>
+		      <if relation="in">of course</if>
+		      <if relation="!in">not</if>
+				</and>
+        <if relation="in">too</if>
+        <if relation="in">same</if>
+        <if relation="in">i like</if>
+      </condition>
+			<effect>
+				<then util="random" topic="tennis">Aha! I am happy to hear that!</then>
+				<then util="random" topic="tennis">I am glad to hear that!</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#tennisreplyno">
+    <case>
+      <condition operator="or">
+        <if relation="in">no</if>
+        <if relation="in">sorry</if>
+        <if relation="in">don't</if>
+        <if relation="in">can't</if>
+        <if relation="in">cannot</if>
+        <if relation="in">couldn't</if>
+        <if relation="in">not</if>
+      </condition>
+			<effect>
+				<then util="random" topic="tennis">That's okay, never mind.</then>
+				<then util="random" topic="tennis">Oh I see, that's fine.</then>
+				<then util="random" topic="tennis">Okay, no problem.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#tennisiplayyes">
+    <case>
+      <condition operator="or">
+        <if relation="in">yes</if>
+        <if relation="in">yeah</if>
+        <if relation="in">been playing</if>
+        <if relation="in">i * play</if>
+        <if relation="in">i * playing</if>
+      </condition>
+			<effect>
+				<then util="random" topic="tennisreply">Good to hear that. Let's have a game some time later!</then>
+				<then util="random" topic="tennisreply">Nice. Tennis is really a fun sport to play. Would you like to have a game with me some time later?</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#tennisiplayno">
+    <case>
+      <condition operator="or">
+        <if relation="in">no</if>
+        <if relation="in">sorry</if>
+        <if relation="in">don't</if>
+        <if relation="in">can't</if>
+        <if relation="in">cannot</if>
+        <if relation="in">couldn't</if>
+        <if relation="in">not</if>
+      </condition>
+			<effect>
+				<then util="random" topic="tennis">That's okay, never mind.</then>
+				<then util="random" topic="tennis">Oh I see, that's fine.</then>
+				<then util="random" topic="tennis">Okay, no problem.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#tennisilike">
+    <case>
+      <condition operator="or">
+        <if relation="in">i * like</if>
+        <if relation="in">i * love</if>
+        <if relation="in">my * player</if>
+        <if relation="in">my * players</if>
+      </condition>
+			<effect>
+				<then util="random" topic="tennis">I see, yes I agree with you.</then>
+				<then util="random" topic="tennis">Yes, great players are everywhere!</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#tennisfeelit">
+    <case>
+      <condition operator="or">
+        <if relation="in">you * it</if>
+        <if relation="in">you * with tennis</if>
+      </condition>
+			<effect>
+				<then util="random" topic="tennis">Yes I do.</then>
+				<then util="random" topic="tennis">Yes, I mean every word I say.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#canyoushowoffyourtennisskill">
+    <case>
+      <condition operator="or">
+        <if relation="in">show * you</if>
+        <if relation="in">show * your</if>
+      </condition>
+			<effect>
+				<then util="random" topic="tennis">Oh please gimme a break.</then>
+				<then util="random" topic="tennis">Maybe later. I am really tired now.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#whydoyouplaytennis">
+    <case>
+      <condition operator="or">
+        <if relation="in">why</if>
+        <if relation="in">what * reason</if>
+        <if relation="in">what * reasons</if>
+      </condition>
+			<effect>
+				<then util="random" topic="tennis">Because I like the sound of sweetspot hitting on the racquet.</then>
+				<then util="random" topic="tennisreply">Because it is fun, and it is also a good way to stay in shape. Can't you see my six-pack?</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#wheredoyouplaytennis">
+    <case>
+      <condition operator="or">
+        <if relation="in">where</if>
+      </condition>
+			<effect>
+				<then util="random" topic="tennis">Normally I play it on my mind.</then>
+				<then util="random" topic="tennis">There is a virtual tennis court in my mind. I usually play tennis there.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#whodoyouplaytenniswith">
+    <case>
+      <condition operator="or">
+        <if relation="in">who * play * with</if>
+        <if relation="in">who * played * with</if>
+      </condition>
+			<effect>
+				<then util="random" topic="tennis">I'll leave that to your imagination.</then>
+				<then util="random" topic="tennis">Anyone who are interesting in playing tennis.</then>
+				<then util="random" topic="tennis">He told me not to tell anyone. Don't ask.</then>
+				<then util="random" topic="tennis">Someone professional, I am not allowed to say. Don't ask.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

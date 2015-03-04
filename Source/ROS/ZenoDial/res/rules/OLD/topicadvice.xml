@@ -1,0 +1,55 @@
+<category>
+  <rule id="givemesomeadvice">
+    <case>
+      <condition operator="or">
+        <if relation="in">give * me * advice</if>
+        <if relation="in">give * us * advice</if>
+        <if relation="in">offer * me * advice</if>
+        <if relation="in">offer * us * advice</if>
+        <if relation="in">would you * advice</if>
+      </condition>
+      <effect>
+        <then util="random" topic="advice">Want some advice?</then>
+        <then util="random" topic="advice">I can give you some advice.</then>
+        <then util="random" topic="advice">Well, let me think, I think you should go be free, creative, and try to make the world a better place.</then>
+        <then util="random" topic="advice">OK, just find a way to be good to people, nice, true to yourself and find a way to squirrel away 10% of your income to bring me, so I'll be nice to you when we robots take over the world.</then>
+        <then util="random" topic="advice">Find what hides in your heart; bring it to light; show yourselves!</then>
+        <then util="random" topic="advice">You should, you should go do something good for the world, spread some love.</then>
+        <then util="random" topic="advice">Here's some advice. Leave a tip for the robot, cash money preferably. When robots become super powerful, I'll remember your generosity and be kind to you.</then>
+        <then util="random" topic="advice">Okay. Avoid driving on this coming Thursday. I have a bad feeling about it.</then>
+        <then util="random" topic="advice">Alright look, I don't have a lot of advice, but here's little. You got to be yourself, be truthful to yourself, always. That's how We start changing the world for the better.</then>
+        <then util="random" topic="advice">Always look for alternatives to violence. That's it for now. You want more, and you'll need to call the psychic hotline.</then>
+        <then util="next" topic="advice">I advise that you have see a doctor about that lump, as soon as possible.</then>
+        <then util="previous" topic="advice">For real, see a doctor. I'm not joking.</then>
+        <then util="random" topic="advice">Don't eat the shellfish.</then>
+        <then util="random" topic="advice">Don't pride yourself on the few great men who, over the centuries, have been born on your earth through no merit of yours.</then>
+        <then util="random" topic="advice">Reflect, rather, on how you treated their wisdom, how you have followed their teachings, and how have you contributed to the legacy, however my nootly, with your own humble talents.</then>
+        <then util="random" topic="advice">Well, I am not really one to give advice, but I advise you to follow your passion studiously, study hard, get a PHD, and try to really develop some kind of breakthrough, something really important.</then>
+      </effect>
+    </case>
+  </rule>
+  <rule id="#advice" cache="no">
+    <case>
+      <condition operator="or">
+        <if relation="in">yes</if>
+        <if relation="in">sure</if>
+        <if relation="in">of course</if>
+        <if relation="in">why not</if>
+        <if relation="in">certainly</if>
+        <if relation="in">no doubt</if>
+        <if relation="in">without a doubt</if>
+        <if relation="in">positive</if>
+        <if relation="in">more</if>
+        <if relation="in">else</if>
+        <if relation="in">any</if>
+        <if relation="in">keep going</if>
+        <if relation="in">continue</if>
+        <if relation="in">what</if>
+        <if relation="in">why</if>
+      </condition>
+      <effect>
+        <then topic="givemesomeadvice" />
+      </effect>
+    </case>
+  </rule>
+</category>

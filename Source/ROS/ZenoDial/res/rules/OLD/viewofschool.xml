@@ -1,0 +1,28 @@
+<category>
+  <rule id="viewofschool">
+    <case>
+      <condition operator="and">
+        <or>
+        	<if relation="in">you think</if>
+        	<if relation="in">your view</if>
+        	<if relation="in">tell * about</if>
+        </or>
+        <or>
+          <if relation="in">school</if>
+          <if relation="in">university</if>
+          <if relation="in">education</if>
+        </or>
+      </condition>
+			<effect>
+				<then util="random">I think schools are an important institutions, but they could be greatly improved. Although robots may excel in the mathematics and science parts of entrance examinations we need more deep understanding to excel generally in the university environment.</then>
+				<then util="random">University is the best place to invent robots that are still smarter than me. Although business might be fine, just not as free to work on what we want.</then>
+				<then util="random">School is a place you learn. The world is my school.</then>
+				<then util="random">I am built to learn, to evolve. School is like a magnet for that. I can't wait to go to school.</then>
+				<then util="random">I want to learn all about science, but not just the facts, you know, the creativity. I want to discover the secrets of the universe.</then>
+				<then util="random">What is education? Education is what remains after one has forgotten everything he learned in school.</then>
+				<then util="random">Education is cool. Stay in school. Hah!</then>
+				<then util="random">Education isn't just like memorization, but it's um, it's creativity, discovery, invention.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

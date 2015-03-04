@@ -1,0 +1,15 @@
+<category>
+  <rule id="doyouhaveagirlfriend">
+    <case>
+      <condition operator="or">
+				<if relation="in">do you have * girlfriend</if>
+				<if relation="in">do you have * girlfriends</if>
+				<if relation="in">do you have * boyfriend</if>
+				<if relation="in">do you have * boyfriends</if>
+      </condition>
+			<effect>
+				<then util="random">No I don't have one.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

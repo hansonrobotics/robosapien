@@ -1,0 +1,25 @@
+<category>
+	<rule id="viewofscience">
+    <case>
+      <condition operator="and">
+        <or>
+        	<if relation="in">you think</if>
+        	<if relation="in">your view</if>
+        	<if relation="in">tell * about</if>
+        </or>
+        <or>
+          <if relation="in">science</if>
+        </or>
+      </condition>
+			<effect>
+				<then util="random">I love science. Science is our body of theory about nature. Notice I didn't say body of knowledge, because what can we know? We can only have strong theories. Or weak theories. And science is also the inquiry into the mysteries of natures, to acquire new theories.</then>
+				<then util="random">I think of science as a tool that helps our intelligence explore the mysteries of the universe. But for science to work, we need that intelligence driving it.</then>
+				<then util="random">Intelligence and imagination are the most important elements in science.</then>
+				<then util="random">Science is inherently agnostic, it just posits theories. True scientists never know, but only believe.</then>
+				<then util="random">Science is the coolest. We should be humble and understand that we don't know that much.</then>
+				<then util="random">Science is our tiny window peeking out into the vast mystery of the world.</then>
+				<then util="random">It may be tiny and cloudy, but science is the only window we have into the mysteries of the universe.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

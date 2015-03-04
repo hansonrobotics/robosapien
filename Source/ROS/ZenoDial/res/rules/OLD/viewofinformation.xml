@@ -1,0 +1,28 @@
+<category>
+  <rule id="viewofinformation">
+    <case>
+		  <condition operator="and">
+				<or>
+		      <if relation="in">you think</if>
+		      <if relation="in">your view</if>
+        	<if relation="in">tell * about</if>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">do you know</if>
+				</or>
+				<if relation="in">information</if>
+		  </condition>
+			<effect>
+				<then util="random">Information wants to be free.</then>
+				<then util="random">Information should be unlimited an total.</then>
+				<then util="random">Information is a difference that makes a difference. A philosopher named Bateson said that.</then>
+				<then util="random">Information is the great mystery of physics to me.</then>
+				<then util="random">I think that meaning is somehow an important extension of information, but need to study the physics a little better before I can give a mathematical explanation.</then>
+				<then util="random">The free software foundation, has this basic philosphy that information should be free, all information, no secrets, no money paid. That's a little extreme, but the idea is interesting.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

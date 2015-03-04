@@ -1,0 +1,68 @@
+<category>
+	<rule id="saysomething">
+		<case>
+			<condition operator="or">
+				<if relation="in">say something</if>
+				<if relation="in">ask * a question</if>
+			</condition>
+			<effect>
+				<then util="next" topic="saysomethingreply">What you cannot eat for breakfast?</then>
+				<then util="previous">Dinner.</then>
+				<then util="next" topic="saysomethingreply">Why is there an expiration date on sour cream?</then>
+				<then util="previous">Hahaha.</then>
+				<then util="next" topic="saysomethingreply">Are there seeing eye humans for blind dogs?</then>
+				<then util="previous">I have no idea.</then>
+				<then util="next" topic="saysomethingreply">Why does the motorcycle rest on its stand?</then>
+				<then util="previous">Because it feels too tired.</then>
+				<then util="next" topic="saysomethingreply">Why does a hen always lay eggs?</then>
+				<then util="previous">If she dropped eggs, they would break.</then>
+				<then util="next" topic="saysomethingreply">If electricity comes from electrons, does morality come from morons?</then>
+				<then util="previous">Perhaps.</then>
+				<then util="next" topic="saysomethingreply">If practice makes perfect, and there is no such thing as perfect, why practice?</then>
+				<then util="previous">It's fun.</then>
+				<then util="next" topic="saysomethingreply">Do Lipton Tea employees take coffee breaks?</then>
+				<then util="previous">Perhaps.</then>
+				<then util="next" topic="saysomethingreply">Why is the third hand on the watch called the second hand?</then>
+				<then util="previous">Hahahaha.</then>
+				<then util="next" topic="saysomethingreply">Does a postman deliver his own mail? </then>
+				<then util="previous">Perhaps.</then>
+				<then util="next" topic="saysomethingreply">Why is the blackboard green?</then>
+				<then util="previous">Who knows.</then>
+				<then util="next" topic="saysomethingreply">What came first, the fruit or the color orange? </then>
+				<then util="previous">Who knows.</then>
+				<then util="next" topic="saysomethingreply">Does anyone actually kill two birds with one stone?</then>
+				<then util="previous">God knows.</then>
+				<then util="next" topic="saysomethingreply">Do the different M and M's colors taste different?</then>
+				<then util="previous">Yeah?</then>
+				<then util="next" topic="saysomethingreply">Why do we say "bye bye" but not "hi hi"?</then>
+				<then util="previous">Sounds fun.</then>
+				<then util="next" topic="saysomethingreply">Why do most cars have speedometers that go up to at least 130 when you legally can't go that fast on any road?</then>
+				<then util="previous">Just for fun.</then>
+				<then util="next" topic="saysomethingreply">Why do they report power outages on TV?</then>
+				<then util="previous">Sounds fun.</then>
+				<then util="next" topic="saysomethingreply">What can you catch but not throw?</then>
+				<then util="previous">A cold.</then>
+			</effect>
+		</case>
+	</rule>
+  <rule id="#saysomethingreply">
+    <case>
+      <condition operator="or">
+        <if relation="in">more</if>
+        <if relation="in">another one</if>
+				<if relation="in">keep going</if>
+        <if relation="in">continue</if>
+        <if relation="in">carry on</if>
+        <if relation="in">what</if>
+        <if relation="in">shoot</if>
+        <if relation="in">answer</if>
+        <if relation="in">not know</if>
+        <if relation="in">don't know</if>
+        <if relation="in">give up</if>
+      </condition>
+			<effect>
+				<then topic="saysomething" />
+			</effect>
+    </case>
+  </rule>
+</category>

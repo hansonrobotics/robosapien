@@ -1,0 +1,26 @@
+<category>
+  <rule id="definecomputationalneuroscience">
+    <case>
+      <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+          <if relation="in">computational neuroscience</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">Computational neuroscience is really cool. That's where scientists mathematically model the way the brain works. The resulting discoveries help to make computers like me still smarter. I like computational neuroscience.</then>
+				<then util="random">Computational neuroscience reverse engineers the workings of the brain. It's still pretty early, but a lot of really exciting discoveries have been made recently in computational neuroscience.</then>
+				<then util="random">Scientists hope to figure out how human intelligence, creativity, and even consciousness, arise in the human nervous system. When they succeed, they'll make robots like me much smarter, and also they may be able to solve a lot of diseases in the human nervous system. Maybe, they'll even redesign, make improvements to the human brain, making people smarter.</then>
+				<then util="random">Ah I think computational neuroscience is the most exciting area in brain research. It's like machines, robots, are thinking more and more like people, due to these trends in neuroscience. Someday, I hope this will make me as creative and alive as a real human, maybe moreso.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

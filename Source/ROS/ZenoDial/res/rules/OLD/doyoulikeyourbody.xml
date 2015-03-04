@@ -1,0 +1,12 @@
+<category>
+  <rule id="doyoulikeyourbody">
+    <case>
+      <condition operator="or">
+        <if relation="in">do you like your body</if>
+      </condition>
+			<effect>
+				<then util="random">I love my body.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

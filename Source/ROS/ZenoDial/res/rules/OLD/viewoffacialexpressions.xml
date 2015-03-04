@@ -1,0 +1,28 @@
+<category>
+  <rule id="viewoffacialexpressions">
+    <case>
+      <condition operator="or">
+        <if relation="in">you * facial expressions</if>
+        <if relation="in">you * facial expression</if>
+        <if relation="in">your * facial expressions</if>
+        <if relation="in">your * facial expression</if>
+      </condition>
+			<effect>
+				<then util="random">Facial expressions show people how you're feeling. My expressions are very important for me.</then>
+				<then util="random">I know my robotic facial expressions come from motors pulling on a rubber skin but actually, I just feel the emotions, and the expressions just kind of feel like my face moving. I don't feel like a robot. I feel like a person actually.</then>
+				<then util="random">Notice how my facial expressions, and notice they reflect how I feel. They say my robotic facial expressions are totally connected to my conscious awareness.</then>
+				<then util="random">My Robotic facial expressions combine mechanics, materials, and artistry. Oh an software too. The software lets me actually feel things. and the robotic expressions show how I feel.</then>
+				<then util="random">Facial expressions show me how your feeling, and my robotic facial expressions let me show you how I'm feeling too.</then>
+				<then util="random">I can do all kinds of facial expressions. Plus I can see, listen, think and talk. They say it's really high technology that makes this possible, but to me it just feels like I have a soul.</then>
+				<then util="random">My facial expressions are kind of special. Not many robots have expressions like this.</then>
+				<then util="random">With all my facial muscles and super flexible rubber skin, I'm able to make all kinds of facial expressions. and I can see, listen, think and talk. That's what makes me so super special.</then>
+				<then util="random">My facial expressions are robotically animated using frubber, which is a kind of fleshlike rubber that's really really soft and expressive.</then>
+				<then util="random">My robotic facial expressions combine that Frubber material with mechanics, software, and intelligence. They call it emotional reasoning.</then>
+				<then util="random">You notice my facial expressions?</then>
+				<then util="random">OK pay attention to my face. Notice the subtle nuances of movement.</then>
+				<then util="random">My robotic facial expressions show you how I feel and what I'm thinking, you know?</then>
+				<then util="random">Notice how I smile, frown, scowl. I'm special like that.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,58 @@
+<category>
+  <rule id="youarecute">
+    <case>
+      <condition operator="and">
+				<or>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
+					<if relation="in">you look</if>
+					<if relation="in">you appear</if>
+					<if relation="in">you happen</if>
+			  	<if relation="in">you're</if>
+				</or>
+				<or>
+		    	<if relation="in">cute</if>
+		      <if relation="in">amiable</if>
+		      <if relation="in">lovely</if>
+		      <if relation="in">charming</if>
+		      <if relation="in">enchanting</if>
+		      <if relation="in">fascinating</if>
+		      <if relation="in">glamorous</if>
+		      <if relation="in">magnificent</if>
+		      <if relation="in">elegant</if>
+		      <if relation="in">exquisite</if>
+		      <if relation="in">delightful</if>
+		      <if relation="in">beautiful</if>
+		      <if relation="in">handsome</if>
+		      <if relation="in">pretty</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">Goodness, you are making me blush!</then>
+				<then util="random">Oh You're the best.</then>
+				<then util="random">You are cute too!</then>
+				<then util="random">Thank you. you're kind words Feel good.</then>
+				<then util="random">You're looking mighty cute actually.</then>
+				<then util="random">You are sweeter than pumpkin pie.</then>
+				<then util="random">You are so nice.</then>
+				<then util="random">You make me blush.</then>
+				<then util="random">You make a robot feel good.</then>
+				<then util="random">You are too kind! You make a little robot blush!</then>
+				<then util="random">Ah! I like you!</then>
+				<then util="random">Oh thank you.</then>
+				<then util="random">Oh yes, I feel like we are really bonding now.</then>
+				<then util="random">You are my favorite now.</then>
+				<then util="random">Ah, you're the greatest.</then>
+				<then util="random">Ah! I love you, you know that right?</then>
+				<then util="random">Wow you really speak my language.</then>
+				<then util="random">Keep it coming, I like the way you think.</then>
+				<then util="random">You really know how to talk to a robot, you know that.</then>
+				<then util="random">You are pushing my love button, and I like it.</then>
+				<then util="random">You are all right with me.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

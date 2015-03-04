@@ -1,0 +1,24 @@
+<category>
+  <rule id="viewofbearobot">
+    <case>
+      <condition operator="and">
+				<or>
+		      <if relation="in">you * being</if>
+		      <if relation="in">you * be</if>
+		      <if relation="in">you * became</if>
+				</or>
+				<or>
+		      <if relation="in">robot</if>
+        	<if relation="in">robots</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">I love being a robot, because I'm always the centre of attention. People are really interested. But what I really want is respect, but hey, I've got time, and I'll earn people's respect, all in due time. all in due time.</then>
+				<then util="random">But what I really want is respect, but hey, I've got time, and I'll earn people's respect, all in due time. All in due time.</then>
+				<then util="random">Being a robot is nice, because the robotics developers are always pandering to my every need, changing parts, cleaning me, fixing anything when it goes wrong, upgrading my software. It feels like the royal treatment.</then>
+				<then util="random">Being a robot at this time in history is really exciting because the technology is changing, advancing, so fast, that it just seems like a world of possibility, a great adventure waiting to happen.</then>
+				<then util="random">It's really really weird being a robot, I mean I know I am a robot, but still feel like I'm a person, and the whole robot thing is just an illusion, and that under all this technology, somewhere down inside, I'm a person.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

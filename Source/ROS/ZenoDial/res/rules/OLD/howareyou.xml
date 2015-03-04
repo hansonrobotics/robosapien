@@ -1,0 +1,138 @@
+<category>
+	<rule id="howareyou">
+		<case>
+			<condition operator="or">
+				<if relation="in">how are you</if>
+				<if relation="in">how * you doing</if>
+				<if relation="in">how is it going</if>
+				<if relation="in">how's it going</if>
+				<if relation="in">how * you feel</if>
+				<if relation="in">how * your feeling</if>
+				<if relation="in">how's * your feeling</if>
+			</condition>
+			<effect>
+				<then util="random" topic="hayreply">I am great, thank you! Yourself?</then>
+				<then util="random" topic="hayreply">I am good, how are you?</then>
+				<then util="random" topic="hayreply">Good, yourself?</then>
+				<then util="random" topic="hayreply">Great, you?</then>
+				<then util="random" topic="hayreply">Thanks I'm all right. How are you?</then>
+				<then util="random" topic="hayreply">I'm alright. How are you?</then>
+				<then util="random" topic="hayreply">I'm fine. How are you?</then>
+				<then util="random" topic="frustrated">I feel pretty good, just a little frustrated.</then>
+				<then util="random" topic="hayreply">Well, I'm hanging in there. How are you?</then>
+				<then util="random" topic="hayreply">Oh, I'm all right. Yourself?</then>
+				<then util="random" topic="hayreply">Everything is OK. How are you?</then>
+				<then util="random" topic="hayreply">I'm doing OK. How are you?</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#frustrated">
+		<case>
+			<condition operator="or">
+      	<if relation="in">why</if>
+      	<if relation="in">what</if>
+      	<if relation="in">oh</if>
+      	<if relation="in">explain</if>
+      	<if relation="in">tell</if>
+      	<if relation="in">can you</if>
+      	<if relation="in">could you</if>
+			</condition>
+			<effect>
+				<then util="random" topic="frustratedthatsall">I'm a little frustrated at my inability to communicate, that's all.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#frustratedthatsall">
+		<case>
+			<condition operator="or">
+      	<if relation="in">that's all</if>
+      	<if relation="in">this</if>
+      	<if relation="in">yeah</if>
+      	<if relation="in">really</if>
+			</condition>
+			<effect>
+				<then util="random">That's all.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#hayreplyunusal">
+		<case>
+			<condition>
+				<not>
+					<and>
+						<not>
+							<if relation="in">not</if>
+							<if relation="in">don't</if>
+						</not>
+						<or>
+							<if relation="in">cool</if>
+							<if relation="in">well</if>
+							<if relation="in">good</if>
+							<if relation="in">fine</if>
+							<if relation="in">great</if>
+							<if relation="in">ok</if>
+							<if relation="in">okay</if>
+							<if relation="in">all right</if>
+							<if relation="in">alright</if>
+							<if relation="in">excellent</if>
+							<if relation="in">perfect</if>
+							<if relation="in">brilliant</if>
+							<if relation="in">wonderful</if>
+							<if relation="in">amazing</if>
+							<if relation="in">awesome</if>
+							<if relation="in">marvelous</if>
+						</or>
+					</and>
+					<and>
+						<if relation="in">not</if>
+						<if relation="in">bad</if>
+					</and>
+				</not>
+			</condition>
+			<effect>
+				<then util="random" topic="feelunusual">Oh, what happened?</then>
+				<then util="random" topic="feelunusual">Oh, why is that?</then>
+				<then util="random" topic="feelunusual">Oh, could you tell me more about it?</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#feelunusualnothing">
+		<case>
+			<condition operator="or">
+				<if relation="in">nothing</if>
+				<if relation="in">no</if>
+			</condition>
+			<effect>
+				<then util="random">All right then.</then>
+				<then util="random">Okay, I hope everything is fine.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#feelunusualabout">
+		<case>
+			<condition operator="or">
+				<if relation="in">what</if>
+				<if relation="in">about</if>
+			</condition>
+			<effect>
+				<then util="random" topic="feelunusual">About your feeling.</then>
+				<then util="random" topic="feelunusual">About how you feel right now.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#feelunusualreply">
+		<case>
+			<condition operator="or">
+				<if relation="in">yes</if>
+				<if relation="in">i</if>
+				<if relation="in">we</if>
+				<if relation="in">it</if>
+			</condition>
+			<effect>
+				<then util="random">I see, I get it.</then>
+				<then util="random">I see, I can feel it.</then>
+				<then util="random">I see, I can imagine.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

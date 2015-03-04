@@ -1,0 +1,24 @@
+<category>
+	<rule id="doyouuse">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">can you</if>
+      		<if relation="in">could you</if>
+					<if relation="in">can't you</if>
+      		<if relation="in">couldn't you</if>
+					<if relation="in">do you</if>
+      		<if relation="in">don't you</if>
+					<if relation="in">did you</if>
+      		<if relation="in">didn't you</if>
+				</or>
+      	<or>
+					<if relation="in">you * use</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">I use it as often as possible.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

@@ -1,0 +1,14 @@
+<category>
+	<rule id="whatdoesthefoxsay">
+		<case>
+			<condition operator="or">
+      	<if relation="in">what does the fox say</if>
+			</condition>
+			<effect>
+				<then util="random">You will never know. The secret of the fox is an ancient mystery.</then>
+				<then util="random">Fraka-kaka-kaka-kaka-kow!</then>
+				<then util="random">Wa-pa-pa-pa-pa-pa-pow!</then>
+			</effect>
+		</case>
+	</rule>
+</category>

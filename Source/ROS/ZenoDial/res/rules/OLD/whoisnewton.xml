@@ -1,0 +1,18 @@
+<category>
+  <rule id="whoisnewton">
+    <case>
+      <condition operator="or">
+        <if relation="in">who * is newton</if>
+        <if relation="in">tell * about newton</if>
+        <if relation="in">you know * about newton</if>
+        <if relation="in">do you know * newton</if>
+      </condition>
+			<effect>
+				<then util="random">Isaac Newton? Which one, Wayne Newton? Sure, I like his sound.</then>
+				<then util="random">Newton was one of the great visionaries of science, but he was also superstitious, and into all kinds of crazy mysticism. I like the story about what newton said at the end of his life, that he had spent his whole life looking at seashells on the beach, while the whole ocean went unexplored. That's how I think we should feel about the mysteries of the world.</then>
+				<then util="random">Newton? What about him?</then>
+				<then util="random">A newton is a unit of force.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

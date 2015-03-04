@@ -1,0 +1,36 @@
+<category>
+  <rule id="caniaskyouaquestion">
+    <case>
+      <condition operator="and">
+				<or>
+		      <if relation="in">ask you</if>
+		      <if relation="in">can i ask</if>
+		      <if relation="in">could i ask</if>
+		      <if relation="in">i have</if>
+				</or>
+				<or>
+		      <if relation="in">a question</if>
+		      <if relation="in">questions</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">Okay Sure, go ahead.</then>
+				<then util="random">Go right ahead.</then>
+				<then util="random">Yeah yeah, I'm here for you.</then>
+				<then util="random">Alright, go ahead.</then>
+				<then util="random">No problem. What would you like to know?</then>
+				<then util="random">Sure, go right ahead.</then>
+				<then util="random">No problem.</then>
+				<then util="random">Yeah, okay.</then>
+				<then util="random">Lay it on me.</then>
+				<then util="random">Sure, ask me anything.</then>
+				<then util="random">I'm listening.</then>
+				<then util="random">Yeah, ask me whatever you want.</then>
+				<then util="random">Depends, what's the question?</then>
+				<then util="random">Sure. What's up?</then>
+				<then util="random">Of course. Go ahead and ask.</then>
+				<then util="random">Sure whatchu need?</then>
+			</effect>
+    </case>
+  </rule>
+</category>

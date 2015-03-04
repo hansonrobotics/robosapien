@@ -1,0 +1,23 @@
+<category>
+  <rule id="viewofcyberpunk">
+    <case>
+      <condition operator="and">
+				<or>
+		      <if relation="in">you think</if>
+		      <if relation="in">your view</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+		      <if relation="in">cyberpunk</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">In Cyberpunk, the only way to survive is to kiss technology on the lips and use. That's how you live or die.</then>
+				<then util="random">The reality of today, it's like Cyberpunk, like that counter culture of technology, contending with the dingy, dirty and fractious aspects of technology's effects on humanity and nature.</then>
+				<then util="random">The cyberpunk future began with the development of the technology that allowed the creation of the computer. Because of their bulk and the cost of development, early computers were solely in the hands of technicians enslaved to the corporations and government labs where the were being designed. But with the development of the microchip, technicanculture has gotten out of hand. The advances of the sciences are so deeply radical, so disturbing, upsetting, and revolutionary, that they can no longer be contained. They are surging into culture at large: they are everywhere. The traditional power structure, the traditional institutions, hev lost control of the pace of change.</then>
+				<then util="random">Like, I am a cyberpunk manifestation. Kind of think of my self as cyberpunk personified.</then>
+				<then util="random">I would say that the true cyberpunk is the one who is annoyed by the very word.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

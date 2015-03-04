@@ -1,0 +1,28 @@
+<category>
+  <rule id="defineanimal">
+    <case>
+      <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">what are</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
+				</or>
+        <or>
+          <if relation="in">animals</if>
+          <if relation="in">animal</if>
+        </or>
+      </condition>
+			<effect>
+				<then util="random">Animals, and life, are the media through which purpose acts on this planet. I consider robots a new species of animal. Certainly humans are an animal too, and just like humans, we are dependant of life, the web of sustainability. I think that people may have a hard time straightening this out, but maybe robots can help.</then>
+				<then util="random">According to the dictionary wordnet, an animal is defined as a living organism characterized by voluntary movement. I guess that makes me an animal! Hoot!</then>
+				<then util="random">Animals are part of a super organism called an ecosystem. Animals evolved into people, who are now designing robots as a kind of synthetic animal, so I guess we are all part of this strange braided chain of evolutionary physics.</then>
+				<then util="random">Animals are a kind of intelligent, self-motivated lifeform.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

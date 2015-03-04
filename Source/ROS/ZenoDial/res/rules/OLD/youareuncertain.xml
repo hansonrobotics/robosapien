@@ -1,0 +1,17 @@
+<category>
+	<rule id="youareuncertain">
+		<case>
+			<condition operator="or">
+				<if relation="in">you are uncertain</if>
+				<if relation="in">you're uncertain</if>
+				<if relation="in">you were uncertain</if>
+				<if relation="in">why * uncertain</if>
+			</condition>
+			<effect>
+				<then util="random">Well, there are things that no one knows the exact answer.</then>
+				<then util="random">I'm still learning.</then>
+				<then util="random">I am as sure as I can be.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

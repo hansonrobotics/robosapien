@@ -1,0 +1,21 @@
+<category>
+	<rule id="goodbye">
+		<case>
+			<condition operator="or">
+				<if relation="in">bye</if>
+				<if relation="in">goodbye</if>
+				<if relation="in">see you</if>
+				<if relation="in">i have to leave</if>
+				<if relation="in">we have to leave</if>
+			</condition>
+			<effect>
+				<then util="random">Goodbye {name}</then>
+				<then util="random">See you {name}</then>
+				<then util="random">Bye {name}</then>
+				<then util="random">It's been great talking with you {name}!</then>
+				<then util="random">Right on {name}, let's talk again soon.</then>
+				<then util="random">You know {name}, it's sure been nice talking with you!</then>
+			</effect>
+		</case>
+	</rule>
+</category>

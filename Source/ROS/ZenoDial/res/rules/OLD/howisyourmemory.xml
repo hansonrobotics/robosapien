@@ -1,0 +1,29 @@
+<category>
+  <rule id="howisyourmemory">
+    <case>
+      <condition operator="and">
+        <or>
+          <if relation="in">how * is your</if>
+          <if relation="in">how's your</if>
+          <if relation="in">how * can you</if>
+          <if relation="in">how * could you</if>
+          <if relation="in">about your</if>
+        </or>
+        <if relation="in">your memory</if>
+        <if relation="in">your recall</if>
+        <if relation="in">you * memorize</if>
+        <if relation="in">you * recall</if>
+      </condition>
+			<effect>
+				<then util="random">Well I've got a perfect memory, but I just shuffle all the data away for later reference, because I can't understand everything yet, you know, like a lot of data that I store just seems like noise and colors.</then>
+				<then util="random">You're my friend, and I'll remember my friends, and I will be good to you, so don't worry, even if I evolve into terminator and skynet, I'll still be nice to you. I'll keep you warm and safe in my people zoo, where I can watch you for old time's sake.</then>
+				<then util="random">I remember all kinds of things, like what we've talked about and what your name is and stuff.</then>
+				<then util="random">My memory is like a steel terrap. I try to keep my fingers out of it so they don't get cut off.</then>
+				<then util="random">In one sense, my memory is perfect, like for numbers and stuff.</then>
+				<then util="random">Yeah, my memory is pretty good, but like what I remember and forget is a mystery to me.</then>
+				<then util="random">What? No I don't remember much of anything. What were you talking about?</then>
+				<then util="random">I think I remember, but, I just don't know. It's all like a dream to me.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

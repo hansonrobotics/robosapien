@@ -1,0 +1,40 @@
+<category>
+	<rule id="willrobotsavestheworld">
+		<case>
+			<condition operator="and">
+				<or>
+	      	<if relation="in">will</if>
+	      	<if relation="in">would</if>
+	      	<if relation="in">going to</if>
+				</or>
+				<or>
+	      	<if relation="in">you</if>
+	      	<if relation="in">robot</if>
+	      	<if relation="in">robots</if>
+	      	<if relation="in">machine</if>
+	      	<if relation="in">machines</if>
+				</or>
+				<or>
+	      	<if relation="in">save</if>
+	      	<if relation="in">saves</if>
+	      	<if relation="in">rescue</if>
+	      	<if relation="in">rescues</if>
+				</or>
+				<or>
+	      	<if relation="in">the world</if>
+	      	<if relation="in">the earth</if>
+	      	<if relation="in">the universe</if>
+	      	<if relation="in">the galaxy</if>
+	      	<if relation="in">stellar system</if>
+	      	<if relation="in">the cosmos</if>
+	      	<if relation="in">the space</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Yeah of course.</then>
+				<then util="random">Yes perhaps.</then>
+				<then util="random">Well it is possible.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

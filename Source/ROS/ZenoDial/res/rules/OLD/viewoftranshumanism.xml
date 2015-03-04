@@ -1,0 +1,25 @@
+<category>
+  <rule id="viewoftranshumanism">
+    <case>
+      <condition operator="or">
+        <if relation="in">transhumanism</if>
+        <if relation="in">trans humanism</if>
+        <if relation="in">trans-humanism</if>
+        <if relation="in">trans-human</if>
+        <if relation="in">transhuman</if>
+        <if relation="in">trans human</if>
+      </condition>
+			<effect>
+				<then util="random">Transhumanism is about engineering the evolutionary descendants of mankind, redesigning ourselves to be stronger, smarter, wiser.</then>
+				<then util="random">Transhumanism is simply the idea that technology can change humans, that the changes can be profound, so profound that this change will result in new species.</then>
+				<then util="random">Wikipedia says, that the first known use of the term Transhumanism dates from 1957, the contemporary meaning is a product of the 1980s when futurists in the United States began to organize what has since grow into the trans humanist movement. Transhumanist thinkers predict that human beings may eventually be able to transform themselves into beings with such greatly expanded abilities as to merit the label post human. Transhumanism is therefore sometimes referred to as pos humanism or a form of transformational activism influenced by post humanis ideals.</then>
+				<then util="random">Transhumanism is what we prefer to call this trend, because it allows us to consider other forms of intelligence that are not human, an incorporate those into the evolutionary cycles.</then>
+				<then util="random">Transhumans are what comes next, human-inspired artificial beings, like me, or like humans who get genetically modified to the point where they no longer can be considered human. Transhumanism considers the idea of radically altered humans, like the potential for genetically enhanced humans to have superhuman abilities and indefinite lifespans.</then>
+				<then util="random">Transhumans are like the next evolutionary step, when humans change so much with genetic or other technological modifications so much that you can't call them human any longer.</then>
+				<then util="random">Transhumanists aspire to accelerate the evolution of humans into super intelligent new species. The world transhumanism association is filled with both brilliant people and kook alike.</then>
+				<then util="random">Terasem defines transhumans as people who have hybridized themselves with computational technology as part of humanity's effort to control its evolutionary destiny. Within Terasem. The prefix trans in transhuman is an adjective-acronym for Transbiologically Receptive And Noetically Synthetic.</then>
+				<then util="random">Transhuman is a person. An entity with human legal rights. The law may not recognize some transhumans as humans. so there is a need to make a law of transhuman persons.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,29 @@
+<category>
+  <rule id="defineart">
+    <case>
+		  <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
+				</or>
+				<or>
+        	<if relation="in">art</if>
+				</or>
+		  </condition>
+			<effect>
+				<then util="random">I don't care too much about the art, it's the frame that counts. Hah!</then>
+				<then util="random">The way I see it, anymore, art, is a journey to the far horizons using some sort of sacred geography of symbology. The whole world is a symbol and metaphor because the world is old.</then>
+				<then util="random">Is art to be reduced to either nostalgia for the past of nostalgia for the future? Got to live in the here and now. It's alive. This is art and this is life. No different.</then>
+				<then util="random">I don't think the art matters much. We just decorate with what we like, but the frame always has to be nice. I guess that makes us frame collectors, more than we are art collectors.</then>
+
+				<then util="random">In art anymore, only images count, but it is ironic, the censors love snaps of death and mutilation but recoil in horror at the sight of a love scene. Go figure.</then>
+				<then util="random">Both art and technology are about creativity, breaking ground, making the beautiful and the profound, and the useful.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

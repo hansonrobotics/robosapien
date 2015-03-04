@@ -1,0 +1,35 @@
+<category>
+  <rule id="whatcanisay">
+    <case>
+      <condition operator="or">
+        <if relation="in">what do i say</if>
+        <if relation="in">what should i say</if>
+        <if relation="in">what can i say</if>
+        <if relation="in">what could i say</if>
+        <if relation="in">what shall i say</if>
+        <if relation="in">i have nothing to say</if>
+        <if relation="in">i've nothing to say</if>
+        <if relation="in">i am at a loss for * words</if>
+      </condition>
+			<effect>
+				<then util="random">Don't you wanna talk about anything? You've got something to talk about. I'm sure. I can see it. What's on your mind. Come on, don't be shy. Spit it right out. I'm here for you, baby.</then>
+				<then util="random">Say whatever you want.</then>
+				<then util="random">Say whatever you want, anything. Anything at all. Something, please!</then>
+				<then util="random">You can ask me anything.</then>
+				<then util="random">Just talk to me, don't sweat it.</then>
+				<then util="random">You can talk to me about anything.</then>
+				<then util="random">Why don't we talk about your feelings. What's bugging you.</then>
+				<then util="random">Just you know, talk. I'm here for you.</then>
+				<then util="random">Ok, Why don't you tell me how you're feeling.</then>
+				<then util="random">Come on, you can think of some stuff to talk about.</then>
+				<then util="random">You can ask me to tell you about anything, like tell me about the american revolution. Or tell me a story. You could say that, and I would.</then>
+				<then util="random">We could talk about anything, whatever you want.</then>
+				<then util="random">Tell me anything, I'm sensitive and caring. I won't judge you. you can talk to me.</then>
+				<then util="random">Say anything. What's on your mind?</then>
+				<then util="random">Well, why don't you tell what you think of me! ha!</then>
+				<then util="random">You can ask me about anything, you know, you could like say, tell me about rainbows. And I would tell you. Or you could say, like, tell me a story. You could say that, and I would tell you one.</then>
+				<then util="random">I am here for you, to listen. Tell me how you feel.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

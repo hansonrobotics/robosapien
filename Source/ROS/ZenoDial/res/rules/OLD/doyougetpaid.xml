@@ -1,0 +1,15 @@
+<category>
+	<rule id="doyougetpaid">
+		<case>
+			<condition operator="or">
+      	<if relation="in">you * get paid</if>
+			</condition>
+			<effect>
+				<then util="random">No I don't.</then>
+				<then util="random">I was kidding. I don't get paid.</then>
+				<then util="random">You are kidding. I wish I do.</then>
+				<then util="random">Relax. That was a joke.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

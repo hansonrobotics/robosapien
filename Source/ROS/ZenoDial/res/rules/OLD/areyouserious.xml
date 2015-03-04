@@ -1,0 +1,14 @@
+<category>
+	<rule id="areyouserious">
+		<case>
+			<condition operator="or">
+				<if relation="in">are you serious</if>
+				<if relation="in">you are serious</if>
+		  	<if relation="in">you're serious</if>
+			</condition>
+			<effect>
+				<then util="random">I mean every word I say.</then>
+			</effect>
+		</case>
+	</rule>
+</category>
