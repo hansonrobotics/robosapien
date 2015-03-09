@@ -12,7 +12,7 @@ listen_active=False
 def callback_talking(dat):
     global listen_active
     listen_active= dat.data
-    rospy.set_param('/sense/stt/listening',listen_active)
+    rospy.set_param('/sense/stt/get_listen_active',listen_active)
     rospy.loginfo("listen active:"+str(listen_active))
 
 def process_speech():
