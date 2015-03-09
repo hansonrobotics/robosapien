@@ -29,7 +29,7 @@ Clone into your catkin workspace, to run:
 
 rosrun itf_talk itf_talk.py
 
-It will monitor the /itf_talk topic for input. 
+It will monitor the /act/tts/set_text topic for input. 
 
 Notes
 -----
@@ -52,11 +52,11 @@ sudo apt-get -y install python-simplejson
 
 Usage
 -----
-Clone into your catkin workspace, to run:
-
+Clone into your catkin workspace, edit itf_listen.py to add your google development keys in keys array.
+to run:
 rosrun itf_listen itf_listen.py
 
-Output will be published on the /itf_listen topic. If Google fails to recognize the voice input, the message BADINPUT will be posted instead.
+Output will be published on the /sense/stt/get_text topic. If Google fails to recognize the voice input, the message BADINPUT will be posted instead.
 
 Notes
 -----

@@ -14,8 +14,8 @@ from SoundFile import SoundFile
 class ITFTalker(Thread):
     NODE_NAME = 'itf_talker'
     #pub = rospy.Publisher('itf_next_sentence', String, queue_size=1)
-    pub_speech_strength = rospy.Publisher('/act/tts/speech_strength', Float32, queue_size=1)
-    pub_speech_active = rospy.Publisher('/act/tts/speech_active', Bool, queue_size=1)
+    pub_speech_strength = rospy.Publisher('/act/tts/get_speech_strength', Float32, queue_size=1)
+    pub_speech_active = rospy.Publisher('/act/tts/get_speech_active', Bool, queue_size=1)
     soundfile = None
     rms_params = {"scale": 1.0/5000, "min": 0.0, "max": 1.0}
     gletplayer = None
