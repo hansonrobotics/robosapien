@@ -61,7 +61,8 @@ public class Output {
 		System.out.println("[ZenoDial] " + output);
 		
 		// For ROS
-		Publisher<std_msgs.String> publisher = ROSMaster.getPublisher("/zenodial/output_talk");
+		Publisher<std_msgs.String> publisher = ROSMaster.getPublisher("/act/tts/set_text");
+		//Publisher<std_msgs.String> publisher = ROSMaster.getPublisher("/ZenoDial/output_text");
 		std_msgs.String stringToPub = publisher.newMessage();
 		stringToPub.setData(output);
 		publisher.publish(stringToPub);

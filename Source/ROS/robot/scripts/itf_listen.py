@@ -8,10 +8,16 @@ import simplejson
 import random
 cmd1='sox -r 16000 -t alsa default recording.flac silence 1 0.1 1% 1 1.5 1%'
 cmd2='wget -q -U "Mozilla/5.0" --post-file recording.flac --header="Content-Type: audio/x-flac; rate=16000" -O - "http://www.google.com/speech-api/v2/recognize?lang=en-us&client=chromium&key=REPLACEWITHKEY"'
-listen_active=False
+listen_active=True
 def callback_talking(dat):
     global listen_active
     listen_active= dat.data
+    rospy.set_param('/sense/stt/get_listen_active',listen_active)
+    rospy.loginfo("listen active:"+str(listen_active))
+
+def callback_stop(dat):
+    global listen_active
+    listen_active= not dat.data
     rospy.set_param('/sense/stt/get_listen_active',listen_active)
     rospy.loginfo("listen active:"+str(listen_active))
 
@@ -24,7 +30,20 @@ def process_speech():
     pubActive = rospy.Publisher('/act/robot/set_listen_led', Bool)
     rospy.set_param('/sense/stt/get_listen_active',listen_active)
     rospy.Subscriber("/sense/stt/set_listen_active", Bool, callback_talking)
+    rospy.Subscriber("/act/tts/get_speech_active",Bool,callback_stop)
 
+    keys = ["AIzaSyAFygjZbN2MHH2stfoj4JzqonWctWxKQoY",
+        "AIzaSyB0KJ20Hu61LihTuZOilGGccKoirKaaj1M",
+        "AIzaSyBB1H15zfUezWeOhpJSPip57GS25zpDi54",
+        "AIzaSyAt45KPVubikEYglLViQ7Ijyp4vk6AdAfc",
+        "AIzaSyBPWoAKCSROZlcwN7DokO1JOhZ8OgxxZO0",
+        "AIzaSyCjELnUutglzEP5Cw0nc4keudaYkVnIhQ0",
+        "AIzaSyCrI4f0on71JFmHl1UIQLZIlCUeTTNUi9c",
+        "AIzaSyAI1_BkxPqHlakDYAGSsh96UaRpca5j7LE",
+        "AIzaSyD5jUzPm-ajshmXjKw2d4YiEbyNED9g3qc",
+        "AIzaSyAcout1WkipZo-siXHCnsCJiQJbuIvRG4s",
+        "AIzaSyDV8AQOciGeJpSx0sKkl9Xi6O-OZF3IygA",
+        "AIzaSyAM2aOh-HWEhH8XZI7foQycswpsjwEWsZo"]
     #keys = [] # Doesn't work
 
     rate=rospy.Rate(10)

@@ -30,8 +30,8 @@ public class ZenoDial {
 		// For ROS
 		System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
 		ROSListener.createInputListener();
-		ROSMaster.initializePublisher("ZenoDialPublisher", "/zenodial/output_talk");
-		
+		//ROSMaster.initializePublisher("ZenoDialPublisher", "/ZenoDial/output_talk");
+		ROSMaster.initializePublisher("ZenoDialPublisher", "/act/tts/set_text");
 		while (true) {
 			// Ask for the profile if there is none in the system
 			while (profile.isEmpty()) {

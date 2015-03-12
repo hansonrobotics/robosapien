@@ -23,7 +23,7 @@ class FaceDetect:
     def __init__(self):
         self.haarbase = '/usr/share/opencv/' #'/opt/ros/hydro/share/OpenCV/' #'/usr/share/opencv/'
         self.faceCascade = cv.Load(self.haarbase + "haarcascades/haarcascade_frontalface_alt.xml")
-        self.pub = rospy.Publisher('facedetect', targets, queue_size=10)
+        self.pub = rospy.Publisher('/facedetect', targets, queue_size=10)
         cv.NamedWindow("ImageShow", 1)
         self.bridge = CvBridge()
         self.image_sub = rospy.Subscriber("/cv_camera/image_raw",Image,self.callback)
@@ -89,8 +89,10 @@ class FaceDetect:
                 pt2 = (int((x + w) * image_scale), int((y + h) * image_scale))
                 cv.Rectangle(image, pt1, pt2, cv.RGB(255, 0, 0), 5, 8, 0)
                 fbox=face_box()
-                fbox.top_left=(float(x)/float(smallImage.width),float(y)/float(smallImage.height))
-                fbox.width_height=(float(w)/float(smallImage.width),float(h)/float(smallImage.height))
+                fbox.top_left.x=float(x)/float(smallImage.width)
+                fbox.top_left.y=float(y)/float(smallImage.height)
+                fbox.width_height.x=float(w)/float(smallImage.width)
+                fbox.width_height.y=float(h)/float(smallImage.height)
                 payload.faces.append(fbox)
                 #fpt=Point()
                 #fpt.x=(float(x) + float(w)/2.0)/float(smallImage.width)
