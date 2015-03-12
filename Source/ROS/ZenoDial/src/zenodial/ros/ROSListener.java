@@ -10,7 +10,7 @@ public class ROSListener {
 	private static Logger log = new Logger("ROSListener", Level.NORMAL);
 	
 	public static void createInputListener() {
-		Subscriber<std_msgs.String> subscriber = ROSMaster.initializeSubscriber("ZenoDialListener", "/sense/stt/get_text");
+		Subscriber<std_msgs.String> subscriber = ROSMaster.initializeSubscriber("ZenoDialListener", "/ZenoDial/text_input");
 		subscriber.addMessageListener(new MessageListener<std_msgs.String>() {
 			@Override
 			public void onNewMessage(std_msgs.String message) {

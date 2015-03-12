@@ -80,7 +80,7 @@ def callback_move(cmd):
         if len(hx)<2: hx="0"+hx
         command=command+hx
         ser.write(command)
-        #rospy.loginfo("command= %s",command)
+        rospy.loginfo("command= %s",command)
 
 def callback_pan(dat):
     data=dat.data
@@ -115,8 +115,8 @@ def init():
      rospy.init_node('body_node', anonymous=False)
      rospy.set_param('/robot/get_pan_range',[0,MAX_PAN])
      rospy.set_param('/robot/get_tilt_range',[0,MAX_TILT])
-     rospy.set_param('/robot/get_pan',-1)
-     rospy.set_param('/robot/get_tilt',-1)
+     rospy.set_param('/robot/get_pan',45)
+     rospy.set_param('/robot/get_tilt',45)
      rospy.Subscriber("/act/robot/send_move_command", robot_cmd, callback_move)
      rospy.Subscriber("/act/robot/set_pan_angle", Int32, callback_pan)
      rospy.Subscriber("/act/robot/set_tilt_angle",Int32,callback_tilt)
