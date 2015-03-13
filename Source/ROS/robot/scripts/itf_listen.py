@@ -32,18 +32,9 @@ def process_speech():
     rospy.Subscriber("/sense/stt/set_listen_active", Bool, callback_talking)
     rospy.Subscriber("/act/tts/get_speech_active",Bool,callback_stop)
 
-    keys = ["AIzaSyAFygjZbN2MHH2stfoj4JzqonWctWxKQoY",
-        "AIzaSyB0KJ20Hu61LihTuZOilGGccKoirKaaj1M",
-        "AIzaSyBB1H15zfUezWeOhpJSPip57GS25zpDi54",
-        "AIzaSyAt45KPVubikEYglLViQ7Ijyp4vk6AdAfc",
-        "AIzaSyBPWoAKCSROZlcwN7DokO1JOhZ8OgxxZO0",
-        "AIzaSyCjELnUutglzEP5Cw0nc4keudaYkVnIhQ0",
-        "AIzaSyCrI4f0on71JFmHl1UIQLZIlCUeTTNUi9c",
-        "AIzaSyAI1_BkxPqHlakDYAGSsh96UaRpca5j7LE",
-        "AIzaSyD5jUzPm-ajshmXjKw2d4YiEbyNED9g3qc",
-        "AIzaSyAcout1WkipZo-siXHCnsCJiQJbuIvRG4s",
-        "AIzaSyDV8AQOciGeJpSx0sKkl9Xi6O-OZF3IygA",
-        "AIzaSyAM2aOh-HWEhH8XZI7foQycswpsjwEWsZo"]
+    keys = ["Key1",
+        "Key2",
+        "Key3"]
     #keys = [] # Doesn't work
 
     rate=rospy.Rate(10)
