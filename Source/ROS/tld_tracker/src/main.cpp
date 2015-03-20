@@ -229,7 +229,8 @@ void Main::process()
       msg.y = y;
       msg.width = width;
       msg.height = height;
-      msg.confidence = confidence;            
+      msg.confidence = confidence; 
+      msg.tracker_id=tracker_id; //added by mandeep on 20 March 2015          
       pub1.publish(msg);
     }
 

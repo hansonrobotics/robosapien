@@ -4,3 +4,4 @@ int32 y
 int32 width
 int32 height
 float32 confidence
+string tracker_id

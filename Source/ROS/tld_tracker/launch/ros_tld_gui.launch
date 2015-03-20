@@ -1,6 +1,6 @@
 <launch>
 	<!-- declare arg to be passed in -->
-	<arg name="image_topic" default="im_acq"/>
+	<arg name="image_topic" default="/cv_camera/image_raw"/>
 
     <!-- Nodes -->
     <node name="ros_tld_gui_node" pkg="tld_tracker" type="tld_gui_node"

@@ -2,14 +2,18 @@
 	<!-- declare arg to be passed in -->
 	<arg name="load_model" default="false"/>
 	<arg name="auto_face_detection" default="false"/>
-	<arg name="model_import_file" default="/home/tld_models/sample"/>
-	<arg name="model_export_file" default="/home/tld_models/sample"/>
+	<arg name="model_import_file" default="/home/mandeep/tld_models/sample"/>
+	<arg name="model_export_file" default="/home/mandeep/tld_models/sample"/>
 	<arg name="cascade_path" default=
-		"$(env ROS_ROOT)/../OpenCV/haarcascades/haarcascade_frontalface_alt.xml"/>
-	<arg name="image_topic" default="im_acq"/>
+		"/usr/share/opencv/haarcascades/haarcascade_frontalface_alt.xml"/>
+	<arg name="image_topic" default="/cv_camera/image_raw"/>
+	<arg name="tracker_id" default="any"/>
+	<arg name="node_name" default="ros_tld_tracker_node"/>
 
 	<!-- Nodes -->
-    <node name="ros_tld_tracker_node" pkg="tld_tracker" type="tld_tracker_node"
+    <!-- node name="ros_tld_tracker_node" pkg="tld_tracker" type="tld_tracker_node"
+	    output="screen" -->
+	<node name="$(arg node_name)" pkg="tld_tracker" type="tld_tracker_node"
 	    output="screen">
         <!-- remap of topics -->
         <remap from="image" to="$(arg image_topic)"/>
@@ -29,6 +33,7 @@
         <param name="width" value="200" type="int"/>
         <param name="height" value="200" type="int"/>
         <param name="correctBB" value="false" type="bool"/>
+        <param name="tracker_id" value="$(arg tracker_id)" type="string"/>
     </node>
 </launch>
 
