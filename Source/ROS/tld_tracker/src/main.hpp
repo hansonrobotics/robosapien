@@ -47,10 +47,13 @@
 #include <ros/ros.h>
 #include <cv_bridge/cv_bridge.h>
 #include <std_msgs/Header.h>
+//
+#include <std_msgs/String.h>
+//
 #include <sensor_msgs/Image.h>
 #include <tld_msgs/Target.h>
 #include <tld_msgs/BoundingBox.h>
-#include <std_msgs/Char.h>
+//#include <std_msgs/Char.h>
 #include <std_msgs/Float32.h>
 #include <string>
 
@@ -77,6 +80,8 @@ class Main
 			np.param("width", target_bb.width, 100);
 			np.param("height", target_bb.height, 100);
 			np.param("correctBB", correctBB, false);
+			//change to send id
+			np.param("tracker_id",tracker_id,std::string("any"));
 
 			pub1 = n.advertise<tld_msgs::BoundingBox>(
                     "tld_tracked_object", 1000, true);
@@ -107,7 +112,8 @@ class Main
 		bool autoFaceDetection;
 		std::string modelImportFile;
 		std::string modelExportFile;
-
+		//added
+		std::string tracker_id;
 		enum
 		{
 			INIT,
@@ -155,7 +161,8 @@ class Main
         /*!
         * \brief ROS command callback.
         */
-		void cmdReceivedCB(const std_msgs::CharConstPtr & cmd);
+		//void cmdReceivedCB(const std_msgs::CharConstPtr & cmd);
+		void cmdReceivedCB(const std_msgs::StringConstPtr & cmd);
 
         /*!
         * \brief This function sends the tracked object as a BoudingBox message.

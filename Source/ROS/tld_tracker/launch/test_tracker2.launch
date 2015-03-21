@@ -22,8 +22,8 @@
 
         <!-- declare param and read value of arg-->
         <param name="showOutput" value="true" type="bool"/>
-        <param name="loadModel" value="$(arg load_model)" type="bool"/>
-        <param name="autoFaceDetection" value="$(arg auto_face_detection)" type="bool"/>
+        <param name="loadModel" value="false" type="bool"/>
+        <param name="autoFaceDetection" value="true" type="bool"/>
         <param name="modelImportFile" value="$(arg model_import_file)" type="string"/>
         <param name="exportModelAfterRun" value="false" type="bool"/>
         <param name="modelExportFile" value="$(arg model_export_file)" type="string"/>
@@ -33,7 +33,7 @@
         <param name="width" value="200" type="int"/>
         <param name="height" value="200" type="int"/>
         <param name="correctBB" value="false" type="bool"/>
-        <param name="tracker_id" value="$(arg tracker_id)" type="string"/>
+        <param name="tracker_id" value="face" type="string"/>
     </node>
 </launch>
 

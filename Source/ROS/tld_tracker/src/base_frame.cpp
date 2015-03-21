@@ -52,7 +52,9 @@ BaseFrame::BaseFrame()
 	sub2 = n.subscribe("tracked_object", 1000, &BaseFrame::tracked_objectCB, this);
 	sub3 = n.subscribe("fps_tracker", 1000, &BaseFrame::fps_trackerCB, this);
 	pub1 = n.advertise<tld_msgs::Target>("tld_gui_bb", 1000, true);
-	pub2 = n.advertise<std_msgs::Char>("tld_gui_cmds", 1000, true);
+	//pub2 = n.advertise<std_msgs::Char>("tld_gui_cmds", 1000, true);
+	//char has bug in ros python
+	pub2 = n.advertise<std_msgs::String>("tld_gui_cmds", 1000, true);
 
 	first_image = true;
 }
@@ -170,7 +172,7 @@ void BaseFrame::fps_trackerCB(const std_msgs::Float32ConstPtr & msg)
 
 void BaseFrame::clear_background()
 {
-	std_msgs::Char cmd;
+	std_msgs::String cmd;
 	cmd.data = 'b';
 	pub2.publish(cmd);
 	qDebug() << "Clearing Background";
@@ -178,7 +180,7 @@ void BaseFrame::clear_background()
 
 void BaseFrame::clear_and_stop_tracking()
 {
-	std_msgs::Char cmd;
+	std_msgs::String cmd;
 	cmd.data = 'c';
 	pub2.publish(cmd);
 	qDebug() << "Clearing and stop tracking";
@@ -186,7 +188,7 @@ void BaseFrame::clear_and_stop_tracking()
 
 void BaseFrame::toggle_learning()
 {
-	std_msgs::Char cmd;
+	std_msgs::String cmd;
 	cmd.data = 'l';
 	pub2.publish(cmd);
 	qDebug() << "Toggle learning";
@@ -194,7 +196,7 @@ void BaseFrame::toggle_learning()
 
 void BaseFrame::alternating_mode()
 {
-	std_msgs::Char cmd;
+	std_msgs::String cmd;
 	cmd.data = 'a';
 	pub2.publish(cmd);            
 	qDebug() << "Alternating mode";
@@ -213,7 +215,7 @@ void BaseFrame::export_model()
 		// The user pressed cancel or closed the dialog.
 	}
 
-	std_msgs::Char cmd;
+	std_msgs::String cmd;
 	cmd.data = 'e';
 	pub2.publish(cmd);
 	qDebug() << "Exporting model : " << res;
@@ -232,7 +234,7 @@ void BaseFrame::import_model()
 		// The user pressed cancel or closed the dialog.
 	}
 
-	std_msgs::Char cmd;
+	std_msgs::String cmd;
 	cmd.data = 'i';
 	pub2.publish(cmd);
 	qDebug() << "Importing model : " << res;
@@ -240,7 +242,7 @@ void BaseFrame::import_model()
 
 void BaseFrame::reset()
 {
-	std_msgs::Char cmd;
+	std_msgs::String cmd;
 	cmd.data = 'r';
 	pub2.publish(cmd);
 	qDebug() << "Reset";

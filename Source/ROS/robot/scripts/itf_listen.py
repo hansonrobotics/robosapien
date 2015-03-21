@@ -13,12 +13,16 @@ def callback_talking(dat):
     global listen_active
     listen_active= dat.data
     rospy.set_param('/sense/stt/get_listen_active',listen_active)
+    pubActive = rospy.Publisher('/act/robot/set_listen_led', Bool)
+    pubActive.publish(listen_active)
     rospy.loginfo("listen active:"+str(listen_active))
 
 def callback_stop(dat):
     global listen_active
     listen_active= not dat.data
     rospy.set_param('/sense/stt/get_listen_active',listen_active)
+    pubActive = rospy.Publisher('/act/robot/set_listen_led', Bool)
+    pubActive.publish(listen_active)
     rospy.loginfo("listen active:"+str(listen_active))
 
 def process_speech():
@@ -32,9 +36,7 @@ def process_speech():
     rospy.Subscriber("/sense/stt/set_listen_active", Bool, callback_talking)
     rospy.Subscriber("/act/tts/get_speech_active",Bool,callback_stop)
 
-    keys = ["Key1",
-        "Key2",
-        "Key3"]
+
     #keys = [] # Doesn't work
 
     rate=rospy.Rate(10)

@@ -1,0 +1,4 @@
+<launch>
+<node name="face_detect_node" pkg="vision" type="face_detect.py"
+        output="screen"/>
+</launch>

@@ -191,9 +191,12 @@ void Main::process()
       correctBB = true;
     }
 
-    void Main::cmdReceivedCB(const std_msgs::CharConstPtr & cmd)
+    //void Main::cmdReceivedCB(const std_msgs::CharConstPtr & cmd)
+    void Main::cmdReceivedCB(const std_msgs::StringConstPtr & cmd)
     {
-      switch (cmd->data)
+	  char cd=cmd->data.c_str()[0];
+      //switch (cmd->data)
+      switch (cd)
       {
         case 'b':
           clearBackground();
@@ -229,7 +232,8 @@ void Main::process()
       msg.y = y;
       msg.width = width;
       msg.height = height;
-      msg.confidence = confidence;            
+      msg.confidence = confidence; 
+      msg.tracker_id=tracker_id; //added by mandeep on 20 March 2015          
       pub1.publish(msg);
     }
 

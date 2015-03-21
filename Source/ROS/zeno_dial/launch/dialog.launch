@@ -1,0 +1,6 @@
+<launch>
+<node name="dialog_node" pkg="zeno_dial" type="run_dialog.py"
+        output="screen">
+        <param name="/zeno_dial_dir" value="$(find zeno_dial)"/>
+        </node>
+</launch>

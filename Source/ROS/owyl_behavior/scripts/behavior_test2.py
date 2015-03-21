@@ -6,9 +6,29 @@ from owyl import blackboard
 from std_msgs.msg import Bool
 from std_msgs.msg import String
 from std_msgs.msg import Int32
-from robot.msg import robot_cmd
-from vision.msg import face_box
+#from std_msgs.msg import Char .. has bug in ros implementation
+#from vision.msg import face_box
 from vision.msg import targets
+from tld_msgs.msg import BoundingBox
+# reset tld tracker each time track command is given or subject is lost or low confidence for a few seconds
+#cmds std_msgs::Char ... keep global instead of local private topic as may need to reset without publishing too many topics
+#maybe modify cmds later to allow choosing the subscriber
+#        case 'b':
+#          clearBackground();
+#        case 'c':
+#          stopTracking();
+#        case 'l':
+#          toggleLearning();
+#        case 'a':
+#          alternatingMode();
+#        case 'e':
+#          exportModel();
+#        case 'i':
+#          importModel();
+#        case 'r':
+#          reset();
+#from tld_msgs.msg import Target
+from robot.msg import robot_cmd
 from robot.msg import compass
 from robot.msg import sonar
 stt_cmd_map= {
@@ -19,17 +39,17 @@ stt_cmd_map= {
              "turn right":(1,800,"turn right"),
              "look up":(2,400,"t+"),#tilt up
              "look down":(2,400,"t-"),
-             "look left":(2,400,"p-"),#pan,400*10ms,left
-             "look right":(2,400,"p+"),
+             "look left":(2,400,"p+"),#pan,400*10ms,left
+             "look right":(2,400,"p-"),
              "look center":(2,400,"tp"),
              "give faces":(3,500,"faces"),#test speech active?
              "give distance":(3,500,"sonar"),
-             "give heading":(3,500,"compass")#,
-             #"what do you see":(3,800,""),
-             #"track me":(4,0,"friend")
-             #"track object":(4,1,"object")
+             "give heading":(3,500,"compass"),#
+             "track me":(4,0,"friend"),
+             "track object":(4,1,"object")
 }
-
+trackers={"face":BoundingBox(),
+          "object":BoundingBox()}#use confidence value while tracking
 class body_cmd:
     def __init__(self,blackboard):
         self.bb=blackboard
@@ -45,6 +65,7 @@ class behavior:
     def create_main_tree(self):
         tree=owyl.repeatAlways(
                 owyl.sequence(
+                    self.poll_tracking(),
                     self.is_stt_on(),
                     self.is_stt_done(),
                     owyl.selector(
@@ -54,6 +75,52 @@ class behavior:
                 )
         )
         return owyl.visit(tree,blackboard=self.blackboard)
+
+    def pan_right(self,deg):
+        pa=rospy.get_param("/robot/get_pan")
+        pn=pa-deg
+        v=Int32(pn)
+        self.blackboard["pub_pan"].publish(v)
+
+    def pan_left(self,deg):
+        pa=rospy.get_param("/robot/get_pan")
+        pn=pa+deg
+        v=Int32(pn)
+        self.blackboard["pub_pan"].publish(v)
+
+    def tilt_down(self,deg):
+        pa=rospy.get_param("/robot/get_tilt")
+        pn=pa-deg
+        v=Int32(pn)
+        self.blackboard["pub_tilt"].publish(v)
+
+    def tilt_up(self,deg):
+        pa=rospy.get_param("/robot/get_tilt")
+        pn=pa+deg
+        v=Int32(pn)
+        self.blackboard["pub_tilt"].publish(v)
+
+    @owyl.taskmethod
+    def poll_tracking(self,**kwargs):
+        img_width=640
+        img_height=480
+        tt=self.blackboard["to_track"]
+        if tt in self.blackboard["trackers"] and self.blackboard["track_delay"]<1:
+            trk=self.blackboard["trackers"][tt]
+            if trk.confidence>0.4:
+                if trk.x<(img_width/2)-(img_width/4):
+                    self.pan_left(1)
+                    self.blackboard["track_delay"]=100/5
+                if trk.x>(img_width/2)+(img_width/4)-(trk.width/2):
+                    self.pan_right(1)
+                    self.blackboard["track_delay"]=100/5
+                if trk.y<(img_height/2)-(img_height/4):
+                    self.tilt_up(1)
+                    self.blackboard["track_delay"]=100/5
+                if trk.y>(img_height/2)+(img_height/4)-(trk.height/2):
+                    self.tilt_down(1)
+                    self.blackboard["track_delay"]=100/5
+        yield True
 
     @owyl.taskmethod
     def is_stt_on(self,**kwargs):
@@ -94,10 +161,12 @@ class behavior:
     def stt_cmd(self,stt):
         func=stt_cmd_map[stt]
         tp=func[0]
+        if not (tp==4):self.blackboard["to_track"]="null"
         self.blackboard["stop_counter"]=func[1]
         todo=func[2]
         if tp==1:
             rospy.loginfo("move bot ="+todo)
+            self.blackboard["wake_up_time"]=6000 #60 seconds
             r_cmd=robot_cmd()
             r_cmd.cmd=todo
             r_cmd.duration_10ms=0
@@ -130,6 +199,19 @@ class behavior:
             elif todo=="compass":
                 to_say=str(board["compass_deg"])+" degrees"
             self.blackboard["pub_speak"].publish(to_say)
+        elif tp==4:
+            if todo=="friend":
+                self.blackboard["tracker_watch"]=900
+                self.blackboard["to_track"]="face"
+            elif todo=="object":
+                self.blackboard["tracker_watch"]=900
+                self.blackboard["to_track"]="object"
+            reset=String()
+            reset.data="r"
+            self.blackboard["pub_cmd"].publish(reset)#reset
+            to_say="tracking "+todo
+            self.blackboard["pub_speak"].publish(to_say)
+
 
 def set_speech(dat):
     if board["stt_read"]:
@@ -155,11 +237,41 @@ def update_bb():
             stp_cmd.duration_10ms=0
             pub_move.publish(stp_cmd)
             #reset num faces seen
+    #when 0 watchdog and low confidence discard bb, reset
+    cnt=board["tracker_watch"]
+    if cnt>0:
+        cnt=cnt-1
+    else:
+        board["to_track"]="null"
+    if board["to_track"]=="null":cnt=0
+    board["tracker_watch"]=cnt
+
+    cnt=board["track_delay"]
+    if cnt>0:
+        cnt=cnt-1
+    board["track_delay"]=cnt
+
+    cnt=board["wake_up_time"]
+    if cnt>0:
+        cnt=cnt-1
+    else:
+        r_cmd=robot_cmd()
+        r_cmd.cmd="wake up"
+        r_cmd.duration_10ms=0
+        board["pub_move"].publish(r_cmd)
+        cnt=6000 #60 seconds
+    board["wake_up_time"]=cnt
 
 def get_faces(boxes):
     board["num_faces"]=len(boxes.faces)
 
-
+def tld_tracker(box):
+    #reset watchdog, store tracked data in appropriate location
+    name=box.tracker_id
+    confd=box.confidence
+    if name==board["to_track"] and confd>0.4:board["tracker_watch"]=900 #9 seconds
+    if name in trackers:
+        board["trackers"][name]=box #watchdog set
 #run ant again
 #/ZenoDial/output_text, zenodial.java, output.java
 #/ZenoDial/text_input
@@ -174,16 +286,22 @@ if __name__=="__main__":
     rospy.init_node("RS1_behavior")
     #subscribe to distance, compass, face bound box, objects models to be loaded
     board=blackboard.Blackboard("behavior")
+    board["wake_up_time"]=6000 # 60 seconds
     board["stt"]=""
     board["stt_read"]=True
     board["stop_counter"]=0
     board["sonar_cm"]=0
     board["compass_deg"]=0
     board["num_faces"]=0
+    board["trackers"]=trackers
+    board["tracker_watch"]=0
+    board["to_track"]="null"
+    board["track_delay"]=0 #delay motor movement commands about 1/2 sec or 1/4 sec
     rospy.Subscriber("/sense/robot/get_sonar_cm",sonar,set_sonar)
     rospy.Subscriber("/sense/robot/get_compass_deg",compass,set_compass)
     rospy.Subscriber("/sense/stt/get_text",String,set_speech)
     rospy.Subscriber('/facedetect',targets,get_faces)
+    rospy.Subscriber('/tld_tracked_object',BoundingBox,tld_tracker)
     pub_enable_listen=rospy.Publisher("/sense/stt/set_listen_active", Bool)
     board["pub_enable_listen"]=pub_enable_listen
     pub_speak=rospy.Publisher("/act/tts/set_text", String)
@@ -196,6 +314,8 @@ if __name__=="__main__":
     board["pub_tilt"]=pub_tilt
     pub_chat=rospy.Publisher("/ZenoDial/text_input",String)
     board["pub_chat"]=pub_chat
+    pub_cmd=rospy.Publisher("/tld_gui_cmds",String)
+    board["pub_cmd"]=pub_cmd
 
     be=behavior(board)
     be_tree=be.main_tree
