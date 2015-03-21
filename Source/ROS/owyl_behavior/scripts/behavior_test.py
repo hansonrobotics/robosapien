@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+__author__ = 'mandeep'
 import rospy
 import owyl
 from owyl import blackboard

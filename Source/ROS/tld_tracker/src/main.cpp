@@ -191,9 +191,12 @@ void Main::process()
       correctBB = true;
     }
 
-    void Main::cmdReceivedCB(const std_msgs::CharConstPtr & cmd)
+    //void Main::cmdReceivedCB(const std_msgs::CharConstPtr & cmd)
+    void Main::cmdReceivedCB(const std_msgs::StringConstPtr & cmd)
     {
-      switch (cmd->data)
+	  char cd=cmd->data.c_str()[0];
+      //switch (cmd->data)
+      switch (cd)
       {
         case 'b':
           clearBackground();

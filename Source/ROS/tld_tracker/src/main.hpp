@@ -48,12 +48,12 @@
 #include <cv_bridge/cv_bridge.h>
 #include <std_msgs/Header.h>
 //
-//#include <std_msgs/String.h>
+#include <std_msgs/String.h>
 //
 #include <sensor_msgs/Image.h>
 #include <tld_msgs/Target.h>
 #include <tld_msgs/BoundingBox.h>
-#include <std_msgs/Char.h>
+//#include <std_msgs/Char.h>
 #include <std_msgs/Float32.h>
 #include <string>
 
@@ -161,7 +161,8 @@ class Main
         /*!
         * \brief ROS command callback.
         */
-		void cmdReceivedCB(const std_msgs::CharConstPtr & cmd);
+		//void cmdReceivedCB(const std_msgs::CharConstPtr & cmd);
+		void cmdReceivedCB(const std_msgs::StringConstPtr & cmd);
 
         /*!
         * \brief This function sends the tracked object as a BoudingBox message.

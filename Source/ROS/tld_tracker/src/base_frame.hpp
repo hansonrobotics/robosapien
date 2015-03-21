@@ -37,7 +37,8 @@
 #include <sensor_msgs/Image.h>
 #include <tld_msgs/Target.h>
 #include <tld_msgs/BoundingBox.h>
-#include <std_msgs/Char.h>
+//#include <std_msgs/Char.h>
+#include <std_msgs/String.h>
 #include <std_msgs/Float32.h>
 
 #include "ui_baseFrame.h"
