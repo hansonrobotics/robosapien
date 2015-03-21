@@ -11,8 +11,7 @@ Prerequisites
 Have the following installed / running on the computer that is going to compile and run ZenoDial:
 - JDK 7 or above
 - ant
-Ubuntu 14.04 :
-sudo apt-get install default-jdk
+
 
 How to run it
 -------------

@@ -1,0 +1,4 @@
+<launch>
+<node name="behavior_test_node" pkg="owyl_behavior" type="behavior_test2.py"
+        output="screen"/>
+</launch>

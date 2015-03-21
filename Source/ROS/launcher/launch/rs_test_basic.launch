@@ -1,0 +1,8 @@
+<launch>
+<include file="$(find cv_camera)/launch/cv_camera.launch" />
+<include file="$(find vision)/launch/vision.launch" />
+<include file="$(find tld_tracker)/launch/test_tracker2.launch" />
+<include file="$(find robot)/launch/rsv1_driver.launch" />
+<include file="$(find zeno_dial)/launch/dialog.launch" />
+<include file="$(find owyl_behavior)/launch/test_behavior.launch" />
+</launch>

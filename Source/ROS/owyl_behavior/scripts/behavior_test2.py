@@ -39,8 +39,8 @@ stt_cmd_map= {
              "turn right":(1,800,"turn right"),
              "look up":(2,400,"t+"),#tilt up
              "look down":(2,400,"t-"),
-             "look left":(2,400,"p-"),#pan,400*10ms,left
-             "look right":(2,400,"p+"),
+             "look left":(2,400,"p+"),#pan,400*10ms,left
+             "look right":(2,400,"p-"),
              "look center":(2,400,"tp"),
              "give faces":(3,500,"faces"),#test speech active?
              "give distance":(3,500,"sonar"),
@@ -76,13 +76,13 @@ class behavior:
         )
         return owyl.visit(tree,blackboard=self.blackboard)
 
-    def pan_left(self,deg):
+    def pan_right(self,deg):
         pa=rospy.get_param("/robot/get_pan")
         pn=pa-deg
         v=Int32(pn)
         self.blackboard["pub_pan"].publish(v)
 
-    def pan_right(self,deg):
+    def pan_left(self,deg):
         pa=rospy.get_param("/robot/get_pan")
         pn=pa+deg
         v=Int32(pn)
