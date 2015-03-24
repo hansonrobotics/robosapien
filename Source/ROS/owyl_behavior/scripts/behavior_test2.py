@@ -35,18 +35,20 @@ stt_cmd_map= {
              "BADINPUT":(0,0,""),
              "walk forward":(1,800,"walk forward"),#body class,800*10 ms timer,command for body
              "walk back":(1,800,"walk backward"),
-             "turn left":(1,800,"turn left"),
+             #"turn left":(1,800,"turn left"),
              "turn right":(1,800,"turn right"),
              "look up":(2,400,"t+"),#tilt up
              "look down":(2,400,"t-"),
-             "look left":(2,400,"p+"),#pan,400*10ms,left
-             "look right":(2,400,"p-"),
+             #"left":(2,400,"p+"),#pan,400*10ms,left .. word left not recognized
+             "right":(2,400,"p-"),
+             #"eyes left":(2,400,"p+"),#pan,400*10ms,left
+             #"eyes right":(2,400,"p-"),
              "look center":(2,400,"tp"),
              "give faces":(3,500,"faces"),#test speech active?
              "give distance":(3,500,"sonar"),
              "give heading":(3,500,"compass"),#
-             "track me":(4,0,"friend"),
-             "track object":(4,1,"object")
+             "track me":(4,400,"friend"),
+             "track object":(4,400,"object")
 }
 trackers={"face":BoundingBox(),
           "object":BoundingBox()}#use confidence value while tracking
@@ -109,17 +111,17 @@ class behavior:
             trk=self.blackboard["trackers"][tt]
             if trk.confidence>0.4:
                 if trk.x<(img_width/2)-(img_width/4):
-                    self.pan_left(1)
-                    self.blackboard["track_delay"]=100/5
+                    self.pan_left(3)
+                    self.blackboard["track_delay"]=100/10
                 if trk.x>(img_width/2)+(img_width/4)-(trk.width/2):
-                    self.pan_right(1)
-                    self.blackboard["track_delay"]=100/5
+                    self.pan_right(3)
+                    self.blackboard["track_delay"]=100/10
                 if trk.y<(img_height/2)-(img_height/4):
-                    self.tilt_up(1)
-                    self.blackboard["track_delay"]=100/5
+                    self.tilt_up(3)
+                    self.blackboard["track_delay"]=100/10
                 if trk.y>(img_height/2)+(img_height/4)-(trk.height/2):
-                    self.tilt_down(1)
-                    self.blackboard["track_delay"]=100/5
+                    self.tilt_down(3)
+                    self.blackboard["track_delay"]=100/10
         yield True
 
     @owyl.taskmethod
@@ -256,7 +258,8 @@ def update_bb():
         cnt=cnt-1
     else:
         r_cmd=robot_cmd()
-        r_cmd.cmd="wake up"
+        #r_cmd.cmd="wake up" #uses too much power causes reset.. to be fix in ckt
+        r_cmd.cmd="stop"
         r_cmd.duration_10ms=0
         board["pub_move"].publish(r_cmd)
         cnt=6000 #60 seconds
