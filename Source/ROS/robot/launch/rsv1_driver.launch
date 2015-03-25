@@ -1,7 +1,7 @@
 <launch>
 <node name="body_driver_node" pkg="robot" type="body_driver.py"
         output="screen"/>
-<node name="talk_node" pkg="robot" type="itf_talk_rep.py"
+<node name="talk_node" pkg="robot" type="itf_talk_rep2.py"
         output="screen"/>
 <node name="listen_node" pkg="robot" type="itf_listen.py"
         output="screen"/>
