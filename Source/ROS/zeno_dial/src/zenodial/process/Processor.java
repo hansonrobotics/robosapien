@@ -23,8 +23,8 @@ import zenodial.rule.RuleMatcher;
 public class Processor {
 	private static Logger log = new Logger("Processor", Level.NORMAL);
 	private static HashMap<Double, Then> potentialOutputs = new HashMap<Double, Then>();
-	private static ArrayList<String> somethingToSayWhenWaiting = new ArrayList<String>(Arrays.asList("Well", "Interesting"));
-	private static ArrayList<String> prefixes = new ArrayList<String>(Arrays.asList("I think it's ", "I heard that it's "));
+	private static ArrayList<String> somethingToSayWhenWaiting = new ArrayList<String>(Arrays.asList("Well", "Interesting", "That's a good question", "Let me think"));
+	private static ArrayList<String> prefixes = new ArrayList<String>(Arrays.asList("I think it's ", "I heard that's ", "I believe it's ", "It should be "));
 	private static ArrayList<Rule> matchingRules = new ArrayList<Rule>();
 	private static Map.Entry<Double, Then> output;
 	private static String lastOutputUtterance = "";
@@ -39,15 +39,17 @@ public class Processor {
 		matchingRules = RuleMatcher.findMatchingRules(inputUtterance);
 		putToPotentialOutputs(matchingRules);
 		
-		// Get the reply from Wolfram|Alpha
-		if (ZenoDial.needsWolframAlpha) {
-			String waReply = WolframAlpha.getReply(inputUtterance);
-			if (!"".equals(waReply)) potentialOutputs.put(Weighting.get("wolframAlpha"), new Then("Wolfram|Alpha", "wolframAlpha", prefixes.get(new Random().nextInt(prefixes.size())) + waReply));
-		}
-		
 		// Get the reply from JMegaHAL
 		if (ZenoDial.needsJMegaHAL) {
 			potentialOutputs.put(Weighting.get("jmegahal"), new Then("JMegaHAL", "jmegahal", JMegaHAL.getReply(inputUtterance)));
+		}
+
+		// Get the reply from Wolfram|Alpha
+		// TODO: Add timeout
+		// TODO: Better to check if it's a question
+		if (ZenoDial.needsWolframAlpha) {
+			String waReply = WolframAlpha.getReply(inputUtterance);
+			if (!"".equals(waReply)) potentialOutputs.put(Weighting.get("wolframAlpha"), new Then("Wolfram|Alpha", "wolframAlpha", prefixes.get(new Random().nextInt(prefixes.size())) + waReply));
 		}
 		
 		// Get the output
@@ -73,17 +75,20 @@ public class Processor {
 		Thread saySomethingThread = new Thread() {
 			public void run() {
 				try {
-					Thread.sleep(2000);
+					Thread.sleep(5000);
 					
 					while (Processor.nothingSpokenYet) {
 						String utterance = somethingToSayWhenWaiting.get(new Random().nextInt(somethingToSayWhenWaiting.size()));
 						Output.publishOutput(utterance);
-						Thread.sleep(3000);
+						Thread.sleep(5000);
 					}
+
+					return;
 				}
 				
 				catch (InterruptedException e) {
-					e.printStackTrace();
+					// e.printStackTrace();
+					return;
 				}
 			}
 		}; saySomethingThread.start();
