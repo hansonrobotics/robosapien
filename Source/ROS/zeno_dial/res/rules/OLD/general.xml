@@ -303,7 +303,6 @@
       	<if relation="!in">how</if>
 			</condition>
 			<effect>
-				<then util="random">Yeah {UU}.</then>
 				<then util="random">Yes of course.</then>
 				<then util="random">I think so.</then>
 				<then util="random">It seems so.</then>
@@ -329,7 +328,6 @@
       	<if relation="!in">how</if>
 			</condition>
 			<effect>
-				<then util="random">Well, no, {UU}.</then>
 				<then util="random">Of course not.</then>
 				<then util="random">It feels like that?</then>
 				<then util="random">So it seems.</then>
