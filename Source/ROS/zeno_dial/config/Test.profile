@@ -1,6 +1,5 @@
-#Mon Oct 06 11:36:49 HKT 2014
-robotname=zeno
-age=4
+robotname=Robosapien
+age=11
 rule=OLD
 jmegahalBT=t
-jmegahal=traindoc1,traindoc2
+jmegahal=traindoc2,traindoc3

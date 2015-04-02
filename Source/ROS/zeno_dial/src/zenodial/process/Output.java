@@ -58,11 +58,10 @@ public class Output {
 	
 	private static void publish(String output) {
 		// For command line
-		System.out.println("[ZenoDial] " + output);
+		System.out.println("[ZenoDial] " + output + "\n");
 		
 		// For ROS
-		Publisher<std_msgs.String> publisher = ROSMaster.getPublisher("/act/tts/set_text");
-		//Publisher<std_msgs.String> publisher = ROSMaster.getPublisher("/ZenoDial/output_text");
+		Publisher<std_msgs.String> publisher = ROSMaster.getPublisher(ROSMaster.rosPublisherTopic);
 		std_msgs.String stringToPub = publisher.newMessage();
 		stringToPub.setData(output);
 		publisher.publish(stringToPub);
