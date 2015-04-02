@@ -30,8 +30,7 @@ public class ZenoDial {
 		// For ROS
 		System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
 		ROSListener.createInputListener();
-		//ROSMaster.initializePublisher("ZenoDialPublisher", "/ZenoDial/output_talk");
-		ROSMaster.initializePublisher("ZenoDialPublisher", "/act/tts/set_text");
+		ROSMaster.initializePublisher("ZenoDialPublisher", ROSMaster.rosPublisherTopic);
 		while (true) {
 			// Ask for the profile if there is none in the system
 			while (profile.isEmpty()) {
@@ -92,7 +91,7 @@ public class ZenoDial {
 			else if ("t".equals(profile.getProperty("jmegahalBT").toLowerCase())) {
 				JMegaHAL.initialize();
 				
-				for (int i = 0; i < ruleSets.length; i++) {
+				for (int i = 0; i < jmegahalSets.length; i++) {
 					String path = jmegahalLocation + jmegahalSets[i];
 					JMegaHAL.setBrainFile(jmegahalBrainLocation + profile.getProperty("robotname"));
 					JMegaHAL.trainFromCorpus(path);
