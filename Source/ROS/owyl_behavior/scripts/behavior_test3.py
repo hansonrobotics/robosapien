@@ -113,18 +113,18 @@ class behavior:
         tt=self.blackboard["to_track"]
         if tt in self.blackboard["trackers"] and self.blackboard["track_delay"]<1:
             trk=self.blackboard["trackers"][tt]
-            if trk.confidence>0.4:
-                if trk.x<(img_width/2)-(img_width/4):
-                    self.pan_left(3)
+            if trk.confidence>0.2:#0.4
+                if trk.x<(img_width/2)-(img_width/5):#4 was previous
+                    self.pan_left(2)
                     self.blackboard["track_delay"]=100/10
-                if trk.x>(img_width/2)+(img_width/4)-(trk.width/2):
-                    self.pan_right(3)
+                if trk.x>(img_width/2)+(img_width/5)-(trk.width/2):
+                    self.pan_right(2)
                     self.blackboard["track_delay"]=100/10
-                if trk.y<(img_height/2)-(img_height/4):
-                    self.tilt_up(3)
+                if trk.y<(img_height/2)-(img_height/5):
+                    self.tilt_up(2)
                     self.blackboard["track_delay"]=100/10
-                if trk.y>(img_height/2)+(img_height/4)-(trk.height/2):
-                    self.tilt_down(3)
+                if trk.y>(img_height/2):#+(img_height/5)-(trk.height/2):
+                    self.tilt_down(2)
                     self.blackboard["track_delay"]=100/10
         yield True
 
@@ -153,8 +153,9 @@ class behavior:
     def run_stt_command(self,**kwargs):
         #rospy.loginfo("processing stt= "+self.blackboard["stt"])
         if self.blackboard["stt"] in stt_cmd_map:
-            rospy.loginfo("processing stt= "+self.blackboard["stt"])
-            self.stt_cmd(self.blackboard["stt"])
+            if not(self.blackboard["stt"]=="BADINPUT"):
+                rospy.loginfo("processing stt= "+self.blackboard["stt"])
+                self.stt_cmd(self.blackboard["stt"])
             yield True
         else:
             yield False
@@ -254,8 +255,8 @@ def update_bb():
     cnt=board["tracker_watch"]
     if cnt>0:
         cnt=cnt-1
-    else:
-        board["to_track"]="null"
+    #else:
+    #    board["to_track"]="null"
     if board["to_track"]=="null":cnt=0
     board["tracker_watch"]=cnt
 
@@ -308,6 +309,7 @@ def get_faces(boxes):
     bb.width=boxes.faces[idist].width_height.x*640
     bb.height=boxes.faces[idist].width_height.y*480
     bb.confidence=1.0
+    bb.tracker_id="face"
     tgt.bb=bb
     board["Target"]=tgt
     board["face_memory"]=50# = 1/2 sec
@@ -316,7 +318,8 @@ def tld_tracker(box):
     #reset watchdog, store tracked data in appropriate location
     name=box.tracker_id
     confd=box.confidence
-    if name==board["to_track"] and confd>0.4:board["tracker_watch"]=900 #9 seconds
+    #if name==board["to_track"] and confd>0.4:board["tracker_watch"]=900 #9 seconds
+    if name==board["to_track"] :board["tracker_watch"]=60000 #60 seconds
     if name in trackers:
         board["trackers"][name]=box #watchdog set
 
