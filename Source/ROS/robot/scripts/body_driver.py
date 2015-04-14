@@ -69,6 +69,14 @@ robosapien_v1_ir_codes={"turn right":"80",
                         "demo karate":"d2",
                         "dance":"d4"}
 
+def serial_write(strng):
+    try:
+        ser.write(strng)
+    except:
+        if (ser.isOpen()):ser.close()
+        if not(ser.isOpen()):ser.open()
+        rospy.logerr("Error writing to serial port")
+
 def callback_move(cmd):
     data=cmd.cmd
     dur=cmd.duration_10ms
@@ -79,7 +87,7 @@ def callback_move(cmd):
         hx=(hex(dur)[2:4])
         if len(hx)<2: hx="0"+hx
         command=command+hx
-        ser.write(command)
+        serial_write(command)
         rospy.loginfo("command= %s",command)
 
 def callback_pan(dat):
@@ -90,7 +98,7 @@ def callback_pan(dat):
     hexdata=hex(data)[2:4]
     if len(hexdata)<2: hexdata="0"+hexdata
     command="s10"+hexdata
-    ser.write(command)
+    serial_write(command)
     rospy.set_param('/robot/get_pan',data)
 
 def callback_tilt(dat):
@@ -101,7 +109,7 @@ def callback_tilt(dat):
     hexdata=hex(data)[2:4]
     if len(hexdata)<2: hexdata="0"+hexdata
     command="s00"+hexdata
-    ser.write(command)
+    serial_write(command)
     rospy.set_param('/robot/get_tilt',data)
 
 def callback_led(dat):
@@ -109,7 +117,7 @@ def callback_led(dat):
     cmmd="l"
     if (data):cmmd=cmmd+"1"
     else: cmmd=cmmd+"0"
-    ser.write(cmmd)
+    serial_write(cmmd)
 
 def init():
      rospy.init_node('body_node', anonymous=False)
@@ -152,8 +160,13 @@ def parse(txt):
 def poll():
     rate=rospy.Rate(1000)
     while not rospy.is_shutdown():
-        parse_txt=ser.readline()
-        if len(parse_txt)>2: parse(parse_txt)
+        try:
+            parse_txt=ser.readline()
+            if len(parse_txt)>2: parse(parse_txt)
+        except:
+            if(ser.isOpen()):ser.close()
+            if not(ser.isOpen()):ser.open()
+            if not(ser.isOpen()): rospy.logerr("could not open bluetooth serial port")
         rate.sleep()
 
 
