@@ -5,3 +5,5 @@ sudo apt-get install subversion
 sudo add-apt-repository --yes ppa:xqms/opencv-nonfree
 sudo apt-get update 
 sudo apt-get install libopencv-nonfree-dev
+
+install google developer keys if using speech to text from google
