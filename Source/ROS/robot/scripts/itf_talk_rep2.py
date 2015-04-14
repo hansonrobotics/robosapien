@@ -109,7 +109,7 @@ class ITFTalker(Thread):
         print(pygame.sndarray.get_arraytype())
         sa1=snd_array[0:22]
         #sa2=snd_array[23::2]
-        sa3=self.speedx(snd_array[23:],0.7)
+        sa3=self.speedx(snd_array[23:],0.8)
         snd_r=np.append(sa1,sa3,axis=0)
         snd_out = pygame.sndarray.make_sound(snd_r)
         snd_out.play()
