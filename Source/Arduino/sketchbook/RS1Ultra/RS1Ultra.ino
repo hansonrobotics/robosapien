@@ -22,11 +22,12 @@ GNU General Public License for more details.
 #include <SimpleTimer.h>
 #include <Wire.h>
 #include <Servo.h>
-#include <HMC5883L.h>
 
 #ifndef MINIMAL
+#include <HMC5883L.h>
 #include <ADXL345.h>
 ADXL345 adxl; //variable adxl is an instance of the ADXL345 library
+HMC5883L compass;
 #endif
 
 #define LISTEN_LED_PIN 7
@@ -36,8 +37,6 @@ ADXL345 adxl; //variable adxl is an instance of the ADXL345 library
 #define MAX_B 90
 #define DIFF_A 0xd
 #define DIFF_B 0xd
-
-HMC5883L compass;
 
 //servo
 Servo panServo,tiltServo;
@@ -707,7 +706,7 @@ int setupL3G4200D(int scale){
   // if you'd like:
   writeRegister(L3G4200D_Address, CTRL_REG5, 0b00000000);
 }
-#endif
+
 void writeRegister(int deviceAddress, byte address, byte val) {
     Wire.beginTransmission(deviceAddress); // start transmission to device 
     Wire.write(address);       // send register address
@@ -732,7 +731,7 @@ int readRegister(int deviceAddress, byte address){
     return v;
 }
 //gyro end
-
+#endif
 //sonar begin
 void sonarDist()
 {
@@ -791,6 +790,7 @@ void RSSendCommand(int cmd)
 }
 
 //IR end
+#ifndef MINIMAL
 //compass begin
 void setupHMC5883L(){
   //Setup the HMC5883L, and check for errors
@@ -816,7 +816,7 @@ float getHeading(){
   return heading * RAD_TO_DEG; //radians to degrees
 }
 //compass end
-#ifndef MINIMAL
+
 //adxl begin
 void setupADXL()
 {
@@ -960,7 +960,7 @@ void gyroEx()
   Serial.print(",");
   Serial.println(z);
 }
-#endif
+
 
 void compassEx()
 {
@@ -968,6 +968,8 @@ void compassEx()
     Serial.print("!c");
     Serial.println(heading);
 }
+#endif
+
 void servoZero()
 {
   panServo.write(MAX_A/2+DIFF_A);
@@ -1012,17 +1014,15 @@ void setup()
         setupL3G4200D(2000); // Configure L3G4200  - 250, 500 or 2000 deg/sec
 	bmp085Calibration();
 	setupADXL();
-#endif
         compass = HMC5883L(); //new instance of HMC5883L library
         setupHMC5883L(); //setup the HMC5883L
         delay(1500); //wait for the sensor to be ready 
-	attachInterrupt(0,sonarDist,CHANGE);
-        timer.setInterval(200,trigSonar);
-#ifndef MINIMAL
         timer.setInterval(100,gyroEx);//not used
         timer.setInterval(1000,baroEx);//not used
-#endif
         timer.setInterval(100,compassEx);
+#endif
+	attachInterrupt(0,sonarDist,CHANGE);
+        timer.setInterval(200,trigSonar);
         timer.setInterval(200,printDist);
 }
 byte hex2byte(byte hexAsc)
@@ -1241,7 +1241,6 @@ void loop()
       break;
     }
   }
-
-  #endif//gesture r
   delay(10);//may remove this later
+  #endif//gesture r
 }
