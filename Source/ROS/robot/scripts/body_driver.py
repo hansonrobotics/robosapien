@@ -21,8 +21,9 @@ import rospy
 from std_msgs.msg import Bool
 from std_msgs.msg import Int32
 from robot.msg import sonar
-from robot.msg import compass
+from robot.msg import compass #only when imu is installed
 from robot.msg import robot_cmd
+from robot.msg import gesture_r #only if gesture sensor is installed
 import serial
 
 #pan or tilts assumed start from 0 degrees
@@ -31,7 +32,7 @@ MAX_TILT=90
 ser = serial.Serial()
 distpub = rospy.Publisher('/sense/robot/get_sonar_cm', sonar, queue_size=10)
 dirpub = rospy.Publisher('/sense/robot/get_compass_deg', compass, queue_size=10)
-
+gesturepub=rospy.Publisher('/sense/robot/get_gesture',gesture_r,queue_size=1)
 robosapien_v1_ir_codes={"turn right":"80",
                         "right arm up":"81",
                         "right arm out":"82",
@@ -154,8 +155,19 @@ def parse(txt):
             #to add timestamp
             tcompass.heading_deg=heading
             dirpub.publish(tcompass)
-
-
+        elif txt[1]=='r':
+            direction=ltxt[0]
+            speed=ltxt[1]
+            ges=gesture_r()
+            ges.direction=direction
+            if speed=='h':
+                ges.speed_level=2
+            elif speed=='m':
+                ges.speed_level=1
+            elif speed=='l':
+                ges.speed_level=0
+            #publish gesture
+            gesturepub.publish(ges)
 
 def poll():
     rate=rospy.Rate(1000)
