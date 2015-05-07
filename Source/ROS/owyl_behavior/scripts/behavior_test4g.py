@@ -360,7 +360,7 @@ def callback_img(data):
     board["img"]=data
 
 def callback_gesture(data):
-    if board["gesture"].directiom=='o':
+    if board["gesture"].direction=='o':
         board["gesture"]=data
 #run ant again
 #/ZenoDial/output_text, zenodial.java, output.java
