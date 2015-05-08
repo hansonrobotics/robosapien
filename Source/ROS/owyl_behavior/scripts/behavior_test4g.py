@@ -160,9 +160,9 @@ class behavior:
             r_cmd.cmd=todo
             r_cmd.duration_10ms=0
             if ges.direction=='l':
-                todo="left hand sweep"
+                todo="left hand strike 1"#"left hand sweep"
             elif ges.direction=='r':
-                todo="right hand sweep"
+                todo="right hand strike 1"#right hand sweep
 
             #if ges.direction=='t':
                 #arm down
@@ -175,6 +175,7 @@ class behavior:
             #elif ges.direction=='r':
                 #swipe right
             #later do action sequences
+            r_cmd.cmd=todo
             self.blackboard["wake_up_time"]=6000 #60 seconds
             self.blackboard["pub_move"].publish(r_cmd)
             self.blackboard["stop_counter"]=400
