@@ -12,7 +12,8 @@ from vision.msg import targets
 from tld_msgs.msg import BoundingBox
 from tld_msgs.msg import Target
 from sensor_msgs.msg import Image
-import math
+from std_msgs.msg import Float32MultiArray
+#import math
 #import cv
 #from cv_bridge import CvBridge, CvBridgeError
 # reset tld tracker each time track command is given or subject is lost or low confidence for a few seconds
@@ -53,8 +54,12 @@ stt_cmd_map= {
              "give distance":(3,500,"sonar"),
              "give heading":(3,500,"compass"),#
              "track me":(4,400,"friend"),
-             "track object":(4,400,"object")
+             #"track object":(4,400,"object")
+             "identify":(5,400,"id objects")#recognize
 }
+tts_objects_map={"1":"book",
+                 "2":"box"}
+#object images in ~/objects/
 trackers={"face":BoundingBox(),
           "object":BoundingBox()}#use confidence value while tracking
 class body_cmd:
@@ -233,7 +238,7 @@ class behavior:
         elif tp==3:
             to_say="What"
             if todo=="faces":
-                to_say="I saw "+str(board["num_faces"])+" faces"
+                to_say="I saw "+str(self.blackboard["num_faces"])+" faces" #bugfix
             elif todo=="sonar":
                 to_say=str(board["sonar_cm"])+" centimeters"
             elif todo=="compass":
@@ -257,6 +262,21 @@ class behavior:
                 to_say="tracking "+todo
 
             self.blackboard["pub_speak"].publish(to_say)
+        elif tp==5:
+            see_ob=False
+            if todo=="id objects":
+                if self.blackboard["objects_memory"]>0:see_ob=True
+            to_say="I can't see objects"
+            if see_ob:
+                to_say="I see "+str(self.blackboard["num_objects"])+" objects"
+                self.blackboard["pub_speak"].publish(to_say)
+                to_say="the objects are"
+                self.blackboard["pub_speak"].publish(to_say)
+                for a in self.blackboard["object_id_list"]:
+                    to_say=tts_objects_map[a]
+                    self.blackboard["pub_speak"].publish(to_say)
+            else:
+                self.blackboard["pub_speak"].publish(to_say)
 
 
 
@@ -314,6 +334,22 @@ def update_bb():
     if cnt>0:
         cnt=cnt-1
     board["face_memory"]=cnt
+
+    cnt=board["objects_memory"]
+    if cnt>0:
+        cnt=cnt-1
+    board["objects_memory"]=cnt
+
+
+def callback_objects(data):
+    arr=data.data
+    num=len(arr)/12
+    if num==0: return
+    board["num_objects"]=num
+    board["objects_memory"]=100
+    board["object_id_list"]=[]
+    for n in range(0,num):
+        board["object_id_list"].append(str(int(arr[n*12])))
 
 def get_faces(boxes):
     board["num_faces"]=len(boxes.faces)
@@ -395,6 +431,9 @@ if __name__=="__main__":
     ges=gesture_r()
     ges.direction='o'
     board["gesture"]=ges
+    board["num_objects"]=0
+    board["object_id_list"]=[]
+    board["objects_memory"]=0
     rospy.Subscriber("/sense/robot/get_sonar_cm",sonar,set_sonar)
     rospy.Subscriber("/sense/robot/get_compass_deg",compass,set_compass)
     rospy.Subscriber("/sense/stt/get_text",String,set_speech)
@@ -402,6 +441,7 @@ if __name__=="__main__":
     rospy.Subscriber('/tld_tracked_object',BoundingBox,tld_tracker)
     rospy.Subscriber("/cv_camera/image_raw",Image,callback_img)
     rospy.Subscriber("/sense/robot/get_gesture",gesture_r,callback_gesture)
+    rospy.Subscriber("/objects",Float32MultiArray,callback_objects)
     pub_enable_listen=rospy.Publisher("/sense/stt/set_listen_active", Bool)
     board["pub_enable_listen"]=pub_enable_listen
     pub_speak=rospy.Publisher("/act/tts/set_text", String)
