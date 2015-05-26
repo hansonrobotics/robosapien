@@ -7,7 +7,10 @@ Author: Alex Van Der Peet
 Year: 2014
 
 itf_talk (depricated - can't be used as library api broken with updates, use itf_talk_rep2.py)
+Use itf_talk_rep3.py as of may 2015 [ Author - Mandeep Singh Bhatia] 
 ==========
+
+itf_talk_rep3 requires installation of festival speech synthesis software [executable called festival]
 
 itf_listen uses Google's text-to-speech API to convert a string of text into several audio files.
 
