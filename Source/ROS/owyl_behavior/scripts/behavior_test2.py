@@ -35,14 +35,13 @@ stt_cmd_map= {
              "BADINPUT":(0,0,""),
              "walk forward":(1,800,"walk forward"),#body class,800*10 ms timer,command for body
              "walk back":(1,800,"walk backward"),
-             #"turn left":(1,800,"turn left"),
+             "turn":(1,800,"turn left"),
              "turn right":(1,800,"turn right"),
              "look up":(2,400,"t+"),#tilt up
              "look down":(2,400,"t-"),
-             #"left":(2,400,"p+"),#pan,400*10ms,left .. word left not recognized
-             "right":(2,400,"p-"),
-             #"eyes left":(2,400,"p+"),#pan,400*10ms,left
-             #"eyes right":(2,400,"p-"),
+             "look like":(2,400,"p+"),#pan,400*10ms,left .. word left not recognized
+             "look left":(2,400,"p+"),#pan,400*10ms,left .. word left not recognized
+             "look right":(2,400,"p-"),
              "look center":(2,400,"tp"),
              "give faces":(3,500,"faces"),#test speech active?
              "give distance":(3,500,"sonar"),
@@ -109,7 +108,7 @@ class behavior:
         tt=self.blackboard["to_track"]
         if tt in self.blackboard["trackers"] and self.blackboard["track_delay"]<1:
             trk=self.blackboard["trackers"][tt]
-            if trk.confidence>0.4:
+            if trk.confidence>0.3:
                 if trk.x<(img_width/2)-(img_width/4):
                     self.pan_left(3)
                     self.blackboard["track_delay"]=100/10
@@ -243,8 +242,8 @@ def update_bb():
     cnt=board["tracker_watch"]
     if cnt>0:
         cnt=cnt-1
-    else:
-        board["to_track"]="null"
+    #else:
+    #    board["to_track"]="null"
     if board["to_track"]=="null":cnt=0
     board["tracker_watch"]=cnt
 
@@ -272,7 +271,8 @@ def tld_tracker(box):
     #reset watchdog, store tracked data in appropriate location
     name=box.tracker_id
     confd=box.confidence
-    if name==board["to_track"] and confd>0.4:board["tracker_watch"]=900 #9 seconds
+    #if name==board["to_track"] and confd>0.4:board["tracker_watch"]=900 #9 seconds
+    if name==board["to_track"] :board["tracker_watch"]=60000
     if name in trackers:
         board["trackers"][name]=box #watchdog set
 #run ant again

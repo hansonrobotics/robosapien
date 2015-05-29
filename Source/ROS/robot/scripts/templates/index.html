@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Chatbot Web Listener</title>
+    <link rel="stylesheet"
+      href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+      href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+    </script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript"
+      src="{{url_for('static', filename='eventemitter2.js')}}">
+    </script>
+    <script type="text/javascript"
+      src="{{url_for('static', filename='roslib.js')}}">
+    </script>
+
+    <script type="text/javascript">
+      var ros = new ROSLIB.Ros({
+        url: 'wss://{{ws_host}}:9090'
+      });
+    
+      var speech_topic = new ROSLIB.Topic({
+        ros: ros,
+        name: '/sense/stt/get_text',
+        messageType: 'std_msgs/String'
+      });
+      /*
+      var led_topic = new ROSLIB.Topic({
+        ros: ros,
+        name: '/act/robot/set_listen_led',
+        messageType: 'std_msgs/Bool'
+      });
+*/
+/*
+      var speech_topic = new ROSLIB.Topic({
+        ros: ros,
+        name: '/chatbot_speech',
+        messageType: 'chatbot/ChatMessage'
+      });
+      var global = 1;
+*/
+      function recognizeSpeech() {
+        if (!('webkitSpeechRecognition' in window)) {
+          alert('Browser not supported.');
+        } else {
+          var recognition = new webkitSpeechRecognition();
+        //recognition.continuous = true;
+        //recognition.interimResults = true;
+
+          recognition.onstart = function() {
+              /*
+            var led_message = new ROSLIB.Message({
+              data: False
+            });
+            led_topic.publish(led_message);
+          };
+              */
+          };
+        
+          recognition.onerror = function(event) {
+            //alert('Recognition error');
+          };
+        
+          recognition.onend = function() {
+              //recognizeSpeech();
+              //console.log("starting again...")
+              recognition.start();
+          };
+        
+          recognition.onresult = function(event) {
+            var utterance = event.results[0][0].transcript;
+
+            document.querySelector('#lasttext').textContent = utterance;
+/*
+            var chat_message = new ROSLIB.Message({
+              utterance: utterance,
+              confidence: Math.round(event.results[0][0].confidence * 100)
+            });
+            */
+            var chat_message = new ROSLIB.Message({
+              data: utterance
+            });
+            speech_topic.publish(chat_message);
+          };
+          recognition.start();
+        }
+      }
+      recognizeSpeech();
+    </script>
+  </head>
+  <body>
+  <p class="bg-info" id="lasttext">resulting text will appear here.</p>
+  </body>
+</html>

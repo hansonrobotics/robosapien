@@ -55,7 +55,9 @@ stt_cmd_map= {
              "give heading":(3,500,"compass"),#
              "track me":(4,400,"friend"),
              #"track object":(4,400,"object")
-             "identify":(5,400,"id objects")#recognize
+             "identify":(5,400,"id objects"),#recognize
+             "pick":(1,400,"left hand pickup"),
+             "throw":(1,400,"left hand throw")
 }
 tts_objects_map={"1":"book",
                  "2":"box"}
@@ -168,6 +170,10 @@ class behavior:
                 todo="left hand strike 1"#"left hand sweep"
             elif ges.direction=='r':
                 todo="right hand strike 1"#right hand sweep
+            elif ges.direction=='t':
+                todo="right hand pickup"
+            elif ges.direction=='b':
+                todo="right hand throw"
 
             #if ges.direction=='t':
                 #arm down
@@ -434,29 +440,29 @@ if __name__=="__main__":
     board["num_objects"]=0
     board["object_id_list"]=[]
     board["objects_memory"]=0
-    rospy.Subscriber("/sense/robot/get_sonar_cm",sonar,set_sonar)
-    rospy.Subscriber("/sense/robot/get_compass_deg",compass,set_compass)
-    rospy.Subscriber("/sense/stt/get_text",String,set_speech)
-    rospy.Subscriber('/facedetect',targets,get_faces)
-    rospy.Subscriber('/tld_tracked_object',BoundingBox,tld_tracker)
-    rospy.Subscriber("/cv_camera/image_raw",Image,callback_img)
-    rospy.Subscriber("/sense/robot/get_gesture",gesture_r,callback_gesture)
-    rospy.Subscriber("/objects",Float32MultiArray,callback_objects)
-    pub_enable_listen=rospy.Publisher("/sense/stt/set_listen_active", Bool)
+    rospy.Subscriber("/sense/robot/get_sonar_cm",sonar,set_sonar,queue_size=1)
+    rospy.Subscriber("/sense/robot/get_compass_deg",compass,set_compass,queue_size=1)
+    rospy.Subscriber("/sense/stt/get_text",String,set_speech,queue_size=1)
+    rospy.Subscriber('/facedetect',targets,get_faces,queue_size=1)
+    rospy.Subscriber('/tld_tracked_object',BoundingBox,tld_tracker,queue_size=1)
+    rospy.Subscriber("/cv_camera/image_raw",Image,callback_img,queue_size=1)
+    rospy.Subscriber("/sense/robot/get_gesture",gesture_r,callback_gesture,queue_size=1)
+    rospy.Subscriber("/objects",Float32MultiArray,callback_objects,queue_size=1)
+    pub_enable_listen=rospy.Publisher("/sense/stt/set_listen_active", Bool,queue_size=1)
     board["pub_enable_listen"]=pub_enable_listen
-    pub_speak=rospy.Publisher("/act/tts/set_text", String)
+    pub_speak=rospy.Publisher("/act/tts/set_text", String,queue_size=1)
     board["pub_speak"]=pub_speak
-    pub_move=rospy.Publisher("/act/robot/send_move_command", robot_cmd)
+    pub_move=rospy.Publisher("/act/robot/send_move_command", robot_cmd,queue_size=1)
     board["pub_move"]=pub_move
-    pub_pan=rospy.Publisher("/act/robot/set_pan_angle", Int32)
+    pub_pan=rospy.Publisher("/act/robot/set_pan_angle", Int32,queue_size=1)
     board["pub_pan"]=pub_pan
-    pub_tilt=rospy.Publisher("/act/robot/set_tilt_angle",Int32)
+    pub_tilt=rospy.Publisher("/act/robot/set_tilt_angle",Int32,queue_size=1)
     board["pub_tilt"]=pub_tilt
-    pub_chat=rospy.Publisher("/ZenoDial/text_input",String)
+    pub_chat=rospy.Publisher("/ZenoDial/text_input",String,queue_size=1)
     board["pub_chat"]=pub_chat
-    pub_cmd=rospy.Publisher("/tld_gui_cmds",String)
+    pub_cmd=rospy.Publisher("/tld_gui_cmds",String,queue_size=1)
     board["pub_cmd"]=pub_cmd
-    pub_bb=rospy.Publisher("/tld_gui_bb",Target)
+    pub_bb=rospy.Publisher("/tld_gui_bb",Target,queue_size=1)
     board["pub_bb"]=pub_bb
 
     be=behavior(board)
