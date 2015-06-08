@@ -1,7 +1,6 @@
 <launch>
 <node name="body_driver_node" pkg="robot" type="body_driver.py"/>
-<node name="talk_node" pkg="robot" type="itf_talk_rep3.py"/>
-<include file="$(find robot)/launch/ssl_websocket.launch"/>
-<node name="listen_node" pkg="robot" type="weblistener.py"/>
-<node name="chrome" pkg="robot" type="run_chrome.py" />
+<node name="talk_node" pkg="robot" type="itf_talk_rep2.py"/>
+<node name="listen_node" pkg="robot" type="itf_listen.py"
+        output="screen"/>
 </launch>
