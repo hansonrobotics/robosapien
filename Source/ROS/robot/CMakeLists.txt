@@ -50,6 +50,7 @@ find_package(catkin REQUIRED COMPONENTS
    sonar.msg
    compass.msg
    robot_cmd.msg
+   gesture_r.msg
  )
 
 ## Generate services in the 'srv' folder

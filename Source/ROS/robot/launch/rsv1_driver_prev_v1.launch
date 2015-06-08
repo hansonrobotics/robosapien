@@ -1,0 +1,6 @@
+<launch>
+<node name="body_driver_node" pkg="robot" type="body_driver.py"/>
+<node name="talk_node" pkg="robot" type="itf_talk_rep2.py"/>
+<node name="listen_node" pkg="robot" type="itf_listen.py"
+        output="screen"/>
+</launch>
