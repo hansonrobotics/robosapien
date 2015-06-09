@@ -5,7 +5,8 @@ import urllib, pycurl
 from threading import Thread
 from std_msgs.msg import String
 from std_msgs.msg import Bool
-import subprocess
+import os
+#import subprocess
 
 import pydub
 import pygame.mixer, pygame.sndarray, numpy as np
@@ -121,8 +122,17 @@ class ITFTalker(Thread):
 
         #snd_out = pygame.sndarray.make_sound(snd_resample)
         #snd_out.play()
+    def mute_mic(self):
+        #mic="alsa_input.usb-Omniechnologies__Inc.538-2655-08.12.30.4_Monitor_Webcam-02-Webcam.analog-stereo"
+        mic="bluez_source.00_1A_7D_10_73_62"
+        os.system("pacmd set-source-mute "+mic+" 1")
+    def unmute_mic(self):
+        #mic="alsa_input.usb-Omniechnologies__Inc.538-2655-08.12.30.4_Monitor_Webcam-02-Webcam.analog-stereo"
+        mic="bluez_source.00_1A_7D_10_73_62"
+        os.system("pacmd set-source-mute "+mic+" 0")
 
     def speakSpeechFromText(self, phrase):
+        ##self.mute_mic()
         ITFTalker.pub.publish(True)
         phraseSections = self.split_text_rec(phrase, '')
 
@@ -147,6 +157,7 @@ class ITFTalker(Thread):
                 continue
             #ITFTalker.pub.publish("Google Voice completed.") ..mandeep
         ITFTalker.pub.publish(False)
+        ##self.unmute_mic()
         #os.system("mplayer tts " + str(index).zfill(index) + ".mp3 -af extrastereo=0 &")
 
     #speakSpeechFromText("Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.")
