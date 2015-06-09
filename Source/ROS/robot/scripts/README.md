@@ -2,6 +2,8 @@ body_driver
 Author: Mandeep Singh Bhatia
 Year: 2015
 
+Current defaults : itf_tak_rep2.py, itf_listen.py(alternate use with weblistner as in sample launch file)
+
 *******************************************
 Author: Alex Van Der Peet
 Year: 2014
@@ -39,7 +41,7 @@ Notes
 If at any time Google decides to shutdown / switch API's this code will probably require some changes.
 
 **************************************************************************
-itf_listen
+itf_listen (should be replaced by weblistner using chrome browser)
 ==========
 Author: Alex Van Der Peet
 Year: 2014
@@ -96,3 +98,20 @@ Notes
 If at any time Google decides to shutdown / switch API's this code will probably require some changes.
 
 **************************************************************************
+For using chrome instead of itf_listen(it takes away certain limitations)
+openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout server.key -out server.crt
+http://stackoverflow.com/questions/7580508/getting-chrome-to-accept-self-signed-localhost-certificate
+https://major.io/2007/08/02/generate-self-signed-certificate-and-key-in-one-line/
+use localhost for domain and names if using with localhost name
+Use above keys in flask in weblistner.py [robot package]
+In chrome export the certificate to PKCS #7 single certificate(clicking on https) and then in chrome advanced settings choose to manage https certificates and import in Authorities tab
+*********************************************************************
+additional : festival and pulse audio
+
+echo "This is an example. Arch is the best." | festival --tts
+[below used for muting microphone while speaking in itf_talk_rep2.py]
+pacmd list-sources
+pacmd set-source-mute INDEX 0  //unmute
+pacmd set-source-mute INDEX 1  //mute
+pacmd set-source-mute "alsa_input.usb-Omniechnologies__Inc.538-2655-08.12.30.4_Monitor_Webcam-02-Webcam.analog-stereo" 0
+
